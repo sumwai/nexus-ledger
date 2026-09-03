@@ -33,8 +33,19 @@ import {
   SlidersHorizontal,
   Tag,
   Search,
-  Boxes
+  Boxes,
+  ShieldCheck,
+  Activity
 } from "lucide-react";
+import { 
+  ResponsiveContainer, 
+  AreaChart, 
+  Area, 
+  XAxis, 
+  YAxis, 
+  Tooltip, 
+  CartesianGrid 
+} from "recharts";
 import { Transaction, CategoryMeta, DEFAULT_CATEGORIES, ACCOUNTS, TransactionType } from "@/lib/types";
 
 export default function MobileLedgerApp() {
@@ -49,6 +60,9 @@ export default function MobileLedgerApp() {
   const [selectedCategoryDetail, setSelectedCategoryDetail] = useState<CategoryMeta | null>(null);
   const [selectedCounterparty, setSelectedCounterparty] = useState<string | null>(null);
   const [searchKeyword, setSearchKeyword] = useState<string>("");
+
+  // 图表时间跨度：近 7 天 / 近 14 天 / 近 30 天 / 当前月份全部
+  const [chartRange, setChartRange] = useState<"7d" | "14d" | "30d" | "all">("14d");
 
   // 修改分类弹窗状态
   const [editingTx, setEditingTx] = useState<Transaction | null>(null);
@@ -157,6 +171,44 @@ export default function MobileLedgerApp() {
     }).filter(c => c.total > 0).sort((a, b) => b.total - a.total);
   }, [transactions, categories, selectedMonth]);
 
+  // 每日收支折线/面积图数据构造 (Daily Trend Data for Recharts)
+  const dailyChartData = useMemo(() => {
+    const periodTxs = transactions.filter(t => (selectedMonth === "all" || t.date.startsWith(selectedMonth)));
+    
+    // 提取所有涉及的日期
+    const dateMap = new Map<string, { income: number; expense: number }>();
+    
+    periodTxs.forEach(tx => {
+      const day = tx.date.substring(0, 10);
+      const cur = dateMap.get(day) || { income: 0, expense: 0 };
+      if (tx.type === "income") cur.income += tx.amount;
+      if (tx.type === "expense") cur.expense += tx.amount;
+      dateMap.set(day, cur);
+    });
+
+    let sortedDays = Array.from(dateMap.keys()).sort();
+    
+    // 如果设置了时间跨度过滤
+    if (chartRange === "7d") {
+      sortedDays = sortedDays.slice(-7);
+    } else if (chartRange === "14d") {
+      sortedDays = sortedDays.slice(-14);
+    } else if (chartRange === "30d") {
+      sortedDays = sortedDays.slice(-30);
+    }
+
+    return sortedDays.map(day => {
+      const val = dateMap.get(day) || { income: 0, expense: 0 };
+      return {
+        date: day,
+        displayDate: `${day.substring(5, 7)}/${day.substring(8, 10)}`,
+        支出: parseFloat(val.expense.toFixed(2)),
+        收入: parseFloat(val.income.toFixed(2)),
+        净结余: parseFloat((val.income - val.expense).toFixed(2))
+      };
+    });
+  }, [transactions, selectedMonth, chartRange]);
+
   // 按日期分组流水
   const groupedTransactionsByDate = useMemo(() => {
     const groups: { dateStr: string; dayTitle: string; totalExp: number; totalInc: number; items: Transaction[] }[] = [];
@@ -190,6 +242,7 @@ export default function MobileLedgerApp() {
 
     switch (catId) {
       case "tokenmp_project": return <Boxes className="w-4 h-4 text-indigo-600" />;
+      case "deposit_asset": return <ShieldCheck className="w-4 h-4 text-cyan-600" />;
       case "food": return <Utensils className="w-4 h-4 text-amber-600" />;
       case "shopping": return <ShoppingBag className="w-4 h-4 text-pink-600" />;
       case "transport": return <Car className="w-4 h-4 text-blue-600" />;
@@ -209,6 +262,7 @@ export default function MobileLedgerApp() {
   const getCategoryBgClass = (catId: string) => {
     switch (catId) {
       case "tokenmp_project": return "bg-indigo-50 text-indigo-600 border-indigo-100";
+      case "deposit_asset": return "bg-cyan-50 text-cyan-600 border-cyan-100";
       case "food": return "bg-amber-50 text-amber-600 border-amber-100";
       case "shopping": return "bg-pink-50 text-pink-600 border-pink-100";
       case "transport": return "bg-blue-50 text-blue-600 border-blue-100";
@@ -314,6 +368,34 @@ export default function MobileLedgerApp() {
     setActiveTab("records");
   };
 
+  // 自定义图表 Tooltip
+  const CustomTooltip = ({ active, payload, label }: any) => {
+    if (active && payload && payload.length) {
+      return (
+        <div className="bg-slate-900/95 backdrop-blur-md border border-slate-700/80 p-3 rounded-2xl shadow-xl text-xs space-y-1.5 font-mono text-white">
+          <div className="font-sans font-bold text-slate-300 pb-1 border-b border-slate-800">
+            {payload[0]?.payload?.date}
+          </div>
+          <div className="flex items-center justify-between gap-4 text-rose-400">
+            <span className="flex items-center gap-1.5 font-sans">
+              <span className="w-2 h-2 rounded-full bg-rose-500" />
+              支出
+            </span>
+            <span className="font-bold">-¥{payload.find((p: any) => p.name === "支出")?.value?.toFixed(2) || "0.00"}</span>
+          </div>
+          <div className="flex items-center justify-between gap-4 text-emerald-400">
+            <span className="flex items-center gap-1.5 font-sans">
+              <span className="w-2 h-2 rounded-full bg-emerald-500" />
+              收入
+            </span>
+            <span className="font-bold">+¥{payload.find((p: any) => p.name === "收入")?.value?.toFixed(2) || "0.00"}</span>
+          </div>
+        </div>
+      );
+    }
+    return null;
+  };
+
   return (
     <div className="w-full min-h-screen bg-[#F6F8FA] text-slate-900 flex flex-col font-sans select-none pb-24">
       {/* 顶部 Header */}
@@ -414,6 +496,123 @@ export default function MobileLedgerApp() {
                       -¥{totalExpense.toLocaleString("zh-CN", { minimumFractionDigits: 2 })}
                     </div>
                   </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 📈 每日收支动态折线/面积趋势图卡片 (Financial Trend Area Chart) */}
+            <div className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/70 shadow-xs space-y-4">
+              <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-slate-100 pb-3">
+                <div className="flex items-center gap-2">
+                  <div className="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center border border-indigo-100 shadow-2xs">
+                    <Activity className="w-4 h-4" />
+                  </div>
+                  <div>
+                    <h3 className="text-sm sm:text-base font-bold text-slate-800">每日收支走势分析</h3>
+                    <p className="text-[11px] text-slate-400">直观洞察每日消费高峰与收益进账曲线</p>
+                  </div>
+                </div>
+
+                {/* 时间跨度切换 */}
+                <div className="flex bg-slate-100/90 p-1 rounded-xl w-fit border border-slate-200/60 text-xs">
+                  <button
+                    onClick={() => setChartRange("7d")}
+                    className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
+                      chartRange === "7d" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
+                    }`}
+                  >
+                    近7天
+                  </button>
+                  <button
+                    onClick={() => setChartRange("14d")}
+                    className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
+                      chartRange === "14d" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
+                    }`}
+                  >
+                    近14天
+                  </button>
+                  <button
+                    onClick={() => setChartRange("30d")}
+                    className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
+                      chartRange === "30d" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
+                    }`}
+                  >
+                    近30天
+                  </button>
+                  <button
+                    onClick={() => setChartRange("all")}
+                    className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
+                      chartRange === "all" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
+                    }`}
+                  >
+                    全部
+                  </button>
+                </div>
+              </div>
+
+              {/* 折线面积图主体 */}
+              <div className="w-full h-64 sm:h-72 pt-2">
+                {dailyChartData.length > 0 ? (
+                  <ResponsiveContainer width="100%" height="100%">
+                    <AreaChart data={dailyChartData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
+                      <defs>
+                        <linearGradient id="expenseGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#F43F5E" stopOpacity={0.25} />
+                          <stop offset="95%" stopColor="#F43F5E" stopOpacity={0.0} />
+                        </linearGradient>
+                        <linearGradient id="incomeGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="5%" stopColor="#10B981" stopOpacity={0.25} />
+                          <stop offset="95%" stopColor="#10B981" stopOpacity={0.0} />
+                        </linearGradient>
+                      </defs>
+                      <CartesianGrid strokeDasharray="3 3" vertical={false} stroke="#E2E8F0" />
+                      <XAxis 
+                        dataKey="displayDate" 
+                        axisLine={false} 
+                        tickLine={false} 
+                        tick={{ fill: "#94A3B8", fontSize: 11 }}
+                      />
+                      <YAxis 
+                        axisLine={false} 
+                        tickLine={false} 
+                        tick={{ fill: "#94A3B8", fontSize: 11 }}
+                        tickFormatter={(v) => `¥${v}`}
+                      />
+                      <Tooltip content={<CustomTooltip />} />
+                      <Area 
+                        type="monotone" 
+                        dataKey="支出" 
+                        stroke="#F43F5E" 
+                        strokeWidth={2.5}
+                        fillOpacity={1} 
+                        fill="url(#expenseGrad)" 
+                      />
+                      <Area 
+                        type="monotone" 
+                        dataKey="收入" 
+                        stroke="#10B981" 
+                        strokeWidth={2.5}
+                        fillOpacity={1} 
+                        fill="url(#incomeGrad)" 
+                      />
+                    </AreaChart>
+                  </ResponsiveContainer>
+                ) : (
+                  <div className="h-full flex items-center justify-center text-xs text-slate-400">
+                    当前周期暂无图表数据
+                  </div>
+                )}
+              </div>
+
+              {/* 图例 */}
+              <div className="flex items-center justify-center gap-6 pt-1 text-xs font-semibold">
+                <div className="flex items-center gap-2 text-rose-600">
+                  <span className="w-3 h-1.5 rounded-full bg-rose-500" />
+                  <span>每日支出</span>
+                </div>
+                <div className="flex items-center gap-2 text-emerald-600">
+                  <span className="w-3 h-1.5 rounded-full bg-emerald-500" />
+                  <span>每日收入</span>
                 </div>
               </div>
             </div>
@@ -595,7 +794,7 @@ export default function MobileLedgerApp() {
           </div>
         )}
 
-        {/* 3. 全量流水 Tab (时间轴卡片流) */}
+        {/* 3. 全量流水 Tab */}
         {activeTab === "records" && (
           <div className="w-full space-y-5">
             {/* 顶栏筛选与统计卡片 */}
