@@ -8,6 +8,7 @@ export async function GET(req: NextRequest) {
     const month = searchParams.get("month");
     const type = searchParams.get("type");
     const category = searchParams.get("category");
+    const tag = searchParams.get("tag");
 
     let txs = await getTransactions();
 
@@ -17,8 +18,11 @@ export async function GET(req: NextRequest) {
     if (type && type !== "all") {
       txs = txs.filter(t => t.type === type);
     }
-    if (category) {
+    if (category && category !== "all") {
       txs = txs.filter(t => t.category === category);
+    }
+    if (tag && tag !== "all") {
+      txs = txs.filter(t => t.tags && t.tags.includes(tag));
     }
 
     const totalIncome = txs
@@ -46,9 +50,9 @@ export async function GET(req: NextRequest) {
 export async function PATCH(req: NextRequest) {
   try {
     const body = await req.json();
-    const { id, category } = body;
-    if (!id || !category) {
-      return NextResponse.json({ success: false, error: "缺少 id 或 category" }, { status: 400 });
+    const { id, category, tags } = body;
+    if (!id) {
+      return NextResponse.json({ success: false, error: "缺少 id" }, { status: 400 });
     }
 
     const txs = await getTransactions();
@@ -57,10 +61,12 @@ export async function PATCH(req: NextRequest) {
       return NextResponse.json({ success: false, error: "未找到对应账目" }, { status: 404 });
     }
 
-    target.category = category;
+    if (category) target.category = category;
+    if (tags !== undefined) target.tags = tags;
+    
     await saveTransactions(txs);
 
-    return NextResponse.json({ success: true, message: "分类更新成功", data: target });
+    return NextResponse.json({ success: true, message: "更新成功", data: target });
   } catch (error) {
     return NextResponse.json({ success: false, error: String(error) }, { status: 500 });
   }
@@ -69,7 +75,7 @@ export async function PATCH(req: NextRequest) {
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { amount, type = "expense", category = "other", account = "wechat", title, note = "", date, source = "web" } = body;
+    const { amount, type = "expense", category = "other", tags = [], account = "wechat", title, note = "", date, source = "web" } = body;
 
     if (!amount || isNaN(Number(amount)) || Number(amount) <= 0) {
       return NextResponse.json({ success: false, error: "金额必须是大于 0 的有效数字" }, { status: 400 });
@@ -85,6 +91,7 @@ export async function POST(req: NextRequest) {
       amount: Number(amount),
       type: type as TransactionType,
       category: category as Category,
+      tags: Array.isArray(tags) ? tags : [],
       account: account as AccountType,
       title,
       note,

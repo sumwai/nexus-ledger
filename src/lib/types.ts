@@ -37,6 +37,7 @@ export interface Transaction {
   type: TransactionType;
   amount: number;
   category: Category;
+  tags?: string[]; // 灵活标签系统（如：#服务器 #API #自用 #Apple #闲鱼）
   account: AccountType;
   title: string;
   note?: string;

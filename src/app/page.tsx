@@ -31,12 +31,13 @@ import {
   X,
   ArrowLeft,
   SlidersHorizontal,
-  Tag,
+  Tag as TagIcon,
   Search,
   Boxes,
   ShieldCheck,
   Activity,
-  Filter
+  Filter,
+  Check
 } from "lucide-react";
 import { 
   ResponsiveContainer, 
@@ -59,17 +60,17 @@ export default function MobileLedgerApp() {
   const [selectedMonth, setSelectedMonth] = useState<string>("all");
   const [filterType, setFilterType] = useState<"all" | "expense" | "income">("all");
   const [selectedCategoryDetail, setSelectedCategoryDetail] = useState<CategoryMeta | null>(null);
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
   const [selectedCounterparty, setSelectedCounterparty] = useState<string | null>(null);
   const [searchKeyword, setSearchKeyword] = useState<string>("");
 
-  // 图表专属分类过滤状态（默认为全部，也可按某个特定分类过滤）
+  // 图表专属分类与标签过滤
   const [chartCategoryFilter, setChartCategoryFilter] = useState<string>("all");
-
-  // 图表时间跨度：近 7 天 / 近 14 天 / 近 30 天 / 当前月份全部
   const [chartRange, setChartRange] = useState<"7d" | "14d" | "30d" | "all">("14d");
 
-  // 修改分类弹窗状态
+  // 编辑标签 & 分类弹窗
   const [editingTx, setEditingTx] = useState<Transaction | null>(null);
+  const [customTagInput, setCustomTagInput] = useState<string>("");
 
   // 新建分类模态框
   const [isAddCategoryOpen, setIsAddCategoryOpen] = useState(false);
@@ -105,6 +106,17 @@ export default function MobileLedgerApp() {
     return Array.from(new Set(transactions.map(t => t.date.substring(0, 7)))).filter(Boolean).sort().reverse();
   }, [transactions]);
 
+  // 全量标签池提炼
+  const allTagsList = useMemo(() => {
+    const map = new Map<string, number>();
+    transactions.forEach(t => {
+      (t.tags || []).forEach(tag => {
+        map.set(tag, (map.get(tag) || 0) + 1);
+      });
+    });
+    return Array.from(map.entries()).map(([name, count]) => ({ name, count })).sort((a, b) => b.count - a.count);
+  }, [transactions]);
+
   // 高频交易方列表
   const counterpartiesList = useMemo(() => {
     const map = new Map<string, { count: number; totalExpense: number; totalIncome: number }>();
@@ -129,14 +141,16 @@ export default function MobileLedgerApp() {
       if (selectedMonth !== "all" && !tx.date.startsWith(selectedMonth)) return false;
       if (filterType !== "all" && tx.type !== filterType) return false;
       if (selectedCategoryDetail && tx.category !== selectedCategoryDetail.id) return false;
+      if (selectedTag && (!tx.tags || !tx.tags.includes(selectedTag))) return false;
       if (selectedCounterparty && tx.title.trim() !== selectedCounterparty) return false;
       if (searchKeyword.trim()) {
         const kw = searchKeyword.toLowerCase();
-        return tx.title.toLowerCase().includes(kw) || (tx.note && tx.note.toLowerCase().includes(kw));
+        const inTags = (tx.tags || []).some(tg => tg.toLowerCase().includes(kw));
+        return inTags || tx.title.toLowerCase().includes(kw) || (tx.note && tx.note.toLowerCase().includes(kw));
       }
       return true;
     });
-  }, [transactions, selectedMonth, filterType, selectedCategoryDetail, selectedCounterparty, searchKeyword]);
+  }, [transactions, selectedMonth, filterType, selectedCategoryDetail, selectedTag, selectedCounterparty, searchKeyword]);
 
   // 统计计算
   const totalIncome = useMemo(() => {
@@ -175,7 +189,7 @@ export default function MobileLedgerApp() {
     }).filter(c => c.total > 0).sort((a, b) => b.total - a.total);
   }, [transactions, categories, selectedMonth]);
 
-  // 每日收支折线/面积图数据构造 (支持结合 chartCategoryFilter 进行特定分类过滤)
+  // 每日收支折线/面积图数据构造
   const dailyChartData = useMemo(() => {
     const periodTxs = transactions.filter(t => {
       if (selectedMonth !== "all" && !t.date.startsWith(selectedMonth)) return false;
@@ -183,7 +197,6 @@ export default function MobileLedgerApp() {
       return true;
     });
     
-    // 提取所有涉及的日期
     const dateMap = new Map<string, { income: number; expense: number }>();
     
     periodTxs.forEach(tx => {
@@ -269,7 +282,7 @@ export default function MobileLedgerApp() {
       case "salary": return <Wallet className="w-4 h-4 text-emerald-600" />;
       case "bonus": return <Gift className="w-4 h-4 text-amber-600" />;
       case "invest": return <TrendingUp className="w-4 h-4 text-blue-600" />;
-      default: return <Tag className="w-4 h-4" style={{ color }} />;
+      default: return <TagIcon className="w-4 h-4" style={{ color }} />;
     }
   };
 
@@ -289,24 +302,52 @@ export default function MobileLedgerApp() {
     }
   };
 
-  // 快捷修改流水分类
-  const handleUpdateCategory = async (txId: string, newCatId: string) => {
+  // 快捷更新流水分类与标签
+  const handleUpdateTx = async (txId: string, newCatId?: string, newTags?: string[]) => {
     try {
+      const payload: any = { id: txId };
+      if (newCatId) payload.category = newCatId;
+      if (newTags !== undefined) payload.tags = newTags;
+
       const res = await fetch("/api/transactions", {
         method: "PATCH",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ id: txId, category: newCatId })
+        body: JSON.stringify(payload)
       });
       const data = await res.json();
       if (data.success) {
-        setTransactions(prev => prev.map(t => t.id === txId ? { ...t, category: newCatId } : t));
-        setEditingTx(null);
+        setTransactions(prev => prev.map(t => t.id === txId ? { ...t, ...payload } : t));
+        if (editingTx && editingTx.id === txId) {
+          setEditingTx(prev => prev ? { ...prev, ...payload } : null);
+        }
       } else {
         alert(data.error);
       }
     } catch {
       alert("修改异常");
     }
+  };
+
+  // 切换/增删标签
+  const toggleTagOnEditingTx = (tag: string) => {
+    if (!editingTx) return;
+    const currentTags = editingTx.tags || [];
+    const nextTags = currentTags.includes(tag) 
+      ? currentTags.filter(t => t !== tag)
+      : [...currentTags, tag];
+    handleUpdateTx(editingTx.id, undefined, nextTags);
+  };
+
+  // 添加自定义标签
+  const handleAddCustomTag = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!editingTx || !customTagInput.trim()) return;
+    const tag = customTagInput.trim().replace(/^#/, "");
+    const currentTags = editingTx.tags || [];
+    if (!currentTags.includes(tag)) {
+      handleUpdateTx(editingTx.id, undefined, [...currentTags, tag]);
+    }
+    setCustomTagInput("");
   };
 
   // 创建自建分类
@@ -371,6 +412,15 @@ export default function MobileLedgerApp() {
   // 下钻分类
   const handleDrilldownCategory = (cat: CategoryMeta) => {
     setSelectedCategoryDetail(cat);
+    setSelectedTag(null);
+    setSelectedCounterparty(null);
+    setActiveTab("records");
+  };
+
+  // 下钻标签
+  const handleDrilldownTag = (tag: string) => {
+    setSelectedTag(tag);
+    setSelectedCategoryDetail(null);
     setSelectedCounterparty(null);
     setActiveTab("records");
   };
@@ -379,6 +429,7 @@ export default function MobileLedgerApp() {
   const handleDrilldownCounterparty = (name: string) => {
     setSelectedCounterparty(name);
     setSelectedCategoryDetail(null);
+    setSelectedTag(null);
     setActiveTab("records");
   };
 
@@ -516,7 +567,7 @@ export default function MobileLedgerApp() {
               </div>
             </div>
 
-            {/* 📈 每日收支走势分析卡片（支持图表分类筛选） */}
+            {/* 📈 每日收支走势分析卡片 */}
             <div className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/70 shadow-xs space-y-4">
               <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3 border-b border-slate-100 pb-3">
                 <div className="flex items-center gap-2">
@@ -539,7 +590,7 @@ export default function MobileLedgerApp() {
                 </div>
 
                 <div className="flex flex-wrap items-center gap-2">
-                  {/* 🎯 图表专属分类过滤下拉框 */}
+                  {/* 图表分类过滤下拉框 */}
                   <select
                     value={chartCategoryFilter}
                     onChange={(e) => setChartCategoryFilter(e.target.value)}
@@ -748,10 +799,10 @@ export default function MobileLedgerApp() {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3 className="text-sm font-bold text-slate-800">最新收支流水</h3>
-                    <p className="text-[11px] text-slate-400">点击商家名可筛选交易方，点击分类可重新归类</p>
+                    <p className="text-[11px] text-slate-400">点击商家名可筛选交易方，点击分类/标签可修改</p>
                   </div>
                   <button 
-                    onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); setActiveTab("records"); }}
+                    onClick={() => { setSelectedCategoryDetail(null); setSelectedTag(null); setSelectedCounterparty(null); setActiveTab("records"); }}
                     className="text-xs text-indigo-600 font-bold hover:underline flex items-center gap-0.5 whitespace-nowrap"
                   >
                     全部流水 <ChevronRight className="w-3.5 h-3.5" />
@@ -788,11 +839,21 @@ export default function MobileLedgerApp() {
                             <span className="shrink-0">•</span>
                             <button 
                               onClick={() => setEditingTx(tx)}
-                              className="font-medium text-slate-600 hover:text-indigo-600 bg-slate-200/60 hover:bg-indigo-50 px-1.5 py-0.2 rounded transition-colors shrink-0"
-                              title="点击修改分类"
+                              className="font-semibold text-slate-600 hover:text-indigo-600 bg-slate-200/60 hover:bg-indigo-50 px-1.5 py-0.2 rounded transition-colors shrink-0"
+                              title="点击修改分类与标签"
                             >
                               {categories.find(c => c.id === tx.category)?.label || tx.category} ✎
                             </button>
+                            {/* 标签徽标 */}
+                            {(tx.tags || []).slice(0, 2).map((tg) => (
+                              <button
+                                key={tg}
+                                onClick={() => handleDrilldownTag(tg)}
+                                className="px-1.5 py-0.2 rounded bg-indigo-50/90 text-indigo-600 border border-indigo-200/60 text-[10px] font-bold shrink-0 hover:bg-indigo-100"
+                              >
+                                #{tg}
+                              </button>
+                            ))}
                             <span className="shrink-0">•</span>
                             <span className="truncate">{ACCOUNTS.find(a => a.id === tx.account)?.label || tx.account}</span>
                           </div>
@@ -870,16 +931,16 @@ export default function MobileLedgerApp() {
           </div>
         )}
 
-        {/* 3. 全量流水 Tab */}
+        {/* 3. 全量流水 Tab (时间轴卡片流 + 分类/标签多维复合过滤) */}
         {activeTab === "records" && (
           <div className="w-full space-y-5">
             {/* 顶栏筛选与统计卡片 */}
             <div className="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs space-y-4">
               <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3">
                 <div className="flex items-center gap-2 min-w-0">
-                  {(selectedCategoryDetail || selectedCounterparty) && (
+                  {(selectedCategoryDetail || selectedTag || selectedCounterparty) && (
                     <button 
-                      onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); }}
+                      onClick={() => { setSelectedCategoryDetail(null); setSelectedTag(null); setSelectedCounterparty(null); }}
                       className="p-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-1 text-xs font-bold mr-1 shadow-2xs shrink-0 whitespace-nowrap"
                     >
                       <ArrowLeft className="w-3.5 h-3.5" /> 全部
@@ -888,8 +949,9 @@ export default function MobileLedgerApp() {
                   <div className="min-w-0">
                     <h2 className="text-base font-black text-slate-800 flex items-center gap-1.5 truncate">
                       {selectedCategoryDetail && <span>【{selectedCategoryDetail.label}】分类明细</span>}
+                      {selectedTag && <span>【#{selectedTag}】标签明细</span>}
                       {selectedCounterparty && <span>【{selectedCounterparty}】交易明细</span>}
-                      {!selectedCategoryDetail && !selectedCounterparty && <span>全量流水明细</span>}
+                      {!selectedCategoryDetail && !selectedTag && !selectedCounterparty && <span>全量流水明细</span>}
                     </h2>
                     <div className="flex items-center gap-3 text-xs text-slate-500 mt-1 whitespace-nowrap overflow-x-auto">
                       <span className="shrink-0">{filteredTransactions.length} 笔记录</span>
@@ -936,9 +998,9 @@ export default function MobileLedgerApp() {
                 </div>
               </div>
 
-              {/* 三联复合筛选行：只看某分类 + 交易方选择 + 关键词搜索 */}
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                {/* 只看某分类下拉选择器 */}
+              {/* 四联复合筛选行：分类 + 标签 + 交易方 + 搜索 */}
+              <div className="grid grid-cols-1 sm:grid-cols-4 gap-2.5">
+                {/* 分类下拉 */}
                 <div className="sm:col-span-1">
                   <select
                     value={selectedCategoryDetail?.id || ""}
@@ -969,7 +1031,27 @@ export default function MobileLedgerApp() {
                   </select>
                 </div>
 
-                {/* 交易方下拉选择器 */}
+                {/* 🎯 标签筛选下拉 */}
+                <div className="sm:col-span-1">
+                  <select
+                    value={selectedTag || ""}
+                    onChange={(e) => setSelectedTag(e.target.value ? e.target.value : null)}
+                    className={`w-full px-3 py-2 border rounded-xl text-xs font-bold focus:outline-none transition-colors shadow-2xs whitespace-nowrap ${
+                      selectedTag 
+                        ? "bg-indigo-50/90 border-indigo-300 text-indigo-700" 
+                        : "bg-slate-50/90 border-slate-200 text-slate-800 focus:border-indigo-500"
+                    }`}
+                  >
+                    <option value="">#️⃣ 全部标签 ({allTagsList.length})</option>
+                    {allTagsList.map((t) => (
+                      <option key={t.name} value={t.name}>
+                        #{t.name} ({t.count}笔)
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* 交易方下拉 */}
                 <div className="sm:col-span-1">
                   <select
                     value={selectedCounterparty || ""}
@@ -979,7 +1061,7 @@ export default function MobileLedgerApp() {
                     <option value="">👤 全部收/付款方 ({counterpartiesList.length})</option>
                     {counterpartiesList.map((c) => (
                       <option key={c.name} value={c.name}>
-                        {c.name} ({c.count}笔 / {c.totalExpense > 0 ? `支¥${c.totalExpense.toFixed(0)}` : `收¥${c.totalIncome.toFixed(0)}`})
+                        {c.name} ({c.count}笔)
                       </option>
                     ))}
                   </select>
@@ -990,7 +1072,7 @@ export default function MobileLedgerApp() {
                   <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
                   <input 
                     type="text"
-                    placeholder="搜索商家/备注..."
+                    placeholder="搜索商家/备注/标签..."
                     value={searchKeyword}
                     onChange={(e) => setSearchKeyword(e.target.value)}
                     className="w-full pl-10 pr-8 py-2 bg-slate-50/90 border border-slate-200 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500 transition-colors shadow-2xs"
@@ -1003,30 +1085,31 @@ export default function MobileLedgerApp() {
                 </div>
               </div>
 
-              {/* 常用分类快捷胶囊栏 */}
+              {/* 常用标签与分类快捷胶囊栏 */}
               <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
-                <span className="text-slate-400 text-[11px] font-medium whitespace-nowrap shrink-0">分类快捷:</span>
+                <span className="text-slate-400 text-[11px] font-medium whitespace-nowrap shrink-0">标签快捷:</span>
                 <button
-                  onClick={() => setSelectedCategoryDetail(null)}
+                  onClick={() => setSelectedTag(null)}
                   className={`px-3 py-1 rounded-full text-[11px] font-bold whitespace-nowrap shrink-0 transition-all ${
-                    !selectedCategoryDetail
+                    !selectedTag
                       ? "bg-slate-900 text-white shadow-sm"
                       : "bg-slate-100 hover:bg-slate-200/80 text-slate-600"
                   }`}
                 >
                   全部
                 </button>
-                {categories.slice(0, 8).map((cat) => (
+                {allTagsList.slice(0, 8).map((t) => (
                   <button
-                    key={cat.id}
-                    onClick={() => setSelectedCategoryDetail(selectedCategoryDetail?.id === cat.id ? null : cat)}
+                    key={t.name}
+                    onClick={() => setSelectedTag(selectedTag === t.name ? null : t.name)}
                     className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap shrink-0 transition-all flex items-center gap-1 ${
-                      selectedCategoryDetail?.id === cat.id
+                      selectedTag === t.name
                         ? "bg-indigo-600 text-white shadow-sm shadow-indigo-500/20 scale-102"
-                        : "bg-slate-100 hover:bg-slate-200/80 text-slate-700"
+                        : "bg-indigo-50/80 hover:bg-indigo-100 text-indigo-700 border border-indigo-200/50"
                     }`}
                   >
-                    <span>{cat.label}</span>
+                    <span>#{t.name}</span>
+                    <span className="text-[9px] opacity-80">({t.count})</span>
                   </button>
                 ))}
               </div>
@@ -1084,11 +1167,21 @@ export default function MobileLedgerApp() {
                               <span className="shrink-0">•</span>
                               <button 
                                 onClick={() => setEditingTx(tx)}
-                                className="font-semibold text-slate-600 hover:text-indigo-600 bg-slate-200/60 hover:bg-indigo-50 px-2 py-0.5 rounded transition-colors shrink-0"
-                                title="点击修改分类"
+                                className="font-semibold text-slate-600 hover:text-indigo-600 bg-slate-200/60 hover:bg-indigo-50 px-1.5 py-0.2 rounded transition-colors shrink-0"
+                                title="点击修改分类与标签"
                               >
                                 {categories.find(c => c.id === tx.category)?.label || tx.category} ✎
                               </button>
+                              {/* 标签徽标 */}
+                              {(tx.tags || []).map((tg) => (
+                                <button
+                                  key={tg}
+                                  onClick={() => handleDrilldownTag(tg)}
+                                  className="px-1.5 py-0.2 rounded bg-indigo-50/90 text-indigo-600 border border-indigo-200/60 text-[10px] font-bold shrink-0 hover:bg-indigo-100"
+                                >
+                                  #{tg}
+                                </button>
+                              ))}
                               <span className="shrink-0">•</span>
                               <span className="truncate">{ACCOUNTS.find(a => a.id === tx.account)?.label || tx.account}</span>
                               {tx.note && <span className="text-slate-400 text-[11px] truncate hidden sm:inline">({tx.note})</span>}
@@ -1119,9 +1212,9 @@ export default function MobileLedgerApp() {
               {filteredTransactions.length === 0 && (
                 <div className="bg-white rounded-3xl p-12 border border-slate-200/70 text-center text-slate-400 space-y-2">
                   <p className="text-sm font-semibold">没有匹配到任何流水账单</p>
-                  {(selectedCategoryDetail || selectedCounterparty) && (
+                  {(selectedCategoryDetail || selectedTag || selectedCounterparty) && (
                     <button 
-                      onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); }}
+                      onClick={() => { setSelectedCategoryDetail(null); setSelectedTag(null); setSelectedCounterparty(null); }}
                       className="text-xs text-indigo-600 underline font-bold"
                     >
                       清除所有筛选条件
@@ -1188,7 +1281,7 @@ export default function MobileLedgerApp() {
       {/* 底部 Tab 导航 */}
       <footer className="fixed bottom-0 left-0 right-0 w-full bg-white/90 backdrop-blur-xl border-t border-slate-200/70 px-4 py-3 z-30 flex items-center justify-around shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
         <button 
-          onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); setActiveTab("overview"); }}
+          onClick={() => { setSelectedCategoryDetail(null); setSelectedTag(null); setSelectedCounterparty(null); setActiveTab("overview"); }}
           className={`flex flex-col items-center gap-1 py-1 px-4 rounded-2xl transition-all ${
             activeTab === "overview" ? "text-indigo-600 font-black scale-105" : "text-slate-400 hover:text-slate-800"
           }`}
@@ -1198,7 +1291,7 @@ export default function MobileLedgerApp() {
         </button>
 
         <button 
-          onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); setActiveTab("stats"); }}
+          onClick={() => { setSelectedCategoryDetail(null); setSelectedTag(null); setSelectedCounterparty(null); setActiveTab("stats"); }}
           className={`flex flex-col items-center gap-1 py-1 px-4 rounded-2xl transition-all ${
             activeTab === "stats" ? "text-indigo-600 font-black scale-105" : "text-slate-400 hover:text-slate-800"
           }`}
@@ -1208,7 +1301,7 @@ export default function MobileLedgerApp() {
         </button>
 
         <button 
-          onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); setActiveTab("records"); }}
+          onClick={() => { setSelectedCategoryDetail(null); setSelectedTag(null); setSelectedCounterparty(null); setActiveTab("records"); }}
           className={`flex flex-col items-center gap-1 py-1 px-4 rounded-2xl transition-all ${
             activeTab === "records" ? "text-indigo-600 font-black scale-105" : "text-slate-400 hover:text-slate-800"
           }`}
@@ -1228,13 +1321,13 @@ export default function MobileLedgerApp() {
         </button>
       </footer>
 
-      {/* 修改单笔分类抽屉 */}
+      {/* 修改分类与编辑标签弹窗 */}
       {editingTx && (
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl p-6 max-w-sm w-full border border-slate-200 shadow-2xl space-y-4 animate-in fade-in zoom-in-95">
             <div className="flex justify-between items-center">
               <div className="min-w-0 flex-1 pr-2">
-                <h3 className="text-base font-black text-slate-900 truncate">重新归类账目</h3>
+                <h3 className="text-base font-black text-slate-900 truncate">编辑账目属性</h3>
                 <p className="text-xs text-slate-500 mt-0.5 truncate">{editingTx.title} (¥{editingTx.amount})</p>
               </div>
               <button onClick={() => setEditingTx(null)} className="text-slate-400 hover:text-slate-600 shrink-0">
@@ -1242,21 +1335,70 @@ export default function MobileLedgerApp() {
               </button>
             </div>
 
-            <div className="grid grid-cols-3 gap-2 max-h-60 overflow-y-auto p-1">
-              {categories.map((cat) => (
-                <button
-                  key={cat.id}
-                  onClick={() => handleUpdateCategory(editingTx.id, cat.id)}
-                  className={`p-2.5 rounded-xl border text-xs font-bold flex flex-col items-center gap-1.5 transition-all ${
-                    editingTx.category === cat.id
-                      ? "bg-indigo-600 text-white border-indigo-600 shadow-md shadow-indigo-500/20 scale-102"
-                      : "bg-slate-50 text-slate-700 border-slate-200 hover:border-indigo-300"
-                  }`}
+            {/* 1. 标签管理模块 */}
+            <div className="space-y-2 p-3 bg-slate-50 rounded-2xl border border-slate-100">
+              <span className="text-xs font-bold text-slate-700 flex items-center gap-1">
+                <TagIcon className="w-3.5 h-3.5 text-indigo-600" /> 快捷标签 (多选)
+              </span>
+              
+              {/* 常用候选标签 */}
+              <div className="flex flex-wrap gap-1.5 pt-1">
+                {["服务器", "AI/API", "Apple", "闲鱼", "TokenMP", "堂食快餐", "自用"].map((tag) => {
+                  const isChecked = (editingTx.tags || []).includes(tag);
+                  return (
+                    <button
+                      key={tag}
+                      onClick={() => toggleTagOnEditingTx(tag)}
+                      className={`px-2.5 py-1 rounded-xl text-xs font-bold transition-all flex items-center gap-1 ${
+                        isChecked 
+                          ? "bg-indigo-600 text-white shadow-xs scale-102" 
+                          : "bg-white text-slate-600 border border-slate-200 hover:border-indigo-300"
+                      }`}
+                    >
+                      <span>#{tag}</span>
+                      {isChecked && <Check className="w-3 h-3" />}
+                    </button>
+                  );
+                })}
+              </div>
+
+              {/* 自定义新增标签 */}
+              <form onSubmit={handleAddCustomTag} className="flex gap-1.5 pt-1.5">
+                <input
+                  type="text"
+                  placeholder="新建标签 (如 #域名)..."
+                  value={customTagInput}
+                  onChange={(e) => setCustomTagInput(e.target.value)}
+                  className="flex-1 px-3 py-1.5 bg-white border border-slate-200 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-indigo-500"
+                />
+                <button 
+                  type="submit"
+                  className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-white rounded-xl text-xs font-bold"
                 >
-                  {renderCategoryIcon(cat.id, editingTx.category === cat.id ? "#FFFFFF" : cat.color)}
-                  <span className="text-[11px] truncate w-full text-center">{cat.label}</span>
+                  添加
                 </button>
-              ))}
+              </form>
+            </div>
+
+            {/* 2. 重新选择主分类 */}
+            <div className="space-y-2">
+              <span className="text-xs font-bold text-slate-700">切换主分类</span>
+              <div className="grid grid-cols-3 gap-2 max-h-48 overflow-y-auto p-1">
+                {categories.map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => handleUpdateTx(editingTx.id, cat.id)}
+                    className={`p-2 rounded-xl border text-xs font-bold flex flex-col items-center gap-1 transition-all ${
+                      editingTx.category === cat.id
+                        ? "bg-indigo-600 text-white border-indigo-600 shadow-md shadow-indigo-500/20 scale-102"
+                        : "bg-slate-50 text-slate-700 border-slate-200 hover:border-indigo-300"
+                    }`}
+                  >
+                    {renderCategoryIcon(cat.id, editingTx.category === cat.id ? "#FFFFFF" : cat.color)}
+                    <span className="text-[10px] truncate w-full text-center">{cat.label}</span>
+                  </button>
+                ))}
+              </div>
             </div>
           </div>
         </div>
