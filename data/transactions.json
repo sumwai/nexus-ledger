@@ -134,7 +134,7 @@
   {
     "id": "wx-1-46268405",
     "type": "expense",
-    "amount": 199.0,
+    "amount": 199,
     "category": "digital",
     "account": "wechat",
     "title": "腾讯云费用账户-移动支付",
@@ -146,7 +146,7 @@
   {
     "id": "alipay-1-20260903080449",
     "type": "expense",
-    "amount": 469.0,
+    "amount": 469,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "MiniMax (TokenPlan)",
@@ -158,7 +158,7 @@
   {
     "id": "wx-2-46268312",
     "type": "expense",
-    "amount": 36.0,
+    "amount": 36,
     "category": "digital",
     "account": "wechat",
     "title": "瓦力科技",
@@ -182,7 +182,7 @@
   {
     "id": "wx-4-46268303",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -194,7 +194,7 @@
   {
     "id": "wx-5-46267618",
     "type": "income",
-    "amount": 40.0,
+    "amount": 40,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "熊本喵",
@@ -206,7 +206,7 @@
   {
     "id": "wx-6-46267505",
     "type": "expense",
-    "amount": 37.0,
+    "amount": 37,
     "category": "food",
     "account": "bank_debit",
     "title": "小宋面馆",
@@ -218,7 +218,7 @@
   {
     "id": "wx-7-46267278",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "social",
     "account": "bank_debit",
     "title": "程相轩 (南约.)",
@@ -254,7 +254,7 @@
   {
     "id": "wx-8-46266516",
     "type": "expense",
-    "amount": 36.0,
+    "amount": 36,
     "category": "food",
     "account": "wechat",
     "title": "东浦副食品店",
@@ -266,7 +266,7 @@
   {
     "id": "wx-9-46266514",
     "type": "expense",
-    "amount": 22.0,
+    "amount": 22,
     "category": "food",
     "account": "bank_debit",
     "title": "小宋面馆",
@@ -278,7 +278,7 @@
   {
     "id": "wx-10-46266363",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "digital",
     "account": "bank_debit",
     "title": "杭州深度求索",
@@ -302,7 +302,7 @@
   {
     "id": "wx-12-46266310",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "bank_debit",
     "title": "小宋面馆",
@@ -314,7 +314,7 @@
   {
     "id": "wx-13-46265567",
     "type": "expense",
-    "amount": 21.0,
+    "amount": 21,
     "category": "food",
     "account": "bank_debit",
     "title": "小宋面馆",
@@ -326,7 +326,7 @@
   {
     "id": "wx-14-46265554",
     "type": "expense",
-    "amount": 15.0,
+    "amount": 15,
     "category": "food",
     "account": "bank_debit",
     "title": "兰州拉面",
@@ -350,7 +350,7 @@
   {
     "id": "wx-17-46265499",
     "type": "expense",
-    "amount": 30.0,
+    "amount": 30,
     "category": "transport",
     "account": "bank_debit",
     "title": "互联互通停车场",
@@ -374,7 +374,7 @@
   {
     "id": "wx-19-46264826",
     "type": "expense",
-    "amount": 145.0,
+    "amount": 145,
     "category": "food",
     "account": "bank_debit",
     "title": "'@郭•(☆_☆)",
@@ -386,7 +386,7 @@
   {
     "id": "alipay-4-20260830164429",
     "type": "expense",
-    "amount": 200.0,
+    "amount": 200,
     "category": "transport",
     "account": "alipay",
     "title": "中国石化浙江石油分公司",
@@ -410,7 +410,7 @@
   {
     "id": "wx-24-46264553",
     "type": "expense",
-    "amount": 15.0,
+    "amount": 15,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -422,7 +422,7 @@
   {
     "id": "wx-25-46264552",
     "type": "expense",
-    "amount": 36.0,
+    "amount": 36,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -446,7 +446,7 @@
   {
     "id": "wx-27-46264357",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -458,7 +458,7 @@
   {
     "id": "wx-28-46263844",
     "type": "expense",
-    "amount": 190.0,
+    "amount": 190,
     "category": "housing",
     "account": "wechat",
     "title": "同程旅行",
@@ -470,7 +470,7 @@
   {
     "id": "wx-29-46263792",
     "type": "expense",
-    "amount": 30.0,
+    "amount": 30,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -482,7 +482,7 @@
   {
     "id": "wx-30-46263533",
     "type": "expense",
-    "amount": 15.0,
+    "amount": 15,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -494,7 +494,7 @@
   {
     "id": "wx-31-46263532",
     "type": "expense",
-    "amount": 26.0,
+    "amount": 26,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -506,7 +506,7 @@
   {
     "id": "wx-32-46263524",
     "type": "expense",
-    "amount": 200.0,
+    "amount": 200,
     "category": "social",
     "account": "bank_debit",
     "title": "许尽欢.",
@@ -518,7 +518,7 @@
   {
     "id": "alipay-5-20260829121633",
     "type": "expense",
-    "amount": 568.0,
+    "amount": 568,
     "category": "transport",
     "account": "alipay",
     "title": "铁路12306",
@@ -530,7 +530,7 @@
   {
     "id": "wx-33-46263379",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "digital",
     "account": "wechat",
     "title": "腾讯云费用账户-移动支付",
@@ -542,7 +542,7 @@
   {
     "id": "wx-34-46263336",
     "type": "expense",
-    "amount": 185.0,
+    "amount": 185,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -566,7 +566,7 @@
   {
     "id": "wx-36-46263263",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -578,7 +578,7 @@
   {
     "id": "wx-37-46262712",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "digital",
     "account": "wechat",
     "title": "杭州深度求索",
@@ -602,7 +602,7 @@
   {
     "id": "wx-38-46261311",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -614,7 +614,7 @@
   {
     "id": "wx-39-46260699",
     "type": "expense",
-    "amount": 150.0,
+    "amount": 150,
     "category": "social",
     "account": "bank_debit",
     "title": "程相轩 (南约.)",
@@ -626,7 +626,7 @@
   {
     "id": "wx-40-46260591",
     "type": "expense",
-    "amount": 6.0,
+    "amount": 6,
     "category": "digital",
     "account": "bank_debit",
     "title": "iCloud 由云上贵州运营",
@@ -638,7 +638,7 @@
   {
     "id": "wx-41-46260438",
     "type": "expense",
-    "amount": 200.0,
+    "amount": 200,
     "category": "social",
     "account": "bank_debit",
     "title": "许尽欢.",
@@ -662,7 +662,7 @@
   {
     "id": "wx-43-46260267",
     "type": "expense",
-    "amount": 3.0,
+    "amount": 3,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -674,7 +674,7 @@
   {
     "id": "wx-44-46260267",
     "type": "expense",
-    "amount": 11.0,
+    "amount": 11,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -698,7 +698,7 @@
   {
     "id": "wx-46-46259262",
     "type": "expense",
-    "amount": 4.0,
+    "amount": 4,
     "category": "other",
     "account": "wechat",
     "title": "丁云娟",
@@ -722,7 +722,7 @@
   {
     "id": "wx-48-46259259",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -758,10 +758,10 @@
   {
     "id": "alipay2-2-202608242300",
     "type": "expense",
-    "amount": 300.0,
-    "category": "tokenmp_project",
+    "amount": 300,
+    "category": "digital",
     "account": "alipay",
-    "title": "DeepSeek API",
+    "title": "DeepSeek API (个人自用)",
     "note": "DeepSeek-API服务(151******32) [支付宝(133)/账户余额]",
     "date": "2026-08-24 20:52:08",
     "createdAt": "2026-09-03T15:43:35.422032",
@@ -806,7 +806,7 @@
   {
     "id": "wx-52-46258268",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -818,7 +818,7 @@
   {
     "id": "wx-53-46258249",
     "type": "expense",
-    "amount": 350.0,
+    "amount": 350,
     "category": "social",
     "account": "bank_debit",
     "title": "苏泓羽 (花开富贵)",
@@ -830,7 +830,7 @@
   {
     "id": "alipay-7-20260824055911",
     "type": "income",
-    "amount": 350.0,
+    "amount": 350,
     "category": "bonus",
     "account": "alipay",
     "title": ".",
@@ -854,7 +854,7 @@
   {
     "id": "wx-55-46257267",
     "type": "expense",
-    "amount": 33.0,
+    "amount": 33,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -914,7 +914,7 @@
   {
     "id": "wx-60-46256278",
     "type": "expense",
-    "amount": 33.0,
+    "amount": 33,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -926,7 +926,7 @@
   {
     "id": "wx-61-46255893",
     "type": "expense",
-    "amount": 160.0,
+    "amount": 160,
     "category": "social",
     "account": "wechat",
     "title": "十万个魏什么",
@@ -974,7 +974,7 @@
   {
     "id": "wx-65-46255283",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -998,7 +998,7 @@
   {
     "id": "alipay2-3-202608202300",
     "type": "income",
-    "amount": 25.0,
+    "amount": 25,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "**空",
@@ -1010,7 +1010,7 @@
   {
     "id": "wx-67-46254943",
     "type": "expense",
-    "amount": 184.0,
+    "amount": 184,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -1046,7 +1046,7 @@
   {
     "id": "wx-70-46254315",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -1058,7 +1058,7 @@
   {
     "id": "wx-71-46253862",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -1094,7 +1094,7 @@
   {
     "id": "wx-74-46253377",
     "type": "expense",
-    "amount": 2.0,
+    "amount": 2,
     "category": "social",
     "account": "wechat",
     "title": "人生初见",
@@ -1130,7 +1130,7 @@
   {
     "id": "wx-77-46253272",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -1142,7 +1142,7 @@
   {
     "id": "alipay-8-20260819053714",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "杭州深度求索",
@@ -1154,7 +1154,7 @@
   {
     "id": "alipay-9-20260819003003",
     "type": "expense",
-    "amount": 199.0,
+    "amount": 199,
     "category": "other",
     "account": "alipay",
     "title": "LucidaCloud Limited",
@@ -1178,7 +1178,7 @@
   {
     "id": "alipay-10-20260818202905",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "social",
     "account": "alipay",
     "title": "啊狸(**才)",
@@ -1190,7 +1190,7 @@
   {
     "id": "wx-79-46252838",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "other",
     "account": "wechat",
     "title": "发给邓雨廷@品郡建材",
@@ -1238,7 +1238,7 @@
   {
     "id": "wx-83-46251745",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "the青",
@@ -1310,7 +1310,7 @@
   {
     "id": "wx-87-46251657",
     "type": "expense",
-    "amount": 135.0,
+    "amount": 135,
     "category": "social",
     "account": "wechat",
     "title": "萬事勝意",
@@ -1322,7 +1322,7 @@
   {
     "id": "wx-88-46251651",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "digital",
     "account": "wechat",
     "title": "深圳灵明智码",
@@ -1346,7 +1346,7 @@
   {
     "id": "wx-90-46251616",
     "type": "expense",
-    "amount": 19.0,
+    "amount": 19,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -1370,7 +1370,7 @@
   {
     "id": "wx-92-46251571",
     "type": "expense",
-    "amount": 95.0,
+    "amount": 95,
     "category": "social",
     "account": "wechat",
     "title": "婷婷黑凤梨😘",
@@ -1382,7 +1382,7 @@
   {
     "id": "wx-93-46251570",
     "type": "expense",
-    "amount": 19.0,
+    "amount": 19,
     "category": "social",
     "account": "wechat",
     "title": "Chinli",
@@ -1394,7 +1394,7 @@
   {
     "id": "wx-94-46251565",
     "type": "income",
-    "amount": 40.0,
+    "amount": 40,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "秋刀鱼不会过期",
@@ -1406,7 +1406,7 @@
   {
     "id": "wx-95-46251563",
     "type": "expense",
-    "amount": 55.0,
+    "amount": 55,
     "category": "social",
     "account": "wechat",
     "title": "秋刀鱼不会过期",
@@ -1418,7 +1418,7 @@
   {
     "id": "wx-96-46251562",
     "type": "expense",
-    "amount": 21.0,
+    "amount": 21,
     "category": "social",
     "account": "wechat",
     "title": "DDbd",
@@ -1442,7 +1442,7 @@
   {
     "id": "wx-98-46251097",
     "type": "expense",
-    "amount": 40.0,
+    "amount": 40,
     "category": "social",
     "account": "wechat",
     "title": "林间清雾",
@@ -1466,7 +1466,7 @@
   {
     "id": "wx-99-46250703",
     "type": "expense",
-    "amount": 18.0,
+    "amount": 18,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -1502,7 +1502,7 @@
   {
     "id": "alipay-13-20260816015252",
     "type": "income",
-    "amount": 238.0,
+    "amount": 238,
     "category": "bonus",
     "account": "alipay",
     "title": ".",
@@ -1514,7 +1514,7 @@
   {
     "id": "wx-102-46250078",
     "type": "expense",
-    "amount": 238.0,
+    "amount": 238,
     "category": "social",
     "account": "wechat",
     "title": "苏泓羽 (花开富贵)",
@@ -1526,7 +1526,7 @@
   {
     "id": "wx-103-46249953",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -1538,7 +1538,7 @@
   {
     "id": "wx-104-46249782",
     "type": "income",
-    "amount": 2.0,
+    "amount": 2,
     "category": "bonus",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -1550,7 +1550,7 @@
   {
     "id": "wx-105-46249764",
     "type": "expense",
-    "amount": 45.0,
+    "amount": 45,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -1562,7 +1562,7 @@
   {
     "id": "wx-106-46249552",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "Ron",
@@ -1586,7 +1586,7 @@
   {
     "id": "wx-108-46249534",
     "type": "expense",
-    "amount": 36.0,
+    "amount": 36,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -1598,7 +1598,7 @@
   {
     "id": "alipay2-5-202608152300",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "l***x",
@@ -1634,7 +1634,7 @@
   {
     "id": "wx-110-46248678",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -1646,7 +1646,7 @@
   {
     "id": "alipay-14-20260814151928",
     "type": "expense",
-    "amount": 35.0,
+    "amount": 35,
     "category": "other",
     "account": "alipay",
     "title": "Anomaly Innovations Inc.",
@@ -1658,7 +1658,7 @@
   {
     "id": "wx-111-46248614",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -1670,7 +1670,7 @@
   {
     "id": "wx-112-46248608",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "骁",
@@ -1694,7 +1694,7 @@
   {
     "id": "alipay-15-20260813163324",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "杭州深度求索",
@@ -1730,7 +1730,7 @@
   {
     "id": "wx-114-46247635",
     "type": "expense",
-    "amount": 137.0,
+    "amount": 137,
     "category": "other",
     "account": "wechat",
     "title": "浦东香烟老店",
@@ -1742,7 +1742,7 @@
   {
     "id": "wx-115-46247633",
     "type": "expense",
-    "amount": 35.0,
+    "amount": 35,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -1766,7 +1766,7 @@
   {
     "id": "alipay-16-20260813034711",
     "type": "expense",
-    "amount": 35.0,
+    "amount": 35,
     "category": "other",
     "account": "alipay",
     "title": "Anomaly Innovations Inc.",
@@ -1778,7 +1778,7 @@
   {
     "id": "wx-117-46247083",
     "type": "income",
-    "amount": 25.0,
+    "amount": 25,
     "category": "bonus",
     "account": "wechat",
     "title": "tuotuo",
@@ -1802,7 +1802,7 @@
   {
     "id": "wx-118-46246960",
     "type": "income",
-    "amount": 30.0,
+    "amount": 30,
     "category": "bonus",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -1814,7 +1814,7 @@
   {
     "id": "wx-119-46246586",
     "type": "expense",
-    "amount": 30.0,
+    "amount": 30,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -1826,7 +1826,7 @@
   {
     "id": "wx-120-46246552",
     "type": "expense",
-    "amount": 22.0,
+    "amount": 22,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -1838,7 +1838,7 @@
   {
     "id": "alipay-18-20260811135401",
     "type": "expense",
-    "amount": 99.0,
+    "amount": 99,
     "category": "other",
     "account": "alipay",
     "title": "LucidaCloud Limited",
@@ -1850,7 +1850,7 @@
   {
     "id": "wx-121-46245531",
     "type": "expense",
-    "amount": 44.0,
+    "amount": 44,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -1862,7 +1862,7 @@
   {
     "id": "wx-122-46245467",
     "type": "income",
-    "amount": 40.0,
+    "amount": 40,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "Fragments.",
@@ -1886,7 +1886,7 @@
   {
     "id": "alipay-19-20260810011359",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "digital",
     "account": "alipay",
     "title": "阿里云",
@@ -1934,7 +1934,7 @@
   {
     "id": "wx-127-46243717",
     "type": "income",
-    "amount": 1000.0,
+    "amount": 1000,
     "category": "bonus",
     "account": "wechat",
     "title": "爸 (前程似锦)",
@@ -1958,7 +1958,7 @@
   {
     "id": "wx-129-46243443",
     "type": "expense",
-    "amount": 11.0,
+    "amount": 11,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -1970,7 +1970,7 @@
   {
     "id": "wx-130-46243407",
     "type": "expense",
-    "amount": 12.0,
+    "amount": 12,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -1982,7 +1982,7 @@
   {
     "id": "wx-131-46243406",
     "type": "expense",
-    "amount": 63.0,
+    "amount": 63,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -2006,7 +2006,7 @@
   {
     "id": "wx-133-46242648",
     "type": "income",
-    "amount": 36.0,
+    "amount": 36,
     "category": "bonus",
     "account": "wechat",
     "title": "z",
@@ -2018,7 +2018,7 @@
   {
     "id": "wx-134-46242542",
     "type": "expense",
-    "amount": 16.0,
+    "amount": 16,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -2030,7 +2030,7 @@
   {
     "id": "wx-135-46242541",
     "type": "expense",
-    "amount": 45.0,
+    "amount": 45,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -2042,7 +2042,7 @@
   {
     "id": "wx-136-46241990",
     "type": "income",
-    "amount": 39.0,
+    "amount": 39,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "刘豪杰@深圳星火自动化",
@@ -2090,7 +2090,7 @@
   {
     "id": "wx-137-46241524",
     "type": "expense",
-    "amount": 9.0,
+    "amount": 9,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -2102,7 +2102,7 @@
   {
     "id": "wx-138-46241514",
     "type": "expense",
-    "amount": 21.0,
+    "amount": 21,
     "category": "food",
     "account": "wechat",
     "title": "农家黄牛肉",
@@ -2114,7 +2114,7 @@
   {
     "id": "wx-139-46241510",
     "type": "expense",
-    "amount": 25.0,
+    "amount": 25,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -2126,7 +2126,7 @@
   {
     "id": "wx-140-46240522",
     "type": "expense",
-    "amount": 31.0,
+    "amount": 31,
     "category": "food",
     "account": "wechat",
     "title": "农家黄牛肉",
@@ -2138,7 +2138,7 @@
   {
     "id": "wx-141-46240518",
     "type": "expense",
-    "amount": 22.0,
+    "amount": 22,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -2174,7 +2174,7 @@
   {
     "id": "wx-144-46239662",
     "type": "expense",
-    "amount": 128.0,
+    "amount": 128,
     "category": "other",
     "account": "wechat",
     "title": "浦东香烟老店",
@@ -2186,7 +2186,7 @@
   {
     "id": "wx-145-46239660",
     "type": "expense",
-    "amount": 34.0,
+    "amount": 34,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -2198,7 +2198,7 @@
   {
     "id": "wx-146-46239651",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "T…WenJie",
@@ -2234,7 +2234,7 @@
   {
     "id": "wx-149-46239570",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "other",
     "account": "bank_debit",
     "title": "蜜雪冰城",
@@ -2246,7 +2246,7 @@
   {
     "id": "wx-150-46239463",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -2258,7 +2258,7 @@
   {
     "id": "wx-151-46238710",
     "type": "income",
-    "amount": 80.0,
+    "amount": 80,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "王",
@@ -2294,7 +2294,7 @@
   {
     "id": "wx-154-46238605",
     "type": "expense",
-    "amount": 34.0,
+    "amount": 34,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -2306,7 +2306,7 @@
   {
     "id": "wx-155-46238409",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -2318,7 +2318,7 @@
   {
     "id": "alipay-21-20260804080537",
     "type": "expense",
-    "amount": 469.0,
+    "amount": 469,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "MiniMax (TokenPlan)",
@@ -2354,7 +2354,7 @@
   {
     "id": "wx-157-46237583",
     "type": "expense",
-    "amount": 34.0,
+    "amount": 34,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -2414,7 +2414,7 @@
   {
     "id": "wx-159-46237420",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -2474,7 +2474,7 @@
   {
     "id": "wx-161-46236685",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -2486,7 +2486,7 @@
   {
     "id": "wx-162-46236619",
     "type": "income",
-    "amount": 75.0,
+    "amount": 75,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "巴格蛮",
@@ -2510,7 +2510,7 @@
   {
     "id": "wx-164-46236265",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -2522,7 +2522,7 @@
   {
     "id": "wx-165-46235975",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -2582,7 +2582,7 @@
   {
     "id": "wx-167-46235818",
     "type": "expense",
-    "amount": 25.0,
+    "amount": 25,
     "category": "other",
     "account": "wechat",
     "title": "爱余发发艺",
@@ -2642,7 +2642,7 @@
   {
     "id": "wx-169-46235473",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -2666,7 +2666,7 @@
   {
     "id": "wx-171-46235450",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -2702,7 +2702,7 @@
   {
     "id": "wx-174-46234754",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -2726,7 +2726,7 @@
   {
     "id": "wx-176-46234268",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "未",
@@ -2750,7 +2750,7 @@
   {
     "id": "wx-178-46234261",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -2762,7 +2762,7 @@
   {
     "id": "wx-179-46233795",
     "type": "income",
-    "amount": 80.0,
+    "amount": 80,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "熊本喵",
@@ -2774,7 +2774,7 @@
   {
     "id": "wx-180-46233527",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -2846,7 +2846,7 @@
   {
     "id": "wx-183-46233262",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -2906,7 +2906,7 @@
   {
     "id": "wx-185-46232596",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -2954,7 +2954,7 @@
   {
     "id": "wx-189-46232263",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -2978,7 +2978,7 @@
   {
     "id": "wx-191-46231360",
     "type": "income",
-    "amount": 40.0,
+    "amount": 40,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "一天世界晴",
@@ -2990,7 +2990,7 @@
   {
     "id": "wx-192-46231360",
     "type": "income",
-    "amount": 100.0,
+    "amount": 100,
     "category": "bonus",
     "account": "wechat",
     "title": "Ekko",
@@ -3014,7 +3014,7 @@
   {
     "id": "wx-194-46231258",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -3062,7 +3062,7 @@
   {
     "id": "wx-198-46230272",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -3074,7 +3074,7 @@
   {
     "id": "wx-199-46230020",
     "type": "income",
-    "amount": 40.0,
+    "amount": 40,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "充电中",
@@ -3182,7 +3182,7 @@
   {
     "id": "wx-200-46229591",
     "type": "expense",
-    "amount": 6.0,
+    "amount": 6,
     "category": "digital",
     "account": "wechat",
     "title": "iCloud 由云上贵州运营",
@@ -3254,7 +3254,7 @@
   {
     "id": "wx-203-46229290",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -3314,7 +3314,7 @@
   {
     "id": "alipay2-41-202607252300",
     "type": "expense",
-    "amount": 200.0,
+    "amount": 200,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "狐***华",
@@ -3338,7 +3338,7 @@
   {
     "id": "wx-209-46228290",
     "type": "expense",
-    "amount": 11.0,
+    "amount": 11,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -3350,7 +3350,7 @@
   {
     "id": "wx-210-46228275",
     "type": "expense",
-    "amount": 3.0,
+    "amount": 3,
     "category": "shopping",
     "account": "wechat",
     "title": "桔园便利店",
@@ -3398,7 +3398,7 @@
   {
     "id": "wx-212-46227857",
     "type": "expense",
-    "amount": 24.0,
+    "amount": 24,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -3518,7 +3518,7 @@
   {
     "id": "wx-217-46227300",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -3578,7 +3578,7 @@
   {
     "id": "wx-218-46226908",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -3602,7 +3602,7 @@
   {
     "id": "wx-219-46226725",
     "type": "income",
-    "amount": 15.0,
+    "amount": 15,
     "category": "bonus",
     "account": "wechat",
     "title": "xin.tong",
@@ -3686,7 +3686,7 @@
   {
     "id": "wx-223-46225696",
     "type": "income",
-    "amount": 100.0,
+    "amount": 100,
     "category": "bonus",
     "account": "wechat",
     "title": "luke",
@@ -3770,7 +3770,7 @@
   {
     "id": "wx-226-46224907",
     "type": "expense",
-    "amount": 34.0,
+    "amount": 34,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -3782,7 +3782,7 @@
   {
     "id": "wx-227-46224881",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "xin.tong",
@@ -3806,7 +3806,7 @@
   {
     "id": "wx-228-46224417",
     "type": "expense",
-    "amount": 15.0,
+    "amount": 15,
     "category": "social",
     "account": "wechat",
     "title": "恋",
@@ -3818,7 +3818,7 @@
   {
     "id": "wx-230-46224414",
     "type": "income",
-    "amount": 110.0,
+    "amount": 110,
     "category": "bonus",
     "account": "wechat",
     "title": "恋",
@@ -3830,7 +3830,7 @@
   {
     "id": "wx-231-46224414",
     "type": "expense",
-    "amount": 15.0,
+    "amount": 15,
     "category": "social",
     "account": "wechat",
     "title": "恋",
@@ -3866,7 +3866,7 @@
   {
     "id": "wx-234-46224263",
     "type": "income",
-    "amount": 5.0,
+    "amount": 5,
     "category": "bonus",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -3878,7 +3878,7 @@
   {
     "id": "wx-235-46224260",
     "type": "expense",
-    "amount": 151.0,
+    "amount": 151,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -3890,7 +3890,7 @@
   {
     "id": "wx-236-46224092",
     "type": "income",
-    "amount": 80.0,
+    "amount": 80,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "林间清雾",
@@ -3938,7 +3938,7 @@
   {
     "id": "wx-238-46223278",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -3950,7 +3950,7 @@
   {
     "id": "wx-239-46222721",
     "type": "income",
-    "amount": 100.0,
+    "amount": 100,
     "category": "bonus",
     "account": "wechat",
     "title": "乐意",
@@ -3986,7 +3986,7 @@
   {
     "id": "alipay-23-20260718201927",
     "type": "income",
-    "amount": 72.0,
+    "amount": 72,
     "category": "other",
     "account": "alipay",
     "title": "*杰",
@@ -3998,7 +3998,7 @@
   {
     "id": "wx-241-46221842",
     "type": "income",
-    "amount": 36.0,
+    "amount": 36,
     "category": "bonus",
     "account": "wechat",
     "title": "DDbd",
@@ -4022,7 +4022,7 @@
   {
     "id": "wx-242-46221440",
     "type": "income",
-    "amount": 25.0,
+    "amount": 25,
     "category": "bonus",
     "account": "wechat",
     "title": "潘潞扬^_^",
@@ -4046,7 +4046,7 @@
   {
     "id": "wx-244-46221298",
     "type": "expense",
-    "amount": 25.0,
+    "amount": 25,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -4058,7 +4058,7 @@
   {
     "id": "wx-245-46221038",
     "type": "expense",
-    "amount": 7.0,
+    "amount": 7,
     "category": "shopping",
     "account": "wechat",
     "title": "优川便利店",
@@ -4070,7 +4070,7 @@
   {
     "id": "wx-246-46221012",
     "type": "expense",
-    "amount": 42.0,
+    "amount": 42,
     "category": "food",
     "account": "wechat",
     "title": "沙县小吃",
@@ -4166,7 +4166,7 @@
   {
     "id": "wx-248-46220807",
     "type": "income",
-    "amount": 17.0,
+    "amount": 17,
     "category": "bonus",
     "account": "wechat",
     "title": "风往北吹",
@@ -4190,7 +4190,7 @@
   {
     "id": "wx-249-46220741",
     "type": "income",
-    "amount": 55.0,
+    "amount": 55,
     "category": "bonus",
     "account": "wechat",
     "title": "秋刀鱼不会过期",
@@ -4274,7 +4274,7 @@
   {
     "id": "wx-253-46220009",
     "type": "expense",
-    "amount": 57.0,
+    "amount": 57,
     "category": "other",
     "account": "wechat",
     "title": "麻辣烫",
@@ -4358,7 +4358,7 @@
   {
     "id": "wx-258-46218698",
     "type": "expense",
-    "amount": 1000.0,
+    "amount": 1000,
     "category": "social",
     "account": "bank_debit",
     "title": "爸 (前程似锦)",
@@ -4370,7 +4370,7 @@
   {
     "id": "alipay-25-20260715162637",
     "type": "expense",
-    "amount": 199.0,
+    "amount": 199,
     "category": "other",
     "account": "alipay",
     "title": "LucidaCloud Limited",
@@ -4418,7 +4418,7 @@
   {
     "id": "wx-260-46217802",
     "type": "expense",
-    "amount": 9.0,
+    "amount": 9,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -4430,7 +4430,7 @@
   {
     "id": "wx-261-46217800",
     "type": "expense",
-    "amount": 22.0,
+    "amount": 22,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -4502,7 +4502,7 @@
   {
     "id": "wx-262-46217522",
     "type": "expense",
-    "amount": 538.0,
+    "amount": 538,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -4514,7 +4514,7 @@
   {
     "id": "wx-263-46216928",
     "type": "income",
-    "amount": 25.0,
+    "amount": 25,
     "category": "bonus",
     "account": "wechat",
     "title": "忘不掉你的微笑",
@@ -4526,7 +4526,7 @@
   {
     "id": "wx-264-46216763",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "the青",
@@ -4538,7 +4538,7 @@
   {
     "id": "wx-265-46216631",
     "type": "expense",
-    "amount": 131.0,
+    "amount": 131,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -4550,7 +4550,7 @@
   {
     "id": "wx-266-46216622",
     "type": "income",
-    "amount": 25.0,
+    "amount": 25,
     "category": "bonus",
     "account": "wechat",
     "title": "默默守护",
@@ -4562,7 +4562,7 @@
   {
     "id": "wx-267-46216437",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "骁",
@@ -4610,7 +4610,7 @@
   {
     "id": "wx-268-46215935",
     "type": "expense",
-    "amount": 5.0,
+    "amount": 5,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -4658,7 +4658,7 @@
   {
     "id": "wx-269-46215852",
     "type": "income",
-    "amount": 25.0,
+    "amount": 25,
     "category": "other",
     "account": "wechat",
     "title": "恋",
@@ -4802,7 +4802,7 @@
   {
     "id": "wx-270-46213482",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -4838,7 +4838,7 @@
   {
     "id": "wx-272-46212976",
     "type": "expense",
-    "amount": 750.0,
+    "amount": 750,
     "category": "social",
     "account": "wechat",
     "title": "苏泓羽 (花开富贵)",
@@ -4850,7 +4850,7 @@
   {
     "id": "alipay-26-20260709232554",
     "type": "income",
-    "amount": 750.0,
+    "amount": 750,
     "category": "bonus",
     "account": "alipay",
     "title": "怕冷的毛裤",
@@ -4862,7 +4862,7 @@
   {
     "id": "wx-273-46212729",
     "type": "expense",
-    "amount": 199.0,
+    "amount": 199,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -4886,7 +4886,7 @@
   {
     "id": "wx-275-46211863",
     "type": "expense",
-    "amount": 40.0,
+    "amount": 40,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -4898,7 +4898,7 @@
   {
     "id": "wx-276-46211609",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -4958,7 +4958,7 @@
   {
     "id": "wx-278-46211493",
     "type": "income",
-    "amount": 40.0,
+    "amount": 40,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "金雷",
@@ -4970,7 +4970,7 @@
   {
     "id": "wx-279-46210985",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "food",
     "account": "wechat",
     "title": "胖哥凉皮",
@@ -5030,7 +5030,7 @@
   {
     "id": "wx-280-46210822",
     "type": "income",
-    "amount": 40.0,
+    "amount": 40,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "刘豪杰@深圳星火自动化",
@@ -5042,7 +5042,7 @@
   {
     "id": "wx-281-46210746",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "social",
     "account": "wechat",
     "title": "真由理",
@@ -5102,7 +5102,7 @@
   {
     "id": "wx-282-46210528",
     "type": "expense",
-    "amount": 16.0,
+    "amount": 16,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -5114,7 +5114,7 @@
   {
     "id": "wx-283-46210527",
     "type": "expense",
-    "amount": 25.0,
+    "amount": 25,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -5150,7 +5150,7 @@
   {
     "id": "alipay-27-20260706122841",
     "type": "expense",
-    "amount": 469.0,
+    "amount": 469,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "MiniMax (TokenPlan)",
@@ -5162,7 +5162,7 @@
   {
     "id": "wx-284-46209485",
     "type": "income",
-    "amount": 50.0,
+    "amount": 50,
     "category": "bonus",
     "account": "wechat",
     "title": "真由理",
@@ -5174,7 +5174,7 @@
   {
     "id": "wx-285-46209484",
     "type": "income",
-    "amount": 50.0,
+    "amount": 50,
     "category": "other",
     "account": "wechat",
     "title": "23",
@@ -5198,7 +5198,7 @@
   {
     "id": "alipay2-115-202607052300",
     "type": "income",
-    "amount": 22.0,
+    "amount": 22,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "****5",
@@ -5222,7 +5222,7 @@
   {
     "id": "wx-288-46208418",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -5306,7 +5306,7 @@
   {
     "id": "wx-290-46207377",
     "type": "expense",
-    "amount": 25.0,
+    "amount": 25,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -5318,7 +5318,7 @@
   {
     "id": "wx-291-46207359",
     "type": "income",
-    "amount": 40.0,
+    "amount": 40,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "慎思笃行 臻于至善",
@@ -5402,7 +5402,7 @@
   {
     "id": "wx-293-46206385",
     "type": "income",
-    "amount": 75.0,
+    "amount": 75,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "巴格蛮",
@@ -5438,7 +5438,7 @@
   {
     "id": "wx-296-46206349",
     "type": "expense",
-    "amount": 11.0,
+    "amount": 11,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -5486,7 +5486,7 @@
   {
     "id": "wx-298-46205855",
     "type": "income",
-    "amount": 40.0,
+    "amount": 40,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "王",
@@ -5498,7 +5498,7 @@
   {
     "id": "wx-299-46205811",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "social",
     "account": "wechat",
     "title": "秋刀鱼不会过期",
@@ -5558,7 +5558,7 @@
   {
     "id": "wx-302-46205388",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -5702,7 +5702,7 @@
   {
     "id": "wx-303-46204839",
     "type": "expense",
-    "amount": 9.0,
+    "amount": 9,
     "category": "social",
     "account": "wechat",
     "title": "乐意",
@@ -5714,7 +5714,7 @@
   {
     "id": "wx-304-46204839",
     "type": "income",
-    "amount": 100.0,
+    "amount": 100,
     "category": "bonus",
     "account": "wechat",
     "title": "乐意",
@@ -5774,7 +5774,7 @@
   {
     "id": "wx-306-46204619",
     "type": "expense",
-    "amount": 22.0,
+    "amount": 22,
     "category": "other",
     "account": "wechat",
     "title": "顺丰速运",
@@ -5798,7 +5798,7 @@
   {
     "id": "wx-308-46204498",
     "type": "income",
-    "amount": 95.0,
+    "amount": 95,
     "category": "bonus",
     "account": "wechat",
     "title": "婷婷黑凤梨😘",
@@ -5810,7 +5810,7 @@
   {
     "id": "wx-309-46204457",
     "type": "expense",
-    "amount": 132.0,
+    "amount": 132,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -5822,7 +5822,7 @@
   {
     "id": "wx-310-46204453",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "social",
     "account": "wechat",
     "title": "创鸿广告  Miss钟",
@@ -5834,7 +5834,7 @@
   {
     "id": "wx-311-46204443",
     "type": "expense",
-    "amount": 25.0,
+    "amount": 25,
     "category": "other",
     "account": "wechat",
     "title": "爱余发发艺",
@@ -5846,7 +5846,7 @@
   {
     "id": "wx-312-46204382",
     "type": "expense",
-    "amount": 18.0,
+    "amount": 18,
     "category": "other",
     "account": "wechat",
     "title": "顺丰速运",
@@ -5858,7 +5858,7 @@
   {
     "id": "wx-313-46204322",
     "type": "expense",
-    "amount": 1000.0,
+    "amount": 1000,
     "category": "tokenmp_project",
     "account": "bank_debit",
     "title": "闲鱼用户等待秋天",
@@ -5870,7 +5870,7 @@
   {
     "id": "alipay2-141-202607012300",
     "type": "expense",
-    "amount": 1000.0,
+    "amount": 1000,
     "category": "food",
     "account": "alipay",
     "title": "x***4",
@@ -5894,7 +5894,7 @@
   {
     "id": "wx-315-46203853",
     "type": "income",
-    "amount": 25.0,
+    "amount": 25,
     "category": "bonus",
     "account": "wechat",
     "title": "MaxBraving",
@@ -5906,7 +5906,7 @@
   {
     "id": "wx-316-46203764",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -5954,7 +5954,7 @@
   {
     "id": "wx-320-46203342",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -5966,7 +5966,7 @@
   {
     "id": "wx-321-46203250",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "social",
     "account": "wechat",
     "title": "梁晶晶 (ㅤ)",
@@ -5978,7 +5978,7 @@
   {
     "id": "wx-322-46202688",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -6050,7 +6050,7 @@
   {
     "id": "wx-327-46202535",
     "type": "expense",
-    "amount": 538.0,
+    "amount": 538,
     "category": "tokenmp_project",
     "account": "bank_debit",
     "title": "讯飞开放平台",
@@ -6062,7 +6062,7 @@
   {
     "id": "wx-328-46202535",
     "type": "expense",
-    "amount": 538.0,
+    "amount": 538,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -6086,7 +6086,7 @@
   {
     "id": "wx-330-46202419",
     "type": "income",
-    "amount": 50.0,
+    "amount": 50,
     "category": "bonus",
     "account": "wechat",
     "title": "Ekko",
@@ -6098,7 +6098,7 @@
   {
     "id": "wx-331-46202369",
     "type": "expense",
-    "amount": 2.0,
+    "amount": 2,
     "category": "food",
     "account": "wechat",
     "title": "老仙居",
@@ -6122,7 +6122,7 @@
   {
     "id": "wx-333-46202368",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -6146,7 +6146,7 @@
   {
     "id": "wx-334-46201443",
     "type": "income",
-    "amount": 80.0,
+    "amount": 80,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "熊本喵",
@@ -6170,7 +6170,7 @@
   {
     "id": "wx-336-46201301",
     "type": "expense",
-    "amount": 15.0,
+    "amount": 15,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -6182,7 +6182,7 @@
   {
     "id": "wx-337-46201173",
     "type": "income",
-    "amount": 25.0,
+    "amount": 25,
     "category": "bonus",
     "account": "wechat",
     "title": "时振刚",
@@ -6266,7 +6266,7 @@
   {
     "id": "alipay2-150-202606272300",
     "type": "expense",
-    "amount": 18.0,
+    "amount": 18,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "t***4",
@@ -6326,7 +6326,7 @@
   {
     "id": "wx-340-46199591",
     "type": "expense",
-    "amount": 6.0,
+    "amount": 6,
     "category": "digital",
     "account": "wechat",
     "title": "iCloud 由云上贵州运营",
@@ -6338,7 +6338,7 @@
   {
     "id": "wx-342-46199436",
     "type": "expense",
-    "amount": 111.0,
+    "amount": 111,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -6446,7 +6446,7 @@
   {
     "id": "wx-347-46198314",
     "type": "expense",
-    "amount": 111.0,
+    "amount": 111,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -6458,7 +6458,7 @@
   {
     "id": "wx-348-46198314",
     "type": "expense",
-    "amount": 111.0,
+    "amount": 111,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -6470,7 +6470,7 @@
   {
     "id": "wx-349-46198314",
     "type": "expense",
-    "amount": 111.0,
+    "amount": 111,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -6482,7 +6482,7 @@
   {
     "id": "wx-350-46198286",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -6506,7 +6506,7 @@
   {
     "id": "wx-351-46198017",
     "type": "income",
-    "amount": 215.0,
+    "amount": 215,
     "category": "bonus",
     "account": "wechat",
     "title": "佩奇🐽",
@@ -6530,7 +6530,7 @@
   {
     "id": "wx-353-46197543",
     "type": "income",
-    "amount": 100.0,
+    "amount": 100,
     "category": "bonus",
     "account": "wechat",
     "title": "乐意",
@@ -6566,7 +6566,7 @@
   {
     "id": "wx-354-46196876",
     "type": "expense",
-    "amount": 39.0,
+    "amount": 39,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -6578,7 +6578,7 @@
   {
     "id": "wx-355-46196876",
     "type": "expense",
-    "amount": 39.0,
+    "amount": 39,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -6590,7 +6590,7 @@
   {
     "id": "wx-356-46196873",
     "type": "expense",
-    "amount": 538.0,
+    "amount": 538,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -6602,7 +6602,7 @@
   {
     "id": "wx-357-46196873",
     "type": "expense",
-    "amount": 538.0,
+    "amount": 538,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -6614,7 +6614,7 @@
   {
     "id": "wx-358-46196824",
     "type": "expense",
-    "amount": 200.0,
+    "amount": 200,
     "category": "food",
     "account": "wechat",
     "title": "在那遥远的地方",
@@ -6638,7 +6638,7 @@
   {
     "id": "wx-359-46196820",
     "type": "expense",
-    "amount": 12.0,
+    "amount": 12,
     "category": "shopping",
     "account": "wechat",
     "title": "胡端超市",
@@ -6746,7 +6746,7 @@
   {
     "id": "wx-361-46196278",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "food",
     "account": "wechat",
     "title": "小苹果",
@@ -6758,7 +6758,7 @@
   {
     "id": "wx-362-46196276",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -6770,7 +6770,7 @@
   {
     "id": "wx-363-46196223",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "时振刚",
@@ -6782,7 +6782,7 @@
   {
     "id": "wx-364-46196038",
     "type": "income",
-    "amount": 88.0,
+    "amount": 88,
     "category": "bonus",
     "account": "wechat",
     "title": "冯十二（群发求带）",
@@ -6830,7 +6830,7 @@
   {
     "id": "wx-365-46195690",
     "type": "income",
-    "amount": 100.0,
+    "amount": 100,
     "category": "bonus",
     "account": "wechat",
     "title": "梁晶晶 (ㅤ)",
@@ -6854,7 +6854,7 @@
   {
     "id": "wx-367-46195552",
     "type": "income",
-    "amount": 38.0,
+    "amount": 38,
     "category": "bonus",
     "account": "wechat",
     "title": "AI助手",
@@ -6890,7 +6890,7 @@
   {
     "id": "wx-369-46195307",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -6902,7 +6902,7 @@
   {
     "id": "wx-370-46194995",
     "type": "expense",
-    "amount": 54.0,
+    "amount": 54,
     "category": "other",
     "account": "wechat",
     "title": "鸭噜噜卤味",
@@ -6950,7 +6950,7 @@
   {
     "id": "wx-372-46194316",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "food",
     "account": "wechat",
     "title": "小苹果",
@@ -6962,7 +6962,7 @@
   {
     "id": "wx-373-46194314",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -6986,7 +6986,7 @@
   {
     "id": "alipay2-173-202606202200",
     "type": "expense",
-    "amount": 199.0,
+    "amount": 199,
     "category": "other",
     "account": "alipay",
     "title": "LucidaCloud Limited",
@@ -6998,7 +6998,7 @@
   {
     "id": "wx-374-46193921",
     "type": "income",
-    "amount": 25.0,
+    "amount": 25,
     "category": "bonus",
     "account": "wechat",
     "title": "LiZz",
@@ -7082,7 +7082,7 @@
   {
     "id": "wx-375-46193432",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "social",
     "account": "bank_debit",
     "title": "程相轩 (南约.)",
@@ -7094,7 +7094,7 @@
   {
     "id": "wx-376-46193321",
     "type": "expense",
-    "amount": 14.0,
+    "amount": 14,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -7166,7 +7166,7 @@
   {
     "id": "wx-380-46191815",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "social",
     "account": "wechat",
     "title": "梁晶晶 (ㅤ)",
@@ -7298,7 +7298,7 @@
   {
     "id": "alipay2-189-202606182300",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "闲鱼服务费",
@@ -7310,7 +7310,7 @@
   {
     "id": "wx-383-46191372",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "DDbd",
@@ -7322,7 +7322,7 @@
   {
     "id": "wx-384-46191308",
     "type": "expense",
-    "amount": 5.0,
+    "amount": 5,
     "category": "food",
     "account": "wechat",
     "title": "梁晶晶 (ㅤ)",
@@ -7334,7 +7334,7 @@
   {
     "id": "wx-385-46191237",
     "type": "expense",
-    "amount": 22.0,
+    "amount": 22,
     "category": "food",
     "account": "wechat",
     "title": "小苹果",
@@ -7346,7 +7346,7 @@
   {
     "id": "wx-386-46191214",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "social",
     "account": "bank_debit",
     "title": "梁晶晶 (ㅤ)",
@@ -7358,7 +7358,7 @@
   {
     "id": "wx-387-46191024",
     "type": "expense",
-    "amount": 538.0,
+    "amount": 538,
     "category": "tokenmp_project",
     "account": "bank_debit",
     "title": "讯飞开放平台",
@@ -7382,7 +7382,7 @@
   {
     "id": "wx-388-46190771",
     "type": "expense",
-    "amount": 39.0,
+    "amount": 39,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -7394,7 +7394,7 @@
   {
     "id": "alipay2-191-202606172300",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "闲鱼服务费",
@@ -7406,7 +7406,7 @@
   {
     "id": "alipay-35-20260617173902",
     "type": "expense",
-    "amount": 5.0,
+    "amount": 5,
     "category": "transport",
     "account": "alipay",
     "title": "台州市财政局",
@@ -7418,7 +7418,7 @@
   {
     "id": "wx-389-46190303",
     "type": "expense",
-    "amount": 21.0,
+    "amount": 21,
     "category": "food",
     "account": "wechat",
     "title": "小苹果",
@@ -7430,7 +7430,7 @@
   {
     "id": "wx-390-46189965",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "food",
     "account": "wechat",
     "title": "胖哥凉皮",
@@ -7550,7 +7550,7 @@
   {
     "id": "wx-394-46189415",
     "type": "expense",
-    "amount": 11.0,
+    "amount": 11,
     "category": "food",
     "account": "wechat",
     "title": "小苹果",
@@ -7562,7 +7562,7 @@
   {
     "id": "wx-395-46189383",
     "type": "expense",
-    "amount": 19.0,
+    "amount": 19,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -7574,7 +7574,7 @@
   {
     "id": "wx-396-46189382",
     "type": "expense",
-    "amount": 19.0,
+    "amount": 19,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -7598,7 +7598,7 @@
   {
     "id": "wx-398-46188920",
     "type": "expense",
-    "amount": 19.0,
+    "amount": 19,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -7610,7 +7610,7 @@
   {
     "id": "wx-399-46188920",
     "type": "expense",
-    "amount": 19.0,
+    "amount": 19,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -7658,7 +7658,7 @@
   {
     "id": "wx-401-46188288",
     "type": "expense",
-    "amount": 27.0,
+    "amount": 27,
     "category": "food",
     "account": "wechat",
     "title": "小苹果",
@@ -7682,7 +7682,7 @@
   {
     "id": "wx-402-46187940",
     "type": "expense",
-    "amount": 141.0,
+    "amount": 141,
     "category": "shopping",
     "account": "bank_debit",
     "title": "弘宇超市",
@@ -7694,7 +7694,7 @@
   {
     "id": "wx-403-46187815",
     "type": "expense",
-    "amount": 60.0,
+    "amount": 60,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -7742,7 +7742,7 @@
   {
     "id": "wx-404-46187491",
     "type": "expense",
-    "amount": 30.0,
+    "amount": 30,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -7766,7 +7766,7 @@
   {
     "id": "wx-406-46186730",
     "type": "expense",
-    "amount": 30.0,
+    "amount": 30,
     "category": "digital",
     "account": "wechat",
     "title": "Apple",
@@ -7814,7 +7814,7 @@
   {
     "id": "wx-407-46186636",
     "type": "expense",
-    "amount": 39.0,
+    "amount": 39,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -7862,7 +7862,7 @@
   {
     "id": "wx-408-46186278",
     "type": "expense",
-    "amount": 21.0,
+    "amount": 21,
     "category": "food",
     "account": "wechat",
     "title": "小苹果",
@@ -7946,7 +7946,7 @@
   {
     "id": "alipay-38-20260610161129",
     "type": "expense",
-    "amount": 25.0,
+    "amount": 25,
     "category": "shopping",
     "account": "alipay",
     "title": "t***5",
@@ -7982,7 +7982,7 @@
   {
     "id": "wx-411-46182906",
     "type": "income",
-    "amount": 300.0,
+    "amount": 300,
     "category": "bonus",
     "account": "wechat",
     "title": "爸 (前程似锦)",
@@ -7994,7 +7994,7 @@
   {
     "id": "wx-412-46182886",
     "type": "expense",
-    "amount": 6.0,
+    "amount": 6,
     "category": "shopping",
     "account": "wechat",
     "title": "鑫鑫来超市",
@@ -8030,7 +8030,7 @@
   {
     "id": "wx-415-46182862",
     "type": "expense",
-    "amount": 25.0,
+    "amount": 25,
     "category": "medical",
     "account": "wechat",
     "title": "台州市中医院",
@@ -8042,7 +8042,7 @@
   {
     "id": "wx-416-46182860",
     "type": "expense",
-    "amount": 1.0,
+    "amount": 1,
     "category": "food",
     "account": "wechat",
     "title": "红叶醉秋",
@@ -8054,7 +8054,7 @@
   {
     "id": "wx-417-46182722",
     "type": "expense",
-    "amount": 28.0,
+    "amount": 28,
     "category": "food",
     "account": "wechat",
     "title": "美团",
@@ -8114,7 +8114,7 @@
   {
     "id": "wx-422-46180837",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "social",
     "account": "wechat",
     "title": "W",
@@ -8126,7 +8126,7 @@
   {
     "id": "wx-423-46180559",
     "type": "expense",
-    "amount": 15.0,
+    "amount": 15,
     "category": "food",
     "account": "wechat",
     "title": "美团",
@@ -8138,7 +8138,7 @@
   {
     "id": "wx-424-46179951",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "shopping",
     "account": "wechat",
     "title": "优川便利店",
@@ -8150,7 +8150,7 @@
   {
     "id": "wx-425-46179905",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "other",
     "account": "wechat",
     "title": "硅基流动",
@@ -8162,7 +8162,7 @@
   {
     "id": "wx-426-46179875",
     "type": "expense",
-    "amount": 60.0,
+    "amount": 60,
     "category": "social",
     "account": "wechat",
     "title": "W",
@@ -8174,7 +8174,7 @@
   {
     "id": "alipay2-213-202606062300",
     "type": "expense",
-    "amount": 15.0,
+    "amount": 15,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "x***4",
@@ -8234,7 +8234,7 @@
   {
     "id": "wx-427-46179736",
     "type": "expense",
-    "amount": 6.0,
+    "amount": 6,
     "category": "digital",
     "account": "wechat",
     "title": "Apple",
@@ -8270,7 +8270,7 @@
   {
     "id": "wx-430-46179618",
     "type": "income",
-    "amount": 30.0,
+    "amount": 30,
     "category": "other",
     "account": "wechat",
     "title": "刘豪杰@深圳星火自动化",
@@ -8342,7 +8342,7 @@
   {
     "id": "wx-433-46179534",
     "type": "expense",
-    "amount": 500.0,
+    "amount": 500,
     "category": "other",
     "account": "wechat",
     "title": "日常收支",
@@ -8378,7 +8378,7 @@
   {
     "id": "wx-435-46179158",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "social",
     "account": "wechat",
     "title": "梁晶晶 (ㅤ)",
@@ -8402,7 +8402,7 @@
   {
     "id": "wx-436-46178708",
     "type": "income",
-    "amount": 500.0,
+    "amount": 500,
     "category": "bonus",
     "account": "wechat",
     "title": "爸 (前程似锦)",
@@ -8450,7 +8450,7 @@
   {
     "id": "alipay2-224-202606047887",
     "type": "expense",
-    "amount": 300.0,
+    "amount": 300,
     "category": "deposit_asset",
     "account": "alipay",
     "title": "闲鱼卖家保证金 (可退押金)",
@@ -8462,7 +8462,7 @@
   {
     "id": "wx-439-46177807",
     "type": "expense",
-    "amount": 300.0,
+    "amount": 300,
     "category": "other",
     "account": "bank_debit",
     "title": "农业银行(9775)",
@@ -8474,7 +8474,7 @@
   {
     "id": "alipay2-225-202606047933",
     "type": "expense",
-    "amount": 200.0,
+    "amount": 200,
     "category": "deposit_asset",
     "account": "alipay",
     "title": "闲鱼卖家保证金 (可退押金)",
@@ -8498,7 +8498,7 @@
   {
     "id": "wx-441-46177735",
     "type": "expense",
-    "amount": 199.0,
+    "amount": 199,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -8546,7 +8546,7 @@
   {
     "id": "wx-445-46176856",
     "type": "expense",
-    "amount": 12.0,
+    "amount": 12,
     "category": "shopping",
     "account": "wechat",
     "title": "优川便利店",
@@ -8630,7 +8630,7 @@
   {
     "id": "alipay2-232-202606032300",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "闲鱼服务费",
@@ -8714,7 +8714,7 @@
   {
     "id": "wx-450-46176095",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "social",
     "account": "wechat",
     "title": "梁晶晶 (ㅤ)",
@@ -8726,7 +8726,7 @@
   {
     "id": "wx-451-46176095",
     "type": "income",
-    "amount": 10.0,
+    "amount": 10,
     "category": "other",
     "account": "wechat",
     "title": "梁晶晶",
@@ -8750,7 +8750,7 @@
   {
     "id": "wx-452-46175988",
     "type": "income",
-    "amount": 40.0,
+    "amount": 40,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "欲语",
@@ -8774,7 +8774,7 @@
   {
     "id": "wx-454-46175812",
     "type": "expense",
-    "amount": 39.0,
+    "amount": 39,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -8786,7 +8786,7 @@
   {
     "id": "wx-455-46175808",
     "type": "expense",
-    "amount": 39.0,
+    "amount": 39,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -8822,7 +8822,7 @@
   {
     "id": "wx-458-46175771",
     "type": "expense",
-    "amount": 300.0,
+    "amount": 300,
     "category": "social",
     "account": "wechat",
     "title": "发出群红包",
@@ -8882,7 +8882,7 @@
   {
     "id": "alipay2-236-202606022300",
     "type": "income",
-    "amount": 32.0,
+    "amount": 32,
     "category": "other",
     "account": "alipay",
     "title": "****h",
@@ -8966,7 +8966,7 @@
   {
     "id": "alipay2-242-202606022300",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "闲鱼服务费",
@@ -8990,7 +8990,7 @@
   {
     "id": "wx-465-46174772",
     "type": "expense",
-    "amount": 119.0,
+    "amount": 119,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -9002,7 +9002,7 @@
   {
     "id": "alipay-40-20260601154440",
     "type": "expense",
-    "amount": 39.0,
+    "amount": 39,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "科大讯飞股份有限公司",
@@ -9038,7 +9038,7 @@
   {
     "id": "wx-468-46174570",
     "type": "income",
-    "amount": 27.0,
+    "amount": 27,
     "category": "food",
     "account": "wechat",
     "title": "💙。峰",
@@ -9050,7 +9050,7 @@
   {
     "id": "wx-469-46174485",
     "type": "expense",
-    "amount": 119.0,
+    "amount": 119,
     "category": "digital",
     "account": "wechat",
     "title": "稀宇科技",
@@ -9098,7 +9098,7 @@
   {
     "id": "wx-471-46173973",
     "type": "expense",
-    "amount": 15.0,
+    "amount": 15,
     "category": "social",
     "account": "wechat",
     "title": "梁晶晶 (ㅤ)",
@@ -9110,7 +9110,7 @@
   {
     "id": "wx-472-46173795",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -9122,7 +9122,7 @@
   {
     "id": "wx-473-46173636",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "food",
     "account": "wechat",
     "title": "兰州拉面",
@@ -9134,7 +9134,7 @@
   {
     "id": "alipay2-244-202605312300",
     "type": "expense",
-    "amount": 15.0,
+    "amount": 15,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "闲鱼服务费",
@@ -9158,7 +9158,7 @@
   {
     "id": "wx-475-46173063",
     "type": "expense",
-    "amount": 5.0,
+    "amount": 5,
     "category": "social",
     "account": "wechat",
     "title": "梁晶晶 (ㅤ)",
@@ -9170,7 +9170,7 @@
   {
     "id": "wx-476-46173052",
     "type": "expense",
-    "amount": 48.0,
+    "amount": 48,
     "category": "food",
     "account": "wechat",
     "title": "皇帝",
@@ -9182,7 +9182,7 @@
   {
     "id": "wx-477-46173043",
     "type": "expense",
-    "amount": 1.0,
+    "amount": 1,
     "category": "social",
     "account": "wechat",
     "title": "梁晶晶 (ㅤ)",
@@ -9194,7 +9194,7 @@
   {
     "id": "wx-478-46173043",
     "type": "expense",
-    "amount": 5.0,
+    "amount": 5,
     "category": "shopping",
     "account": "wechat",
     "title": "美宜佳便利店",
@@ -9254,7 +9254,7 @@
   {
     "id": "wx-483-46172715",
     "type": "expense",
-    "amount": 39.0,
+    "amount": 39,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -9266,7 +9266,7 @@
   {
     "id": "wx-484-46172713",
     "type": "expense",
-    "amount": 39.0,
+    "amount": 39,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -9302,7 +9302,7 @@
   {
     "id": "wx-487-46172022",
     "type": "income",
-    "amount": 300.0,
+    "amount": 300,
     "category": "bonus",
     "account": "wechat",
     "title": "爸 (前程似锦)",
@@ -9338,7 +9338,7 @@
   {
     "id": "wx-490-46171813",
     "type": "expense",
-    "amount": 99.0,
+    "amount": 99,
     "category": "food",
     "account": "wechat",
     "title": "阶跃星辰",
@@ -9398,7 +9398,7 @@
   {
     "id": "alipay2-245-202605292300",
     "type": "expense",
-    "amount": 1.0,
+    "amount": 1,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "闲鱼服务费",
@@ -9410,7 +9410,7 @@
   {
     "id": "alipay-42-20260529154745",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "**元",
@@ -9446,7 +9446,7 @@
   {
     "id": "wx-497-46171622",
     "type": "income",
-    "amount": 40.0,
+    "amount": 40,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "熊本喵",
@@ -9494,7 +9494,7 @@
   {
     "id": "alipay-44-20260529144510",
     "type": "income",
-    "amount": 20.0,
+    "amount": 20,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "**元",
@@ -9506,7 +9506,7 @@
   {
     "id": "wx-500-46171523",
     "type": "expense",
-    "amount": 120.0,
+    "amount": 120,
     "category": "social",
     "account": "bank_debit",
     "title": "爸 (前程似锦)",
@@ -9518,7 +9518,7 @@
   {
     "id": "wx-501-46171523",
     "type": "expense",
-    "amount": 380.0,
+    "amount": 380,
     "category": "social",
     "account": "wechat",
     "title": "爸 (前程似锦)",
@@ -9554,7 +9554,7 @@
   {
     "id": "alipay2-246-202605282300",
     "type": "expense",
-    "amount": 268.0,
+    "amount": 268,
     "category": "food",
     "account": "alipay",
     "title": "g***v",
@@ -9566,7 +9566,7 @@
   {
     "id": "alipay-47-20260528215557",
     "type": "expense",
-    "amount": 1094.0,
+    "amount": 1094,
     "category": "other",
     "account": "alipay",
     "title": "北京智谱华章科技股份有限公司",
@@ -9578,7 +9578,7 @@
   {
     "id": "wx-502-46170682",
     "type": "expense",
-    "amount": 30.0,
+    "amount": 30,
     "category": "food",
     "account": "wechat",
     "title": "浙江海翔药业股份有限公司",
@@ -9590,7 +9590,7 @@
   {
     "id": "wx-503-46170437",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "food",
     "account": "wechat",
     "title": "浙江海翔药业股份有限公司",
@@ -9602,7 +9602,7 @@
   {
     "id": "wx-504-46169913",
     "type": "expense",
-    "amount": 199.0,
+    "amount": 199,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -9614,7 +9614,7 @@
   {
     "id": "wx-505-46169907",
     "type": "expense",
-    "amount": 199.0,
+    "amount": 199,
     "category": "tokenmp_project",
     "account": "wechat",
     "title": "讯飞开放平台",
@@ -9626,7 +9626,7 @@
   {
     "id": "wx-506-46169893",
     "type": "expense",
-    "amount": 4.0,
+    "amount": 4,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -9638,7 +9638,7 @@
   {
     "id": "wx-507-46169893",
     "type": "expense",
-    "amount": 30.0,
+    "amount": 30,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -9650,7 +9650,7 @@
   {
     "id": "wx-508-46169884",
     "type": "expense",
-    "amount": 159.0,
+    "amount": 159,
     "category": "other",
     "account": "wechat",
     "title": "台州乾乐汤文化发展有限公司",
@@ -9674,7 +9674,7 @@
   {
     "id": "wx-509-46169712",
     "type": "expense",
-    "amount": 45.0,
+    "amount": 45,
     "category": "tokenmp_project",
     "account": "bank_debit",
     "title": "闲鱼用户森林绿的三北一一剑断",
@@ -9686,7 +9686,7 @@
   {
     "id": "wx-510-46169703",
     "type": "expense",
-    "amount": 5.0,
+    "amount": 5,
     "category": "social",
     "account": "bank_debit",
     "title": "梁晶晶 (ㅤ)",
@@ -9722,7 +9722,7 @@
   {
     "id": "wx-513-46168591",
     "type": "expense",
-    "amount": 6.0,
+    "amount": 6,
     "category": "digital",
     "account": "wechat",
     "title": "iCloud 由云上贵州运营",
@@ -9746,7 +9746,7 @@
   {
     "id": "wx-515-46167929",
     "type": "expense",
-    "amount": 25.0,
+    "amount": 25,
     "category": "food",
     "account": "wechat",
     "title": "爱情之都造型18006585851",
@@ -9770,7 +9770,7 @@
   {
     "id": "wx-516-46167756",
     "type": "expense",
-    "amount": 9.0,
+    "amount": 9,
     "category": "food",
     "account": "wechat",
     "title": "秋影",
@@ -9782,7 +9782,7 @@
   {
     "id": "wx-517-46167754",
     "type": "expense",
-    "amount": 5.0,
+    "amount": 5,
     "category": "food",
     "account": "wechat",
     "title": "大雨🎈 小雨",
@@ -9794,7 +9794,7 @@
   {
     "id": "wx-518-46167753",
     "type": "expense",
-    "amount": 25.0,
+    "amount": 25,
     "category": "food",
     "account": "wechat",
     "title": "小宋面馆",
@@ -9806,7 +9806,7 @@
   {
     "id": "wx-519-46167736",
     "type": "income",
-    "amount": 500.0,
+    "amount": 500,
     "category": "bonus",
     "account": "wechat",
     "title": "鲜小清",
@@ -9854,7 +9854,7 @@
   {
     "id": "wx-523-46166500",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "social",
     "account": "bank_debit",
     "title": "程相轩 (南约.)",
@@ -9878,7 +9878,7 @@
   {
     "id": "wx-525-46165729",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "social",
     "account": "wechat",
     "title": "爸 (前程似锦)",
@@ -9890,7 +9890,7 @@
   {
     "id": "wx-526-46165505",
     "type": "expense",
-    "amount": 40.0,
+    "amount": 40,
     "category": "other",
     "account": "wechat",
     "title": "火山引擎",
@@ -9902,7 +9902,7 @@
   {
     "id": "wx-527-46165455",
     "type": "expense",
-    "amount": 300.0,
+    "amount": 300,
     "category": "digital",
     "account": "wechat",
     "title": "杭州深度求索",
@@ -9914,7 +9914,7 @@
   {
     "id": "wx-528-46165382",
     "type": "expense",
-    "amount": 132.0,
+    "amount": 132,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -9926,7 +9926,7 @@
   {
     "id": "wx-529-46165380",
     "type": "expense",
-    "amount": 8.0,
+    "amount": 8,
     "category": "food",
     "account": "wechat",
     "title": "翟培培",
@@ -9938,7 +9938,7 @@
   {
     "id": "alipay2-248-202605222300",
     "type": "expense",
-    "amount": 30.0,
+    "amount": 30,
     "category": "tokenmp_project",
     "account": "alipay",
     "title": "剑***5",
@@ -9950,7 +9950,7 @@
   {
     "id": "wx-530-46164454",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "food",
     "account": "wechat",
     "title": "浙江海翔药业股份有限公司",
@@ -9962,7 +9962,7 @@
   {
     "id": "wx-531-46163861",
     "type": "expense",
-    "amount": 4650.0,
+    "amount": 4650,
     "category": "social",
     "account": "bank_debit",
     "title": "爸 (前程似锦)",
@@ -9974,7 +9974,7 @@
   {
     "id": "wx-532-46163663",
     "type": "expense",
-    "amount": 10.0,
+    "amount": 10,
     "category": "social",
     "account": "bank_debit",
     "title": "程相轩 (南约.)",
@@ -9998,7 +9998,7 @@
   {
     "id": "wx-534-46163311",
     "type": "expense",
-    "amount": 521.0,
+    "amount": 521,
     "category": "social",
     "account": "bank_debit",
     "title": "许尽欢.",
@@ -10058,7 +10058,7 @@
   {
     "id": "wx-537-46161452",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "food",
     "account": "bank_debit",
     "title": "浙江海翔药业股份有限公司",
@@ -10070,7 +10070,7 @@
   {
     "id": "wx-538-46160882",
     "type": "expense",
-    "amount": 90.0,
+    "amount": 90,
     "category": "digital",
     "account": "wechat",
     "title": "腾讯云费用账户-移动支付",
@@ -10082,7 +10082,7 @@
   {
     "id": "wx-539-46159812",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "social",
     "account": "bank_debit",
     "title": "程相轩 (南约.)",
@@ -10130,7 +10130,7 @@
   {
     "id": "wx-543-46158848",
     "type": "expense",
-    "amount": 5.0,
+    "amount": 5,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -10142,7 +10142,7 @@
   {
     "id": "wx-544-46157813",
     "type": "expense",
-    "amount": 30.0,
+    "amount": 30,
     "category": "food",
     "account": "wechat",
     "title": "浙江海翔药业股份有限公司",
@@ -10154,7 +10154,7 @@
   {
     "id": "wx-545-46157449",
     "type": "expense",
-    "amount": 15.0,
+    "amount": 15,
     "category": "food",
     "account": "wechat",
     "title": "美团",
@@ -10166,7 +10166,7 @@
   {
     "id": "wx-546-46157449",
     "type": "expense",
-    "amount": 24.0,
+    "amount": 24,
     "category": "food",
     "account": "wechat",
     "title": "美团",
@@ -10190,7 +10190,7 @@
   {
     "id": "wx-548-46157341",
     "type": "expense",
-    "amount": 150.0,
+    "amount": 150,
     "category": "shopping",
     "account": "wechat",
     "title": "弘宇超市",
@@ -10202,7 +10202,7 @@
   {
     "id": "wx-549-46156680",
     "type": "expense",
-    "amount": 5.0,
+    "amount": 5,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -10262,7 +10262,7 @@
   {
     "id": "wx-554-46153689",
     "type": "expense",
-    "amount": 20.0,
+    "amount": 20,
     "category": "digital",
     "account": "wechat",
     "title": "腾讯云费用账户-移动支付",
@@ -10274,7 +10274,7 @@
   {
     "id": "wx-555-46153686",
     "type": "expense",
-    "amount": 690.0,
+    "amount": 690,
     "category": "digital",
     "account": "bank_debit",
     "title": "腾讯云费用账户-移动支付",
@@ -10286,7 +10286,7 @@
   {
     "id": "wx-556-46153324",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "food",
     "account": "wechat",
     "title": "浙江海翔药业股份有限公司",
@@ -10298,7 +10298,7 @@
   {
     "id": "wx-557-46152855",
     "type": "expense",
-    "amount": 30.0,
+    "amount": 30,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -10334,7 +10334,7 @@
   {
     "id": "wx-560-46147560",
     "type": "expense",
-    "amount": 200.0,
+    "amount": 200,
     "category": "social",
     "account": "wechat",
     "title": "许尽欢.",
@@ -10346,7 +10346,7 @@
   {
     "id": "wx-562-46147557",
     "type": "expense",
-    "amount": 28.0,
+    "amount": 28,
     "category": "social",
     "account": "wechat",
     "title": "许尽欢.",
@@ -10358,7 +10358,7 @@
   {
     "id": "wx-563-46147466",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "social",
     "account": "wechat",
     "title": "许尽欢.",
@@ -10382,7 +10382,7 @@
   {
     "id": "wx-565-46146904",
     "type": "expense",
-    "amount": 50.0,
+    "amount": 50,
     "category": "social",
     "account": "wechat",
     "title": "程相轩 (南约.)",
@@ -10394,7 +10394,7 @@
   {
     "id": "wx-567-46146441",
     "type": "expense",
-    "amount": 100.0,
+    "amount": 100,
     "category": "food",
     "account": "wechat",
     "title": "浙江海翔药业股份有限公司",
@@ -10406,7 +10406,7 @@
   {
     "id": "wx-568-46145806",
     "type": "expense",
-    "amount": 500.0,
+    "amount": 500,
     "category": "social",
     "account": "wechat",
     "title": "爸 (前程似锦)",
@@ -10418,7 +10418,7 @@
   {
     "id": "alipay-51-20260503190927",
     "type": "expense",
-    "amount": 4.0,
+    "amount": 4,
     "category": "food",
     "account": "alipay",
     "title": "吕丽",
@@ -10430,7 +10430,7 @@
   {
     "id": "alipay-52-20260503083345",
     "type": "expense",
-    "amount": 149.0,
+    "amount": 149,
     "category": "shopping",
     "account": "alipay",
     "title": "深圳市狐蒂云网络科技有限公司",
@@ -10442,7 +10442,7 @@
   {
     "id": "wx-569-46144729",
     "type": "expense",
-    "amount": 24.0,
+    "amount": 24,
     "category": "food",
     "account": "wechat",
     "title": "美团",
@@ -10454,7 +10454,7 @@
   {
     "id": "wx-570-46144728",
     "type": "expense",
-    "amount": 12.0,
+    "amount": 12,
     "category": "food",
     "account": "wechat",
     "title": "美团",
