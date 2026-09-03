@@ -14,15 +14,16 @@ export type Category =
   | "housing"      // 住房物业
   | "entertainment"// 休闲娱乐
   | "medical"      // 医疗健康
-  | "digital"      // 数码数码
+  | "digital"      // 数码科技/云服务
   | "education"    // 学习进修
-  | "salary"       // 工资收入
-  | "bonus"        // 奖金分红
+  | "salary"       // 工资薪水
+  | "bonus"        // 奖金红包
   | "invest"       // 理财收益
-  | "other";       // 其它收支
+  | "other"        // 其它收支
+  | string;        // 支持用户自建分类
 
 export type AccountType = 
-  | "wechat"       // 微信零钱/零钱通
+  | "wechat"       // 微信支付/分付/零钱
   | "alipay"       // 支付宝
   | "bank_debit"   // 储蓄卡
   | "bank_credit"  // 信用卡
@@ -42,29 +43,30 @@ export interface Transaction {
 }
 
 export interface CategoryMeta {
-  id: Category;
+  id: string;
   label: string;
   icon: string;
   color: string;
   type: TransactionType | "both";
+  isCustom?: boolean;
 }
 
-export const CATEGORIES: CategoryMeta[] = [
+export const DEFAULT_CATEGORIES: CategoryMeta[] = [
   { id: "food", label: "餐饮美食", icon: "Utensils", color: "#F59E0B", type: "expense" },
   { id: "shopping", label: "购物日用", icon: "ShoppingBag", color: "#EC4899", type: "expense" },
   { id: "transport", label: "交通出行", icon: "Car", color: "#3B82F6", type: "expense" },
   { id: "housing", label: "住房缴费", icon: "Home", color: "#8B5CF6", type: "expense" },
   { id: "entertainment", label: "休闲娱乐", icon: "Gamepad2", color: "#10B981", type: "expense" },
-  { id: "digital", label: "数码数码", icon: "Smartphone", color: "#6366F1", type: "expense" },
+  { id: "digital", label: "数码服务", icon: "Smartphone", color: "#6366F1", type: "expense" },
   { id: "medical", label: "医疗健康", icon: "HeartPulse", color: "#EF4444", type: "expense" },
   { id: "education", label: "学习培训", icon: "GraduationCap", color: "#06B6D4", type: "expense" },
   { id: "salary", label: "工资薪水", icon: "Wallet", color: "#10B981", type: "income" },
-  { id: "bonus", label: "奖金补贴", icon: "Gift", color: "#F59E0B", type: "income" },
+  { id: "bonus", label: "奖金红包", icon: "Gift", color: "#F59E0B", type: "income" },
   { id: "invest", label: "理财分红", icon: "TrendingUp", color: "#3B82F6", type: "income" },
   { id: "other", label: "其它款项", icon: "MoreHorizontal", color: "#64748B", type: "both" },
 ];
 
-export const ACCOUNTS: { id: AccountType; label: string; icon: string; balanceHint?: string }[] = [
+export const ACCOUNTS: { id: AccountType; label: string; icon: string }[] = [
   { id: "wechat", label: "微信支付", icon: "MessageCircle" },
   { id: "alipay", label: "支付宝", icon: "CreditCard" },
   { id: "bank_debit", label: "储蓄卡", icon: "Building2" },
