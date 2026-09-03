@@ -7,6 +7,14 @@
     "type": "both"
   },
   {
+    "id": "deposit_asset",
+    "label": "押金冻结",
+    "icon": "ShieldCheck",
+    "color": "#06B6D4",
+    "type": "both",
+    "isCustom": true
+  },
+  {
     "id": "food",
     "label": "餐饮美食",
     "icon": "Utensils",

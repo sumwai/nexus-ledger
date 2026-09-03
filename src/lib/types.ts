@@ -8,7 +8,8 @@ export function cn(...inputs: ClassValue[]) {
 export type TransactionType = "expense" | "income";
 
 export type Category = 
-  | "tokenmp_project" // TokenMP 项目收支（收支一体）
+  | "tokenmp_project" // TokenMP 项目收支
+  | "deposit_asset"   // 押金冻结/可退资产
   | "food"            // 餐饮美食
   | "shopping"        // 日用百货/购物
   | "transport"       // 交通出行
@@ -55,6 +56,7 @@ export interface CategoryMeta {
 
 export const DEFAULT_CATEGORIES: CategoryMeta[] = [
   { id: "tokenmp_project", label: "TokenMP", icon: "Boxes", color: "#6366F1", type: "both" },
+  { id: "deposit_asset", label: "押金冻结", icon: "ShieldCheck", color: "#06B6D4", type: "both" },
   { id: "food", label: "餐饮美食", icon: "Utensils", color: "#F59E0B", type: "expense" },
   { id: "shopping", label: "购物日用", icon: "ShoppingBag", color: "#EC4899", type: "expense" },
   { id: "transport", label: "交通出行", icon: "Car", color: "#3B82F6", type: "expense" },
