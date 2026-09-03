@@ -1,0 +1,10 @@
+[
+  {
+    "id": "tokenmp_project",
+    "label": "TokenMP 支出",
+    "icon": "Boxes",
+    "color": "#6366F1",
+    "type": "expense",
+    "isCustom": true
+  }
+]

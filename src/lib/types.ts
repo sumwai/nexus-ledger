@@ -8,20 +8,21 @@ export function cn(...inputs: ClassValue[]) {
 export type TransactionType = "expense" | "income";
 
 export type Category = 
-  | "food"         // 餐饮美食
-  | "shopping"     // 日用百货/购物
-  | "transport"    // 交通出行
-  | "housing"      // 住房酒店
-  | "social"       // 社交人情/转账
-  | "entertainment"// 休闲娱乐
-  | "medical"      // 医疗健康
-  | "digital"      // 数码服务/云服务
-  | "education"    // 学习进修
-  | "salary"       // 工资薪水
-  | "bonus"        // 奖金红包/转账入账
-  | "invest"       // 理财收益
-  | "other"        // 其它款项
-  | string;        // 用户自建
+  | "tokenmp_project" // TokenMP 项目支出
+  | "food"            // 餐饮美食
+  | "shopping"        // 日用百货/购物
+  | "transport"       // 交通出行
+  | "housing"         // 住房酒店
+  | "social"          // 社交人情/转账
+  | "entertainment"   // 休闲娱乐
+  | "medical"         // 医疗健康
+  | "digital"         // 数码服务/云服务
+  | "education"       // 学习进修
+  | "salary"          // 工资薪水
+  | "bonus"           // 奖金红包/转账入账
+  | "invest"          // 理财收益
+  | "other"           // 其它款项
+  | string;           // 用户自建
 
 export type AccountType = 
   | "wechat"       // 微信支付/分付/零钱
@@ -53,6 +54,7 @@ export interface CategoryMeta {
 }
 
 export const DEFAULT_CATEGORIES: CategoryMeta[] = [
+  { id: "tokenmp_project", label: "TokenMP 支出", icon: "Boxes", color: "#6366F1", type: "expense" },
   { id: "food", label: "餐饮美食", icon: "Utensils", color: "#F59E0B", type: "expense" },
   { id: "shopping", label: "购物日用", icon: "ShoppingBag", color: "#EC4899", type: "expense" },
   { id: "transport", label: "交通出行", icon: "Car", color: "#3B82F6", type: "expense" },
