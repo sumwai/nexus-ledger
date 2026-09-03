@@ -612,6 +612,42 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-0-202608251003",
+    "type": "expense",
+    "amount": 0.23,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3316357059034012189)扣款 [支付宝(133)/]",
+    "date": "2026-08-25 01:52:03",
+    "createdAt": "2026-09-03T15:43:35.421996",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-1-202608251003",
+    "type": "expense",
+    "amount": 0.14,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3316357059034012189)扣款 [支付宝(133)/]",
+    "date": "2026-08-25 01:51:48",
+    "createdAt": "2026-09-03T15:43:35.422019",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-2-202608242300",
+    "type": "expense",
+    "amount": 300.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "DeepSeek API",
+    "note": "DeepSeek-API服务(151******32) [支付宝(133)/账户余额]",
+    "date": "2026-08-24 20:52:08",
+    "createdAt": "2026-09-03T15:43:35.422032",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-49-46258865",
     "type": "expense",
     "amount": 12.5,
@@ -837,6 +873,18 @@
     "note": "转账备注:微信转账 [零钱通]",
     "date": "2026-08-21 00:40:38",
     "createdAt": "2026-09-03T13:57:57.329283",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-3-202608202300",
+    "type": "income",
+    "amount": 25.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "**空",
+    "note": "闲鱼转账 [支付宝(133)/]",
+    "date": "2026-08-20 22:51:10",
+    "createdAt": "2026-09-03T15:43:35.422044",
     "createdBy": "user"
   },
   {
@@ -1101,6 +1149,18 @@
     "note": "收款方备注:二维码收款 [零钱]",
     "date": "2026-08-17 17:03:12",
     "createdAt": "2026-09-03T13:57:57.329539",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-4-202608172300",
+    "type": "expense",
+    "amount": 9.33,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "n***丶",
+    "note": "闲鱼转账 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-08-17 16:45:02",
+    "createdAt": "2026-09-03T15:43:35.422053",
     "createdBy": "user"
   },
   {
@@ -1416,6 +1476,30 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-5-202608152300",
+    "type": "expense",
+    "amount": 10.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "l***x",
+    "note": "闲鱼转账 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-08-15 01:49:26",
+    "createdAt": "2026-09-03T15:43:35.422060",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-6-202608152300",
+    "type": "income",
+    "amount": 79.9,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****x",
+    "note": "tokenmp [支付宝(133)/]",
+    "date": "2026-08-15 01:46:55",
+    "createdAt": "2026-09-03T15:43:35.422068",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-109-46248734",
     "type": "expense",
     "amount": 25.41,
@@ -1497,6 +1581,30 @@
     "note": "DeepSeek-API服务(151******32) [支付宝/花呗]",
     "date": "2026-08-13 16:33:24",
     "createdAt": "2026-09-03T15:29:57.048683",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-7-202608131003",
+    "type": "expense",
+    "amount": 0.14,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5127506389787017201)扣款 [支付宝(133)/]",
+    "date": "2026-08-13 15:50:39",
+    "createdAt": "2026-09-03T15:43:35.422076",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-8-202608131003",
+    "type": "expense",
+    "amount": 0.08,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5127506389787017201)扣款 [支付宝(133)/]",
+    "date": "2026-08-13 15:50:38",
+    "createdAt": "2026-09-03T15:43:35.422085",
     "createdBy": "user"
   },
   {
@@ -1836,6 +1944,30 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-9-202608072300",
+    "type": "expense",
+    "amount": 0.01,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "DeepSeek API",
+    "note": "deepseek-v4flash正式版 [支付宝(133)/账户余额]",
+    "date": "2026-08-07 14:12:21",
+    "createdAt": "2026-09-03T15:43:35.422097",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-10-202608072300",
+    "type": "expense",
+    "amount": 0.9,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "DeepSeek API",
+    "note": "DeepSeek-V4-Flash正式版 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-08-07 14:06:38",
+    "createdAt": "2026-09-03T15:43:35.422110",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-137-46241524",
     "type": "expense",
     "amount": 9.0,
@@ -2088,6 +2220,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-11-202608032300",
+    "type": "income",
+    "amount": 13.93,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****3",
+    "note": "TokenMP 套餐 [支付宝(133)/]",
+    "date": "2026-08-03 15:50:10",
+    "createdAt": "2026-09-03T15:43:35.422117",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-157-46237583",
     "type": "expense",
     "amount": 34.0,
@@ -2097,6 +2241,42 @@
     "note": "收款方备注:二维码收款 [零钱通] (原微信收款方: 初温)",
     "date": "2026-08-03 13:59:54",
     "createdAt": "2026-09-03T13:57:57.330730",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-12-202608031003",
+    "type": "expense",
+    "amount": 11.94,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3313856246447006696)扣款 [支付宝(133)/]",
+    "date": "2026-08-03 12:55:59",
+    "createdAt": "2026-09-03T15:43:35.422125",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-13-202608031003",
+    "type": "expense",
+    "amount": 0.4,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3313856246447006696)扣款 [支付宝(133)/]",
+    "date": "2026-08-03 12:55:58",
+    "createdAt": "2026-09-03T15:43:35.422132",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-14-202608031003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3313856246447006696)扣款 [支付宝(133)/]",
+    "date": "2026-08-03 12:55:57",
+    "createdAt": "2026-09-03T15:43:35.422138",
     "createdBy": "user"
   },
   {
@@ -2121,6 +2301,42 @@
     "note": "收款方备注:二维码收款 [零钱通] (原微信收款方: 禹莉)",
     "date": "2026-08-03 10:05:20",
     "createdAt": "2026-09-03T13:57:57.330748",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-15-202608021003",
+    "type": "expense",
+    "amount": 5.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5126007169758033145)扣款 [支付宝(133)/]",
+    "date": "2026-08-02 21:22:42",
+    "createdAt": "2026-09-03T15:43:35.422145",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-16-202608021003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5126007169758033145)扣款 [支付宝(133)/]",
+    "date": "2026-08-02 21:22:25",
+    "createdAt": "2026-09-03T15:43:35.422151",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-17-202608021003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5126007169758033145)扣款 [支付宝(133)/]",
+    "date": "2026-08-02 21:22:03",
+    "createdAt": "2026-09-03T15:43:35.422157",
     "createdBy": "user"
   },
   {
@@ -2208,6 +2424,42 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-18-202608011003",
+    "type": "expense",
+    "amount": 5.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3313608386723023085)扣款 [支付宝(133)/]",
+    "date": "2026-08-01 19:45:26",
+    "createdAt": "2026-09-03T15:43:35.422165",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-19-202608011003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3313608386723023085)扣款 [支付宝(133)/]",
+    "date": "2026-08-01 19:45:25",
+    "createdAt": "2026-09-03T15:43:35.422171",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-20-202608011003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3313608386723023085)扣款 [支付宝(133)/]",
+    "date": "2026-08-01 19:44:11",
+    "createdAt": "2026-09-03T15:43:35.422178",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-167-46235818",
     "type": "expense",
     "amount": 25.0,
@@ -2217,6 +2469,42 @@
     "note": "[零钱通]",
     "date": "2026-08-01 19:39:03",
     "createdAt": "2026-09-03T13:57:57.330864",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-21-202608011003",
+    "type": "expense",
+    "amount": 5.75,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5125235583904007229)扣款 [支付宝(133)/]",
+    "date": "2026-08-01 16:32:33",
+    "createdAt": "2026-09-03T15:43:35.422186",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-22-202608011003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5125235583904007229)扣款 [支付宝(133)/]",
+    "date": "2026-08-01 16:32:32",
+    "createdAt": "2026-09-03T15:43:35.422197",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-23-202608011003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5125235583904007229)扣款 [支付宝(133)/]",
+    "date": "2026-08-01 16:32:10",
+    "createdAt": "2026-09-03T15:43:35.422204",
     "createdBy": "user"
   },
   {
@@ -2388,6 +2676,42 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-24-202607301003",
+    "type": "expense",
+    "amount": 11.81,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3313618284468007076)扣款 [支付宝(133)/]",
+    "date": "2026-07-30 11:02:13",
+    "createdAt": "2026-09-03T15:43:35.422211",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-25-202607301003",
+    "type": "expense",
+    "amount": 0.4,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3313618284468007076)扣款 [支付宝(133)/]",
+    "date": "2026-07-30 11:02:12",
+    "createdAt": "2026-09-03T15:43:35.422216",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-26-202607301003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3313618284468007076)扣款 [支付宝(133)/]",
+    "date": "2026-07-30 10:57:00",
+    "createdAt": "2026-09-03T15:43:35.422222",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-182-46233263",
     "type": "expense",
     "amount": 7.5,
@@ -2421,6 +2745,42 @@
     "note": "转账备注:微信转账 [/]",
     "date": "2026-07-30 05:53:48",
     "createdAt": "2026-09-03T13:57:57.331205",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-27-202607291003",
+    "type": "expense",
+    "amount": 11.77,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3313379101767067380)扣款 [支付宝(133)/]",
+    "date": "2026-07-29 21:30:02",
+    "createdAt": "2026-09-03T15:43:35.422231",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-28-202607291003",
+    "type": "expense",
+    "amount": 0.4,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3313379101767067380)扣款 [支付宝(133)/]",
+    "date": "2026-07-29 21:30:01",
+    "createdAt": "2026-09-03T15:43:35.422237",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-29-202607291003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3313379101767067380)扣款 [支付宝(133)/]",
+    "date": "2026-07-29 21:29:34",
+    "createdAt": "2026-09-03T15:43:35.422242",
     "createdBy": "user"
   },
   {
@@ -2604,6 +2964,102 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-30-202607261003",
+    "type": "expense",
+    "amount": 5.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3312632535814202755)扣款 [支付宝(133)/]",
+    "date": "2026-07-26 17:36:31",
+    "createdAt": "2026-09-03T15:43:35.422248",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-31-202607261003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3312632535814202755)扣款 [支付宝(133)/]",
+    "date": "2026-07-26 17:36:30",
+    "createdAt": "2026-09-03T15:43:35.422254",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-32-202607261003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3312632535814202755)扣款 [支付宝(133)/]",
+    "date": "2026-07-26 17:33:53",
+    "createdAt": "2026-09-03T15:43:35.422260",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-33-202607261003",
+    "type": "expense",
+    "amount": 0.14,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3312609134782003087)扣款 [支付宝(133)/]",
+    "date": "2026-07-26 15:53:22",
+    "createdAt": "2026-09-03T15:43:35.422265",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-34-202607261003",
+    "type": "expense",
+    "amount": 0.08,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3312609134782003087)扣款 [支付宝(133)/]",
+    "date": "2026-07-26 15:52:41",
+    "createdAt": "2026-09-03T15:43:35.422271",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-35-202607261003",
+    "type": "expense",
+    "amount": 11.44,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3313013557222028478)扣款 [支付宝(133)/]",
+    "date": "2026-07-26 15:40:26",
+    "createdAt": "2026-09-03T15:43:35.422279",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-36-202607261003",
+    "type": "expense",
+    "amount": 0.39,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3313013557222028478)扣款 [支付宝(133)/]",
+    "date": "2026-07-26 15:40:25",
+    "createdAt": "2026-09-03T15:43:35.422287",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-37-202607261003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3313013557222028478)扣款 [支付宝(133)/]",
+    "date": "2026-07-26 15:40:11",
+    "createdAt": "2026-09-03T15:43:35.422297",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-200-46229591",
     "type": "expense",
     "amount": 6.0,
@@ -2625,6 +3081,42 @@
     "note": "（送入校）酸菜蛋炒饭（开胃下饭）等2件商品-拼好饭微信小程序-26072611100300001307084649195515 [零钱]",
     "date": "2026-07-26 12:50:37",
     "createdAt": "2026-09-03T13:57:57.331426",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-38-202607261003",
+    "type": "expense",
+    "amount": 5.96,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5124523827982012433)扣款 [支付宝(133)/]",
+    "date": "2026-07-26 10:52:36",
+    "createdAt": "2026-09-03T15:43:35.422336",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-39-202607261003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5124523827982012433)扣款 [支付宝(133)/]",
+    "date": "2026-07-26 10:52:35",
+    "createdAt": "2026-09-03T15:43:35.422342",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-40-202607261003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5124523827982012433)扣款 [支付宝(133)/]",
+    "date": "2026-07-26 10:52:34",
+    "createdAt": "2026-09-03T15:43:35.422348",
     "createdBy": "user"
   },
   {
@@ -2700,6 +3192,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-41-202607252300",
+    "type": "expense",
+    "amount": 200.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "狐***华",
+    "note": "小米MiMo Max套餐账号 8.25到期 整月可用 200 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-07-25 09:00:20",
+    "createdAt": "2026-09-03T15:43:35.422357",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-208-46228291",
     "type": "expense",
     "amount": 19.5,
@@ -2748,6 +3252,30 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-42-202607241003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5125796534662134306)扣款 [支付宝(133)/]",
+    "date": "2026-07-24 21:50:08",
+    "createdAt": "2026-09-03T15:43:35.422363",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-43-202607241003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5125796534662134306)扣款 [支付宝(133)/]",
+    "date": "2026-07-24 21:49:31",
+    "createdAt": "2026-09-03T15:43:35.422368",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-212-46227857",
     "type": "expense",
     "amount": 24.0,
@@ -2772,6 +3300,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-44-202607242300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****w",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-24 16:08:40",
+    "createdAt": "2026-09-03T15:43:35.422385",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-214-46227637",
     "type": "income",
     "amount": 19.9,
@@ -2781,6 +3321,54 @@
     "note": "[零钱]",
     "date": "2026-07-24 15:18:17",
     "createdAt": "2026-09-03T13:57:57.331593",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-45-202607241003",
+    "type": "expense",
+    "amount": 23.27,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3312772860781026499)扣款 [支付宝(133)/]",
+    "date": "2026-07-24 15:17:53",
+    "createdAt": "2026-09-03T15:43:35.422391",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-46-202607241003",
+    "type": "expense",
+    "amount": 0.79,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3312772860781026499)扣款 [支付宝(133)/]",
+    "date": "2026-07-24 15:17:52",
+    "createdAt": "2026-09-03T15:43:35.422397",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-47-202607241003",
+    "type": "expense",
+    "amount": 0.48,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3312772860781026499)扣款 [支付宝(133)/]",
+    "date": "2026-07-24 15:17:51",
+    "createdAt": "2026-09-03T15:43:35.422403",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-48-202607242300",
+    "type": "income",
+    "amount": 39.87,
+    "category": "other",
+    "account": "alipay",
+    "title": "****6",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-24 12:54:40",
+    "createdAt": "2026-09-03T15:43:35.422415",
     "createdBy": "user"
   },
   {
@@ -2820,6 +3408,54 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-49-202607241003",
+    "type": "expense",
+    "amount": 11.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3314448948489094156)扣款 [支付宝(133)/]",
+    "date": "2026-07-24 02:47:36",
+    "createdAt": "2026-09-03T15:43:35.422421",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-50-202607241003",
+    "type": "expense",
+    "amount": 0.4,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3314448948489094156)扣款 [支付宝(133)/]",
+    "date": "2026-07-24 02:47:26",
+    "createdAt": "2026-09-03T15:43:35.422426",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-51-202607241003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3314448948489094156)扣款 [支付宝(133)/]",
+    "date": "2026-07-24 02:46:52",
+    "createdAt": "2026-09-03T15:43:35.422432",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-52-202607242300",
+    "type": "income",
+    "amount": 39.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****8",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-24 02:44:16",
+    "createdAt": "2026-09-03T15:43:35.422443",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-218-46226908",
     "type": "expense",
     "amount": 20.0,
@@ -2829,6 +3465,18 @@
     "note": "转账备注:微信转账 [零钱通]",
     "date": "2026-07-23 21:48:04",
     "createdAt": "2026-09-03T13:57:57.331635",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-53-202607232300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****g",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-23 21:15:09",
+    "createdAt": "2026-09-03T15:43:35.422457",
     "createdBy": "user"
   },
   {
@@ -2880,6 +3528,42 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-54-202607231003",
+    "type": "expense",
+    "amount": 0.14,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5123709325146126048)扣款 [支付宝(133)/]",
+    "date": "2026-07-23 10:41:17",
+    "createdAt": "2026-09-03T15:43:35.422462",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-55-202607231003",
+    "type": "expense",
+    "amount": 0.08,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5123709325146126048)扣款 [支付宝(133)/]",
+    "date": "2026-07-23 10:40:43",
+    "createdAt": "2026-09-03T15:43:35.422471",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-56-202607222300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****丶",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-22 19:42:19",
+    "createdAt": "2026-09-03T15:43:35.422487",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-223-46225696",
     "type": "income",
     "amount": 100.0,
@@ -2889,6 +3573,18 @@
     "note": "转账备注:微信转账 [/]",
     "date": "2026-07-22 16:43:40",
     "createdAt": "2026-09-03T13:57:57.331699",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-57-202607222300",
+    "type": "income",
+    "amount": 19.68,
+    "category": "other",
+    "account": "alipay",
+    "title": "****7",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-22 16:29:02",
+    "createdAt": "2026-09-03T15:43:35.422501",
     "createdBy": "user"
   },
   {
@@ -2916,6 +3612,42 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-58-202607211003",
+    "type": "expense",
+    "amount": 5.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5125048635563061946)扣款 [支付宝(133)/]",
+    "date": "2026-07-21 23:11:44",
+    "createdAt": "2026-09-03T15:43:35.422513",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-59-202607211003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5125048635563061946)扣款 [支付宝(133)/]",
+    "date": "2026-07-21 23:11:42",
+    "createdAt": "2026-09-03T15:43:35.422519",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-60-202607211003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5125048635563061946)扣款 [支付宝(133)/]",
+    "date": "2026-07-21 23:11:31",
+    "createdAt": "2026-09-03T15:43:35.422525",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-226-46224907",
     "type": "expense",
     "amount": 34.0,
@@ -2937,6 +3669,18 @@
     "note": "转账备注:微信转账 [/]",
     "date": "2026-07-21 21:08:51",
     "createdAt": "2026-09-03T13:57:57.331753",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-61-202607212300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "**空",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-21 20:54:05",
+    "createdAt": "2026-09-03T15:43:35.422537",
     "createdBy": "user"
   },
   {
@@ -3036,6 +3780,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-62-202607202300",
+    "type": "income",
+    "amount": 39.74,
+    "category": "other",
+    "account": "alipay",
+    "title": "****6",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-07-20 10:55:35",
+    "createdAt": "2026-09-03T15:43:35.422547",
+    "createdBy": "user"
+  },
+  {
     "id": "alipay-22-20260720075804",
     "type": "income",
     "amount": 39.9,
@@ -3084,6 +3840,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-63-202607192300",
+    "type": "income",
+    "amount": 39.7,
+    "category": "other",
+    "account": "alipay",
+    "title": "****x",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-07-19 11:48:51",
+    "createdAt": "2026-09-03T15:43:35.422558",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-240-46222109",
     "type": "income",
     "amount": 19.9,
@@ -3117,6 +3885,18 @@
     "note": "转账备注:微信转账 [/]",
     "date": "2026-07-18 20:13:03",
     "createdAt": "2026-09-03T13:57:57.331940",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-64-202607182300",
+    "type": "income",
+    "amount": 19.89,
+    "category": "other",
+    "account": "alipay",
+    "title": "****1",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-18 10:41:10",
+    "createdAt": "2026-09-03T15:43:35.422572",
     "createdBy": "user"
   },
   {
@@ -3192,6 +3972,78 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-65-202607171003",
+    "type": "expense",
+    "amount": 11.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3313268797913006083)扣款 [支付宝(133)/]",
+    "date": "2026-07-17 22:28:09",
+    "createdAt": "2026-09-03T15:43:35.422578",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-66-202607171003",
+    "type": "expense",
+    "amount": 0.4,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3313268797913006083)扣款 [支付宝(133)/]",
+    "date": "2026-07-17 22:28:02",
+    "createdAt": "2026-09-03T15:43:35.422584",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-67-202607171003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3313268797913006083)扣款 [支付宝(133)/]",
+    "date": "2026-07-17 22:27:26",
+    "createdAt": "2026-09-03T15:43:35.422590",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-68-202607171003",
+    "type": "expense",
+    "amount": 5.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3311153043578006066)扣款 [支付宝(133)/]",
+    "date": "2026-07-17 20:52:23",
+    "createdAt": "2026-09-03T15:43:35.422596",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-69-202607171003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3311153043578006066)扣款 [支付宝(133)/]",
+    "date": "2026-07-17 20:52:22",
+    "createdAt": "2026-09-03T15:43:35.422602",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-70-202607171003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3311153043578006066)扣款 [支付宝(133)/]",
+    "date": "2026-07-17 20:47:04",
+    "createdAt": "2026-09-03T15:43:35.422608",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-248-46220807",
     "type": "income",
     "amount": 17.0,
@@ -3201,6 +4053,18 @@
     "note": "转账备注:网络费用 [/]",
     "date": "2026-07-17 19:22:06",
     "createdAt": "2026-09-03T13:57:57.332026",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-71-202607172300",
+    "type": "income",
+    "amount": 39.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****1",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-17 18:58:34",
+    "createdAt": "2026-09-03T15:43:35.422621",
     "createdBy": "user"
   },
   {
@@ -3264,6 +4128,30 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-72-202607171003",
+    "type": "expense",
+    "amount": 0.14,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5123181061362036736)扣款 [支付宝(133)/]",
+    "date": "2026-07-17 10:20:02",
+    "createdAt": "2026-09-03T15:43:35.422627",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-73-202607171003",
+    "type": "expense",
+    "amount": 0.08,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5123181061362036736)扣款 [支付宝(133)/]",
+    "date": "2026-07-17 10:20:01",
+    "createdAt": "2026-09-03T15:43:35.422633",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-253-46220009",
     "type": "expense",
     "amount": 57.0,
@@ -3276,6 +4164,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-74-202607162300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****0",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-16 17:31:15",
+    "createdAt": "2026-09-03T15:43:35.422643",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-254-46219676",
     "type": "expense",
     "amount": 13.9,
@@ -3285,6 +4185,30 @@
     "note": "【七寻奶茶·咖啡】一桶粉嫩的桃超级桶-拼好饭微信小程序-26071611100300001305349815617515 [零钱]",
     "date": "2026-07-16 16:13:42",
     "createdAt": "2026-09-03T13:57:57.332100",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-75-202607162300",
+    "type": "income",
+    "amount": 13.93,
+    "category": "other",
+    "account": "alipay",
+    "title": "****3",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-16 15:51:27",
+    "createdAt": "2026-09-03T15:43:35.422655",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-76-202607162300",
+    "type": "income",
+    "amount": 39.37,
+    "category": "other",
+    "account": "alipay",
+    "title": "****3",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-16 15:37:44",
+    "createdAt": "2026-09-03T15:43:35.422671",
     "createdBy": "user"
   },
   {
@@ -3348,6 +4272,30 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-77-202607151003",
+    "type": "expense",
+    "amount": 0.14,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3311316913755011785)扣款 [支付宝(133)/]",
+    "date": "2026-07-15 09:55:54",
+    "createdAt": "2026-09-03T15:43:35.422687",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-78-202607151003",
+    "type": "expense",
+    "amount": 0.08,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3311316913755011785)扣款 [支付宝(133)/]",
+    "date": "2026-07-15 09:55:53",
+    "createdAt": "2026-09-03T15:43:35.422694",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-260-46217802",
     "type": "expense",
     "amount": 9.0,
@@ -3369,6 +4317,66 @@
     "note": "收款方备注:二维码收款 [零钱] (原微信收款方: 禹莉)",
     "date": "2026-07-14 19:12:53",
     "createdAt": "2026-09-03T13:57:57.332178",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-79-202607142300",
+    "type": "income",
+    "amount": 27.93,
+    "category": "other",
+    "account": "alipay",
+    "title": "****0",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-14 15:43:27",
+    "createdAt": "2026-09-03T15:43:35.422736",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-80-202607141003",
+    "type": "expense",
+    "amount": 3.61,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5122415880178008019)扣款 [支付宝(133)/]",
+    "date": "2026-07-14 15:41:36",
+    "createdAt": "2026-09-03T15:43:35.422742",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-81-202607141003",
+    "type": "expense",
+    "amount": 0.18,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5122415880178008019)扣款 [支付宝(133)/]",
+    "date": "2026-07-14 15:41:35",
+    "createdAt": "2026-09-03T15:43:35.422748",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-82-202607141003",
+    "type": "expense",
+    "amount": 0.11,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5122415880178008019)扣款 [支付宝(133)/]",
+    "date": "2026-07-14 15:41:31",
+    "createdAt": "2026-09-03T15:43:35.422754",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-83-202607142300",
+    "type": "income",
+    "amount": 79.2,
+    "category": "other",
+    "account": "alipay",
+    "title": "****n",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-14 15:04:55",
+    "createdAt": "2026-09-03T15:43:35.422765",
     "createdBy": "user"
   },
   {
@@ -3444,6 +4452,42 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-84-202607131003",
+    "type": "expense",
+    "amount": 11.29,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3310646919684039782)扣款 [支付宝(133)/]",
+    "date": "2026-07-13 08:42:24",
+    "createdAt": "2026-09-03T15:43:35.422776",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-85-202607131003",
+    "type": "expense",
+    "amount": 0.39,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3310646919684039782)扣款 [支付宝(133)/]",
+    "date": "2026-07-13 08:42:22",
+    "createdAt": "2026-09-03T15:43:35.422782",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-86-202607131003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3310646919684039782)扣款 [支付宝(133)/]",
+    "date": "2026-07-13 08:42:22",
+    "createdAt": "2026-09-03T15:43:35.422788",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-268-46215935",
     "type": "expense",
     "amount": 5.0,
@@ -3456,6 +4500,42 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-87-202607121003",
+    "type": "expense",
+    "amount": 5.18,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5122605960360002445)扣款 [支付宝(133)/]",
+    "date": "2026-07-12 21:15:04",
+    "createdAt": "2026-09-03T15:43:35.422794",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-88-202607121003",
+    "type": "expense",
+    "amount": 0.19,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5122605960360002445)扣款 [支付宝(133)/]",
+    "date": "2026-07-12 21:15:03",
+    "createdAt": "2026-09-03T15:43:35.422802",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-89-202607121003",
+    "type": "expense",
+    "amount": 0.11,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5122605960360002445)扣款 [支付宝(133)/]",
+    "date": "2026-07-12 21:14:37",
+    "createdAt": "2026-09-03T15:43:35.422808",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-269-46215852",
     "type": "income",
     "amount": 25.0,
@@ -3465,6 +4545,138 @@
     "note": "[/]",
     "date": "2026-07-12 20:27:06",
     "createdAt": "2026-09-03T13:57:57.332306",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-90-202607121003",
+    "type": "expense",
+    "amount": 50.64,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3311258376875019569)扣款 [支付宝(133)/]",
+    "date": "2026-07-12 17:51:04",
+    "createdAt": "2026-09-03T15:43:35.422814",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-91-202607121003",
+    "type": "expense",
+    "amount": 1.69,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3311258376875019569)扣款 [支付宝(133)/]",
+    "date": "2026-07-12 17:48:16",
+    "createdAt": "2026-09-03T15:43:35.422822",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-92-202607121003",
+    "type": "expense",
+    "amount": 1.01,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3311258376875019569)扣款 [支付宝(133)/]",
+    "date": "2026-07-12 17:47:40",
+    "createdAt": "2026-09-03T15:43:35.422828",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-93-202607121003",
+    "type": "expense",
+    "amount": 5.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5124014101104012132)扣款 [支付宝(133)/]",
+    "date": "2026-07-12 14:26:23",
+    "createdAt": "2026-09-03T15:43:35.422834",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-94-202607121003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5124014101104012132)扣款 [支付宝(133)/]",
+    "date": "2026-07-12 14:26:22",
+    "createdAt": "2026-09-03T15:43:35.422839",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-95-202607121003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5124014101104012132)扣款 [支付宝(133)/]",
+    "date": "2026-07-12 14:25:47",
+    "createdAt": "2026-09-03T15:43:35.422845",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-96-202607122300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****2",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-12 14:17:09",
+    "createdAt": "2026-09-03T15:43:35.422858",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-97-202607101003",
+    "type": "expense",
+    "amount": 11.96,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5123327151300068242)扣款 [支付宝(133)/]",
+    "date": "2026-07-10 18:28:18",
+    "createdAt": "2026-09-03T15:43:35.422865",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-98-202607101003",
+    "type": "expense",
+    "amount": 0.4,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5123327151300068242)扣款 [支付宝(133)/]",
+    "date": "2026-07-10 18:28:00",
+    "createdAt": "2026-09-03T15:43:35.422871",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-99-202607101003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5123327151300068242)扣款 [支付宝(133)/]",
+    "date": "2026-07-10 18:27:28",
+    "createdAt": "2026-09-03T15:43:35.422877",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-100-202607102300",
+    "type": "income",
+    "amount": 39.89,
+    "category": "other",
+    "account": "alipay",
+    "title": "****9",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-10 18:19:14",
+    "createdAt": "2026-09-03T15:43:35.422887",
     "createdBy": "user"
   },
   {
@@ -3489,6 +4701,18 @@
     "note": "转账备注:微信转账 [/]",
     "date": "2026-07-10 10:39:25",
     "createdAt": "2026-09-03T13:57:57.332340",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-101-202607102300",
+    "type": "income",
+    "amount": 13.93,
+    "category": "other",
+    "account": "alipay",
+    "title": "****3",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-07-10 09:35:57",
+    "createdAt": "2026-09-03T15:43:35.422897",
     "createdBy": "user"
   },
   {
@@ -3564,6 +4788,42 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-102-202607081003",
+    "type": "expense",
+    "amount": 5.71,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5123104560076034541)扣款 [支付宝(133)/]",
+    "date": "2026-07-08 14:27:20",
+    "createdAt": "2026-09-03T15:43:35.422905",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-103-202607081003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5123104560076034541)扣款 [支付宝(133)/]",
+    "date": "2026-07-08 14:27:19",
+    "createdAt": "2026-09-03T15:43:35.422911",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-104-202607081003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5123104560076034541)扣款 [支付宝(133)/]",
+    "date": "2026-07-08 14:27:18",
+    "createdAt": "2026-09-03T15:43:35.422917",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-277-46211596",
     "type": "income",
     "amount": 19.9,
@@ -3600,6 +4860,54 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-105-202607071003",
+    "type": "expense",
+    "amount": 5.47,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5123239669974002705)扣款 [支付宝(133)/]",
+    "date": "2026-07-07 21:39:09",
+    "createdAt": "2026-09-03T15:43:35.422968",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-106-202607071003",
+    "type": "expense",
+    "amount": 0.19,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5123239669974002705)扣款 [支付宝(133)/]",
+    "date": "2026-07-07 21:39:08",
+    "createdAt": "2026-09-03T15:43:35.422978",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-107-202607071003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5123239669974002705)扣款 [支付宝(133)/]",
+    "date": "2026-07-07 21:36:45",
+    "createdAt": "2026-09-03T15:43:35.422987",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-108-202607072300",
+    "type": "income",
+    "amount": 19.4,
+    "category": "other",
+    "account": "alipay",
+    "title": "****9",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-07-07 20:20:19",
+    "createdAt": "2026-09-03T15:43:35.423000",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-280-46210822",
     "type": "income",
     "amount": 40.0,
@@ -3624,6 +4932,54 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-109-202607072300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****9",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-07-07 17:41:34",
+    "createdAt": "2026-09-03T15:43:35.423009",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-110-202607071003",
+    "type": "expense",
+    "amount": 5.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5122113913261012132)扣款 [支付宝(133)/]",
+    "date": "2026-07-07 14:02:57",
+    "createdAt": "2026-09-03T15:43:35.423018",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-111-202607071003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5122113913261012132)扣款 [支付宝(133)/]",
+    "date": "2026-07-07 14:02:55",
+    "createdAt": "2026-09-03T15:43:35.423024",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-112-202607071003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5122113913261012132)扣款 [支付宝(133)/]",
+    "date": "2026-07-07 14:02:31",
+    "createdAt": "2026-09-03T15:43:35.423030",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-282-46210528",
     "type": "expense",
     "amount": 16.0,
@@ -3645,6 +5001,30 @@
     "note": "收款方备注:二维码收款 [零钱] (原微信收款方: 禹莉)",
     "date": "2026-07-07 12:39:50",
     "createdAt": "2026-09-03T13:57:57.332848",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-113-202607072300",
+    "type": "income",
+    "amount": 13.93,
+    "category": "other",
+    "account": "alipay",
+    "title": "a**",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-07 10:17:29",
+    "createdAt": "2026-09-03T15:43:35.423042",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-114-202607072300",
+    "type": "income",
+    "amount": 19.64,
+    "category": "other",
+    "account": "alipay",
+    "title": "****9",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-07 06:56:33",
+    "createdAt": "2026-09-03T15:43:35.423053",
     "createdBy": "user"
   },
   {
@@ -3696,6 +5076,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-115-202607052300",
+    "type": "income",
+    "amount": 22.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****5",
+    "note": "闲鱼转账 [支付宝(133)/]",
+    "date": "2026-07-05 14:47:01",
+    "createdAt": "2026-09-03T15:43:35.423062",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-287-46208549",
     "type": "expense",
     "amount": 21.3,
@@ -3717,6 +5109,66 @@
     "note": "收款方备注:二维码收款 [零钱] (原微信收款方: 禹莉)",
     "date": "2026-07-05 10:03:20",
     "createdAt": "2026-09-03T13:57:57.332943",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-116-202607052300",
+    "type": "income",
+    "amount": 13.93,
+    "category": "other",
+    "account": "alipay",
+    "title": "****1",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-07-05 09:46:10",
+    "createdAt": "2026-09-03T15:43:35.423072",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-117-202607041003",
+    "type": "expense",
+    "amount": 11.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3310803950872042093)扣款 [支付宝(133)/]",
+    "date": "2026-07-04 12:32:08",
+    "createdAt": "2026-09-03T15:43:35.423078",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-118-202607041003",
+    "type": "expense",
+    "amount": 0.4,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3310803950872042093)扣款 [支付宝(133)/]",
+    "date": "2026-07-04 12:32:07",
+    "createdAt": "2026-09-03T15:43:35.423084",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-119-202607041003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3310803950872042093)扣款 [支付宝(133)/]",
+    "date": "2026-07-04 12:31:29",
+    "createdAt": "2026-09-03T15:43:35.423090",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-120-202607042300",
+    "type": "income",
+    "amount": 39.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****1",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-04 12:10:06",
+    "createdAt": "2026-09-03T15:43:35.423105",
     "createdBy": "user"
   },
   {
@@ -3792,6 +5244,42 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-121-202607031003",
+    "type": "expense",
+    "amount": 5.45,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5122139799985005532)扣款 [支付宝(133)/]",
+    "date": "2026-07-03 10:37:49",
+    "createdAt": "2026-09-03T15:43:35.423117",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-122-202607031003",
+    "type": "expense",
+    "amount": 0.19,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5122139799985005532)扣款 [支付宝(133)/]",
+    "date": "2026-07-03 10:37:47",
+    "createdAt": "2026-09-03T15:43:35.423123",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-123-202607031003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5122139799985005532)扣款 [支付宝(133)/]",
+    "date": "2026-07-03 10:37:46",
+    "createdAt": "2026-09-03T15:43:35.423129",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-293-46206385",
     "type": "income",
     "amount": 75.0,
@@ -3852,6 +5340,30 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-124-202607032300",
+    "type": "income",
+    "amount": 39.22,
+    "category": "other",
+    "account": "alipay",
+    "title": "****8",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-03 03:14:20",
+    "createdAt": "2026-09-03T15:43:35.423171",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-125-202607022300",
+    "type": "income",
+    "amount": 19.11,
+    "category": "other",
+    "account": "alipay",
+    "title": "****e",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-07-02 21:13:03",
+    "createdAt": "2026-09-03T15:43:35.423180",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-298-46205855",
     "type": "income",
     "amount": 40.0,
@@ -3873,6 +5385,30 @@
     "note": "转账备注:微信转账 [零钱]",
     "date": "2026-07-02 19:29:04",
     "createdAt": "2026-09-03T13:57:57.333141",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-126-202607022300",
+    "type": "income",
+    "amount": 168.8,
+    "category": "other",
+    "account": "alipay",
+    "title": "****大",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-07-02 17:42:30",
+    "createdAt": "2026-09-03T15:43:35.423190",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-127-202607022300",
+    "type": "income",
+    "amount": 19.38,
+    "category": "other",
+    "account": "alipay",
+    "title": "****5",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-07-02 15:35:38",
+    "createdAt": "2026-09-03T15:43:35.423199",
     "createdBy": "user"
   },
   {
@@ -3924,6 +5460,126 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-128-202607011003",
+    "type": "expense",
+    "amount": 23.94,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3310969837074005470)扣款 [支付宝(133)/]",
+    "date": "2026-07-01 23:06:16",
+    "createdAt": "2026-09-03T15:43:35.423208",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-129-202607011003",
+    "type": "expense",
+    "amount": 0.8,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3310969837074005470)扣款 [支付宝(133)/]",
+    "date": "2026-07-01 23:06:15",
+    "createdAt": "2026-09-03T15:43:35.423214",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-130-202607011003",
+    "type": "expense",
+    "amount": 0.48,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3310969837074005470)扣款 [支付宝(133)/]",
+    "date": "2026-07-01 23:05:56",
+    "createdAt": "2026-09-03T15:43:35.423219",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-131-202607012300",
+    "type": "income",
+    "amount": 79.87,
+    "category": "other",
+    "account": "alipay",
+    "title": "****8",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-01 22:54:46",
+    "createdAt": "2026-09-03T15:43:35.423230",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-132-202607011003",
+    "type": "expense",
+    "amount": 5.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3311138208330041480)扣款 [支付宝(133)/]",
+    "date": "2026-07-01 20:43:06",
+    "createdAt": "2026-09-03T15:43:35.423236",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-133-202607011003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3311138208330041480)扣款 [支付宝(133)/]",
+    "date": "2026-07-01 20:42:54",
+    "createdAt": "2026-09-03T15:43:35.423242",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-134-202607011003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3311138208330041480)扣款 [支付宝(133)/]",
+    "date": "2026-07-01 20:42:24",
+    "createdAt": "2026-09-03T15:43:35.423247",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-135-202607011003",
+    "type": "expense",
+    "amount": 11.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3310501047866015497)扣款 [支付宝(133)/]",
+    "date": "2026-07-01 20:12:47",
+    "createdAt": "2026-09-03T15:43:35.423258",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-136-202607011003",
+    "type": "expense",
+    "amount": 0.4,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3310501047866015497)扣款 [支付宝(133)/]",
+    "date": "2026-07-01 20:12:46",
+    "createdAt": "2026-09-03T15:43:35.423266",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-137-202607011003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3310501047866015497)扣款 [支付宝(133)/]",
+    "date": "2026-07-01 20:12:12",
+    "createdAt": "2026-09-03T15:43:35.423272",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-303-46204839",
     "type": "expense",
     "amount": 9.0,
@@ -3948,6 +5604,30 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-138-202607012300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****8",
+    "note": "国产 AI 中转站，支持 GLM 5.2，GLM 5.1，K [支付宝(133)/]",
+    "date": "2026-07-01 19:46:49",
+    "createdAt": "2026-09-03T15:43:35.423284",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-139-202607012300",
+    "type": "income",
+    "amount": 39.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****0",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-07-01 19:10:58",
+    "createdAt": "2026-09-03T15:43:35.423294",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-305-46204765",
     "type": "income",
     "amount": 88.9,
@@ -3957,6 +5637,18 @@
     "note": "转账备注:微信转账 [/]",
     "date": "2026-07-01 18:22:20",
     "createdAt": "2026-09-03T13:57:57.333260",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-140-202607012300",
+    "type": "income",
+    "amount": 17.54,
+    "category": "other",
+    "account": "alipay",
+    "title": "****3",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-07-01 15:38:47",
+    "createdAt": "2026-09-03T15:43:35.423303",
     "createdBy": "user"
   },
   {
@@ -4053,6 +5745,18 @@
     "note": "Max套餐无限流量月包 [农业银行储蓄卡(9775)]",
     "date": "2026-07-01 07:43:47",
     "createdAt": "2026-09-03T13:57:57.333440",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-141-202607012300",
+    "type": "expense",
+    "amount": 1000.0,
+    "category": "food",
+    "account": "alipay",
+    "title": "x***4",
+    "note": "Max套餐无限流量月包 [支付宝(133)/]",
+    "date": "2026-07-01 07:42:44",
+    "createdAt": "2026-09-03T15:43:35.423311",
     "createdBy": "user"
   },
   {
@@ -4188,6 +5892,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-142-202606290200",
+    "type": "income",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "20260628期现金夺宝 [支付宝(133)/]",
+    "date": "2026-06-29 16:04:33",
+    "createdAt": "2026-09-03T15:43:35.423318",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-325-46202544",
     "type": "expense",
     "amount": 12.5,
@@ -4296,6 +6012,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-143-202606280200",
+    "type": "income",
+    "amount": 0.19,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "20260627期现金夺宝 [支付宝(133)/]",
+    "date": "2026-06-28 12:19:43",
+    "createdAt": "2026-09-03T15:43:35.423326",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-334-46201443",
     "type": "income",
     "amount": 80.0,
@@ -4344,6 +6072,90 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-144-202606271003",
+    "type": "expense",
+    "amount": 5.47,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5120424722939034816)扣款 [支付宝(133)/]",
+    "date": "2026-06-27 19:06:41",
+    "createdAt": "2026-09-03T15:43:35.423332",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-145-202606271003",
+    "type": "expense",
+    "amount": 0.19,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5120424722939034816)扣款 [支付宝(133)/]",
+    "date": "2026-06-27 19:05:27",
+    "createdAt": "2026-09-03T15:43:35.423338",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-146-202606271003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5120424722939034816)扣款 [支付宝(133)/]",
+    "date": "2026-06-27 19:05:21",
+    "createdAt": "2026-09-03T15:43:35.423344",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-147-202606272300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****2",
+    "note": "mimo 畅享，注册即得。 [支付宝(133)/]",
+    "date": "2026-06-27 14:00:11",
+    "createdAt": "2026-09-03T15:43:35.423351",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-148-202606272300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****3",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-27 10:57:58",
+    "createdAt": "2026-09-03T15:43:35.423359",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-149-202606270200",
+    "type": "income",
+    "amount": 0.14,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "20260626期现金夺宝 [支付宝(133)/]",
+    "date": "2026-06-27 10:20:56",
+    "createdAt": "2026-09-03T15:43:35.423365",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-150-202606272300",
+    "type": "expense",
+    "amount": 18.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "t***4",
+    "note": "小米MIMO 盲盒 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-06-27 09:44:51",
+    "createdAt": "2026-09-03T15:43:35.423372",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-338-46200162",
     "type": "expense",
     "amount": 35.9,
@@ -4365,6 +6177,30 @@
     "note": "【欣旺美食(炒菜)】猪油渣炒饭等4件商品-美团外卖微信小程序-26062611100300001301961963597515 [零钱]",
     "date": "2026-06-26 18:41:43",
     "createdAt": "2026-09-03T13:57:57.334110",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-151-202606262300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****3",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-26 17:23:18",
+    "createdAt": "2026-09-03T15:43:35.423382",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-152-202606260200",
+    "type": "income",
+    "amount": 0.16,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "20260625期现金夺宝 [支付宝(133)/]",
+    "date": "2026-06-26 17:04:21",
+    "createdAt": "2026-09-03T15:43:35.423388",
     "createdBy": "user"
   },
   {
@@ -4413,6 +6249,54 @@
     "note": "转账备注:1836114456@qq.com [/]",
     "date": "2026-06-26 01:53:25",
     "createdAt": "2026-09-03T13:57:57.334202",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-153-202606252300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****4",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-25 16:54:26",
+    "createdAt": "2026-09-03T15:43:35.423397",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-154-202606251003",
+    "type": "expense",
+    "amount": 5.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3307875783686005091)扣款 [支付宝(133)/]",
+    "date": "2026-06-25 16:13:46",
+    "createdAt": "2026-09-03T15:43:35.423406",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-155-202606251003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3307875783686005091)扣款 [支付宝(133)/]",
+    "date": "2026-06-25 16:13:45",
+    "createdAt": "2026-09-03T15:43:35.423416",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-156-202606251003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3307875783686005091)扣款 [支付宝(133)/]",
+    "date": "2026-06-25 16:13:27",
+    "createdAt": "2026-09-03T15:43:35.423424",
     "createdBy": "user"
   },
   {
@@ -4488,6 +6372,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-157-202606252300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****1",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-25 02:30:46",
+    "createdAt": "2026-09-03T15:43:35.423431",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-351-46198017",
     "type": "income",
     "amount": 215.0,
@@ -4533,6 +6429,18 @@
     "note": "收钱码收款 [支付宝/]",
     "date": "2026-06-24 11:28:39",
     "createdAt": "2026-09-03T15:29:57.049081",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-158-202606242300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****1",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-24 08:25:22",
+    "createdAt": "2026-09-03T15:43:35.423437",
     "createdBy": "user"
   },
   {
@@ -4596,6 +6504,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-159-202606230200",
+    "type": "income",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "20260622期现金夺宝 [支付宝(133)/]",
+    "date": "2026-06-23 19:45:21",
+    "createdAt": "2026-09-03T15:43:35.423443",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-359-46196820",
     "type": "expense",
     "amount": 12.0,
@@ -4608,6 +6528,66 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-160-202606232300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****4",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-23 19:40:34",
+    "createdAt": "2026-09-03T15:43:35.423449",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-161-202606231003",
+    "type": "expense",
+    "amount": 11.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3309759840131005183)扣款 [支付宝(133)/]",
+    "date": "2026-06-23 17:37:39",
+    "createdAt": "2026-09-03T15:43:35.423456",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-162-202606231003",
+    "type": "expense",
+    "amount": 0.4,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3309759840131005183)扣款 [支付宝(133)/]",
+    "date": "2026-06-23 17:37:38",
+    "createdAt": "2026-09-03T15:43:35.423461",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-163-202606231003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3309759840131005183)扣款 [支付宝(133)/]",
+    "date": "2026-06-23 17:37:37",
+    "createdAt": "2026-09-03T15:43:35.423467",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-164-202606232300",
+    "type": "expense",
+    "amount": 168.8,
+    "category": "other",
+    "account": "alipay",
+    "title": "深圳市中融小额贷款有限公司",
+    "note": "抖音月付 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-06-23 17:27:49",
+    "createdAt": "2026-09-03T15:43:35.423480",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-360-46196727",
     "type": "expense",
     "amount": 4188.1,
@@ -4617,6 +6597,30 @@
     "note": "[农业银行储蓄卡(9775)]",
     "date": "2026-06-23 17:27:05",
     "createdAt": "2026-09-03T13:57:57.334497",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-165-202606232300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****2",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-23 16:40:45",
+    "createdAt": "2026-09-03T15:43:35.423490",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-166-202606232300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****7",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-23 14:02:17",
+    "createdAt": "2026-09-03T15:43:35.423499",
     "createdBy": "user"
   },
   {
@@ -4665,6 +6669,42 @@
     "note": "转账备注:微信转账 [/]",
     "date": "2026-06-23 00:55:32",
     "createdAt": "2026-09-03T13:57:57.334561",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-167-202606222300",
+    "type": "income",
+    "amount": 39.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****8",
+    "note": "国产模型中转站 [支付宝(133)/]",
+    "date": "2026-06-22 17:50:22",
+    "createdAt": "2026-09-03T15:43:35.423512",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-168-202606220200",
+    "type": "income",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "20260621期现金夺宝 [支付宝(133)/]",
+    "date": "2026-06-22 16:45:27",
+    "createdAt": "2026-09-03T15:43:35.423518",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-169-202606222300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****8",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-22 16:43:58",
+    "createdAt": "2026-09-03T15:43:35.423525",
     "createdBy": "user"
   },
   {
@@ -4764,6 +6804,30 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-170-202606210200",
+    "type": "income",
+    "amount": 0.14,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "20260620期现金夺宝 [支付宝(133)/]",
+    "date": "2026-06-21 12:12:16",
+    "createdAt": "2026-09-03T15:43:35.423564",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-171-202606212300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****3",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-21 11:53:54",
+    "createdAt": "2026-09-03T15:43:35.423570",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-372-46194316",
     "type": "expense",
     "amount": 20.0,
@@ -4788,6 +6852,30 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-172-202606212300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****0",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-21 03:43:49",
+    "createdAt": "2026-09-03T15:43:35.423580",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-173-202606202200",
+    "type": "expense",
+    "amount": 199.0,
+    "category": "other",
+    "account": "alipay",
+    "title": "LucidaCloud Limited",
+    "note": "LucidaCloud Limited [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-06-20 22:55:15",
+    "createdAt": "2026-09-03T15:43:35.423593",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-374-46193921",
     "type": "income",
     "amount": 25.0,
@@ -4797,6 +6885,78 @@
     "note": "转账备注:微信转账 [/]",
     "date": "2026-06-20 22:07:01",
     "createdAt": "2026-09-03T13:57:57.334708",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-174-202606201003",
+    "type": "expense",
+    "amount": 5.97,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3309247813481015265)扣款 [支付宝(133)/]",
+    "date": "2026-06-20 19:08:50",
+    "createdAt": "2026-09-03T15:43:35.423602",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-175-202606201003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3309247813481015265)扣款 [支付宝(133)/]",
+    "date": "2026-06-20 19:08:49",
+    "createdAt": "2026-09-03T15:43:35.423608",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-176-202606201003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3309247813481015265)扣款 [支付宝(133)/]",
+    "date": "2026-06-20 19:08:42",
+    "createdAt": "2026-09-03T15:43:35.423614",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-177-202606200200",
+    "type": "income",
+    "amount": 0.22,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "20260619期现金夺宝 [支付宝(133)/]",
+    "date": "2026-06-20 18:28:18",
+    "createdAt": "2026-09-03T15:43:35.423620",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-178-202606202300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****1",
+    "note": "mimo 畅享，注册即得。 [支付宝(133)/]",
+    "date": "2026-06-20 16:07:30",
+    "createdAt": "2026-09-03T15:43:35.423637",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-179-202606202300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****1",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-20 11:35:21",
+    "createdAt": "2026-09-03T15:43:35.423646",
     "createdBy": "user"
   },
   {
@@ -4821,6 +6981,30 @@
     "note": "收款方备注:二维码收款 [分付] (原微信收款方: 禹莉)",
     "date": "2026-06-20 07:42:30",
     "createdAt": "2026-09-03T13:57:57.334732",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-180-202606202200",
+    "type": "expense",
+    "amount": 1099.2,
+    "category": "digital",
+    "account": "alipay",
+    "title": "阿里云",
+    "note": "轻量应用服务器 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-06-20 00:10:21",
+    "createdAt": "2026-09-03T15:43:35.423656",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-181-202606192300",
+    "type": "income",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****9",
+    "note": "mimo v2.5 mimo 2.5 pro  0.1 元 [支付宝(133)/]",
+    "date": "2026-06-19 19:14:58",
+    "createdAt": "2026-09-03T15:43:35.423663",
     "createdBy": "user"
   },
   {
@@ -4908,6 +7092,102 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-182-202606181003",
+    "type": "expense",
+    "amount": 2.37,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3308463806089006083)扣款 [支付宝(133)/]",
+    "date": "2026-06-18 10:48:21",
+    "createdAt": "2026-09-03T15:43:35.423669",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-183-202606181003",
+    "type": "expense",
+    "amount": 0.08,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3308463806089006083)扣款 [支付宝(133)/]",
+    "date": "2026-06-18 10:48:19",
+    "createdAt": "2026-09-03T15:43:35.423675",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-184-202606181003",
+    "type": "expense",
+    "amount": 0.05,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3308463806089006083)扣款 [支付宝(133)/]",
+    "date": "2026-06-18 10:47:41",
+    "createdAt": "2026-09-03T15:43:35.423681",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-185-202606182300",
+    "type": "income",
+    "amount": 7.9,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****1",
+    "note": "mimo 畅享，注册即得。 [支付宝(133)/]",
+    "date": "2026-06-18 10:39:28",
+    "createdAt": "2026-09-03T15:43:35.423687",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-186-202606181003",
+    "type": "expense",
+    "amount": 0.28,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5120440706578010642)扣款 [支付宝(133)/]",
+    "date": "2026-06-18 10:34:16",
+    "createdAt": "2026-09-03T15:43:35.423693",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-187-202606181003",
+    "type": "expense",
+    "amount": 0.17,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5120440706578010642)扣款 [支付宝(133)/]",
+    "date": "2026-06-18 10:34:15",
+    "createdAt": "2026-09-03T15:43:35.423699",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-188-202606182300",
+    "type": "income",
+    "amount": 27.93,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****1",
+    "note": "mimo 畅享，注册即得。 [支付宝(133)/]",
+    "date": "2026-06-18 10:32:47",
+    "createdAt": "2026-09-03T15:43:35.423705",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-189-202606182300",
+    "type": "expense",
+    "amount": 10.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "闲鱼超级擦亮充值 [支付宝(133)/账户余额(个人余额)]",
+    "date": "2026-06-18 09:50:14",
+    "createdAt": "2026-09-03T15:43:35.423714",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-383-46191372",
     "type": "income",
     "amount": 20.0,
@@ -4968,6 +7248,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-190-202606172300",
+    "type": "income",
+    "amount": 19.4,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****版",
+    "note": "mimo 畅享，注册即得。 [支付宝(133)/]",
+    "date": "2026-06-17 19:04:40",
+    "createdAt": "2026-09-03T15:43:35.423721",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-388-46190771",
     "type": "expense",
     "amount": 39.0,
@@ -4977,6 +7269,18 @@
     "note": "讯飞开放平台-coding plan-Coding plan专业版 [分付]",
     "date": "2026-06-17 18:30:34",
     "createdAt": "2026-09-03T13:57:57.334915",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-191-202606172300",
+    "type": "expense",
+    "amount": 50.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "闲鱼超级擦亮充值 [支付宝(133)/账户余额(个人余额)]",
+    "date": "2026-06-17 18:20:31",
+    "createdAt": "2026-09-03T15:43:35.423726",
     "createdBy": "user"
   },
   {
@@ -5064,6 +7368,66 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-192-202606162300",
+    "type": "income",
+    "amount": 79.9,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "**熙",
+    "note": "mimo 畅享，注册即得。 [支付宝(133)/]",
+    "date": "2026-06-16 18:53:38",
+    "createdAt": "2026-09-03T15:43:35.423733",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-193-202606161003",
+    "type": "expense",
+    "amount": 17.76,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3306262406840017887)扣款 [支付宝(133)/]",
+    "date": "2026-06-16 12:46:55",
+    "createdAt": "2026-09-03T15:43:35.423742",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-194-202606161003",
+    "type": "expense",
+    "amount": 0.89,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3306262406840017887)扣款 [支付宝(133)/]",
+    "date": "2026-06-16 12:46:54",
+    "createdAt": "2026-09-03T15:43:35.423751",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-195-202606161003",
+    "type": "expense",
+    "amount": 0.53,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3306262406840017887)扣款 [支付宝(133)/]",
+    "date": "2026-06-16 12:44:57",
+    "createdAt": "2026-09-03T15:43:35.423757",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-196-202606160200",
+    "type": "income",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "20260615期现金夺宝 [支付宝(133)/]",
+    "date": "2026-06-16 12:08:44",
+    "createdAt": "2026-09-03T15:43:35.423763",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-394-46189415",
     "type": "expense",
     "amount": 11.0,
@@ -5136,6 +7500,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-197-202606152300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****央",
+    "note": "mimo 畅享，注册即得。 [支付宝(133)/]",
+    "date": "2026-06-15 16:08:45",
+    "createdAt": "2026-09-03T15:43:35.423769",
+    "createdBy": "user"
+  },
+  {
     "id": "alipay-37-20260615141633",
     "type": "income",
     "amount": 39.9,
@@ -5172,6 +7548,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-198-202606152300",
+    "type": "expense",
+    "amount": 26.22,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "闲鱼超级擦亮充值 [支付宝(133)/账户余额(个人余额)]",
+    "date": "2026-06-15 01:01:00",
+    "createdAt": "2026-09-03T15:43:35.423775",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-402-46187940",
     "type": "expense",
     "amount": 141.0,
@@ -5193,6 +7581,42 @@
     "note": "转账备注:微信转账 [零钱通]",
     "date": "2026-06-14 19:33:45",
     "createdAt": "2026-09-03T13:57:57.335228",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-199-202606141003",
+    "type": "expense",
+    "amount": 3.98,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5118626883065019023)扣款 [支付宝(133)/]",
+    "date": "2026-06-14 19:25:11",
+    "createdAt": "2026-09-03T15:43:35.423782",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-200-202606141003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5118626883065019023)扣款 [支付宝(133)/]",
+    "date": "2026-06-14 19:25:10",
+    "createdAt": "2026-09-03T15:43:35.423787",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-201-202606141003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5118626883065019023)扣款 [支付宝(133)/]",
+    "date": "2026-06-14 19:24:37",
+    "createdAt": "2026-09-03T15:43:35.423793",
     "createdBy": "user"
   },
   {
@@ -5232,6 +7656,42 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-202-202606131003",
+    "type": "expense",
+    "amount": 3.98,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5118612375384000626)扣款 [支付宝(133)/]",
+    "date": "2026-06-13 17:17:10",
+    "createdAt": "2026-09-03T15:43:35.423799",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-203-202606131003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5118612375384000626)扣款 [支付宝(133)/]",
+    "date": "2026-06-13 17:17:09",
+    "createdAt": "2026-09-03T15:43:35.423805",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-204-202606131003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5118612375384000626)扣款 [支付宝(133)/]",
+    "date": "2026-06-13 17:16:30",
+    "createdAt": "2026-09-03T15:43:35.423811",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-407-46186636",
     "type": "expense",
     "amount": 39.0,
@@ -5244,6 +7704,42 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-205-202606131003",
+    "type": "expense",
+    "amount": 1.98,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3306061525734005774)扣款 [支付宝(133)/]",
+    "date": "2026-06-13 11:54:48",
+    "createdAt": "2026-09-03T15:43:35.423816",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-206-202606131003",
+    "type": "expense",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3306061525734005774)扣款 [支付宝(133)/]",
+    "date": "2026-06-13 11:54:31",
+    "createdAt": "2026-09-03T15:43:35.423825",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-207-202606131003",
+    "type": "expense",
+    "amount": 0.06,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3306061525734005774)扣款 [支付宝(133)/]",
+    "date": "2026-06-13 11:54:00",
+    "createdAt": "2026-09-03T15:43:35.423831",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-408-46186278",
     "type": "expense",
     "amount": 21.0,
@@ -5253,6 +7749,66 @@
     "note": "收款方备注:二维码收款 [零钱通]",
     "date": "2026-06-13 06:40:54",
     "createdAt": "2026-09-03T13:57:57.335294",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-208-202606121003",
+    "type": "expense",
+    "amount": 3.95,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3306384480808012189)扣款 [支付宝(133)/]",
+    "date": "2026-06-12 23:24:10",
+    "createdAt": "2026-09-03T15:43:35.423836",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-209-202606121003",
+    "type": "expense",
+    "amount": 0.2,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3306384480808012189)扣款 [支付宝(133)/]",
+    "date": "2026-06-12 23:24:09",
+    "createdAt": "2026-09-03T15:43:35.423842",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-210-202606121003",
+    "type": "expense",
+    "amount": 0.12,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3306384480808012189)扣款 [支付宝(133)/]",
+    "date": "2026-06-12 23:23:43",
+    "createdAt": "2026-09-03T15:43:35.423848",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-211-202606121003",
+    "type": "expense",
+    "amount": 0.32,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3305700410965013195)扣款 [支付宝(133)/]",
+    "date": "2026-06-12 17:35:35",
+    "createdAt": "2026-09-03T15:43:35.423854",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-212-202606121003",
+    "type": "expense",
+    "amount": 0.19,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3305700410965013195)扣款 [支付宝(133)/]",
+    "date": "2026-06-12 17:35:04",
+    "createdAt": "2026-09-03T15:43:35.423860",
     "createdBy": "user"
   },
   {
@@ -5496,6 +8052,66 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-213-202606062300",
+    "type": "expense",
+    "amount": 15.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "x***4",
+    "note": "小米MIMO模型账号套餐 [支付宝(133)/账户余额(个人余额)]",
+    "date": "2026-06-06 20:47:23",
+    "createdAt": "2026-09-03T15:43:35.423896",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-214-202606061003",
+    "type": "expense",
+    "amount": 1.48,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3306349922946042076)扣款 [支付宝(133)/]",
+    "date": "2026-06-06 20:40:54",
+    "createdAt": "2026-09-03T15:43:35.423902",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-215-202606061003",
+    "type": "expense",
+    "amount": 0.09,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3306349922946042076)扣款 [支付宝(133)/]",
+    "date": "2026-06-06 20:40:53",
+    "createdAt": "2026-09-03T15:43:35.423908",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-216-202606061003",
+    "type": "expense",
+    "amount": 0.06,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3306349922946042076)扣款 [支付宝(133)/]",
+    "date": "2026-06-06 20:38:30",
+    "createdAt": "2026-09-03T15:43:35.423914",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-217-202606062300",
+    "type": "income",
+    "amount": 9.4,
+    "category": "other",
+    "account": "alipay",
+    "title": "****9",
+    "note": "模型中转站，官方模型。 [支付宝(133)/]",
+    "date": "2026-06-06 18:48:38",
+    "createdAt": "2026-09-03T15:43:35.423924",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-427-46179736",
     "type": "expense",
     "amount": 6.0,
@@ -5541,6 +8157,42 @@
     "note": "[/]",
     "date": "2026-06-06 14:50:51",
     "createdAt": "2026-09-03T13:57:57.335618",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-218-202606061003",
+    "type": "expense",
+    "amount": 1.98,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5119115616194003913)扣款 [支付宝(133)/]",
+    "date": "2026-06-06 13:50:20",
+    "createdAt": "2026-09-03T15:43:35.423930",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-219-202606061003",
+    "type": "expense",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5119115616194003913)扣款 [支付宝(133)/]",
+    "date": "2026-06-06 13:50:19",
+    "createdAt": "2026-09-03T15:43:35.423938",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-220-202606061003",
+    "type": "expense",
+    "amount": 0.06,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5119115616194003913)扣款 [支付宝(133)/]",
+    "date": "2026-06-06 13:50:18",
+    "createdAt": "2026-09-03T15:43:35.423944",
     "createdBy": "user"
   },
   {
@@ -5592,6 +8244,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-221-202606062300",
+    "type": "income",
+    "amount": 88.8,
+    "category": "other",
+    "account": "alipay",
+    "title": "****6",
+    "note": "模型中转站，官方模型。 [支付宝(133)/]",
+    "date": "2026-06-06 04:31:43",
+    "createdAt": "2026-09-03T15:43:35.423956",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-435-46179158",
     "type": "expense",
     "amount": 100.0,
@@ -5601,6 +8265,18 @@
     "note": "转账备注:微信转账 [零钱]",
     "date": "2026-06-06 03:47:44",
     "createdAt": "2026-09-03T13:57:57.335688",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-222-202606062200",
+    "type": "expense",
+    "amount": 34.9,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "闲鱼超级擦亮充值 [支付宝(133)/账户余额(个人余额)]",
+    "date": "2026-06-06 01:55:55",
+    "createdAt": "2026-09-03T15:43:35.423965",
     "createdBy": "user"
   },
   {
@@ -5628,6 +8304,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-223-202606052300",
+    "type": "income",
+    "amount": 9.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****7",
+    "note": "模型中转站，官方模型。 [支付宝(133)/]",
+    "date": "2026-06-05 08:51:52",
+    "createdAt": "2026-09-03T15:43:35.423974",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-438-46178050",
     "type": "expense",
     "amount": 49.06,
@@ -5640,6 +8328,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-224-202606047887",
+    "type": "expense",
+    "amount": 300.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "保证金",
+    "note": "闲鱼业务保证金-冻结-保证金充值 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-06-04 19:22:49",
+    "createdAt": "2026-09-03T15:43:35.423981",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-439-46177807",
     "type": "expense",
     "amount": 300.0,
@@ -5649,6 +8349,18 @@
     "note": "[农业银行储蓄卡(9775)]",
     "date": "2026-06-04 19:22:39",
     "createdAt": "2026-09-03T13:57:57.335741",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-225-202606047933",
+    "type": "expense",
+    "amount": 200.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "保证金",
+    "note": "闲鱼业务保证金-冻结-保证金充值 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-06-04 19:20:21",
+    "createdAt": "2026-09-03T15:43:35.423990",
     "createdBy": "user"
   },
   {
@@ -5724,6 +8436,90 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-226-202606032300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****0",
+    "note": "模型中转站，官方模型。 [支付宝(133)/]",
+    "date": "2026-06-03 18:54:17",
+    "createdAt": "2026-09-03T15:43:35.423999",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-227-202606031003",
+    "type": "expense",
+    "amount": 7.98,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(5119031016469004721)扣款 [支付宝(133)/]",
+    "date": "2026-06-03 17:23:19",
+    "createdAt": "2026-09-03T15:43:35.424005",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-228-202606031003",
+    "type": "expense",
+    "amount": 0.4,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(5119031016469004721)扣款 [支付宝(133)/]",
+    "date": "2026-06-03 17:21:15",
+    "createdAt": "2026-09-03T15:43:35.424011",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-229-202606031003",
+    "type": "expense",
+    "amount": 0.24,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(5119031016469004721)扣款 [支付宝(133)/]",
+    "date": "2026-06-03 17:21:14",
+    "createdAt": "2026-09-03T15:43:35.424017",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-230-202606032300",
+    "type": "income",
+    "amount": 39.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****丝",
+    "note": "模型中转站，官方模型。 [支付宝(133)/]",
+    "date": "2026-06-03 16:14:49",
+    "createdAt": "2026-09-03T15:43:35.424027",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-231-202606032300",
+    "type": "income",
+    "amount": 19.9,
+    "category": "other",
+    "account": "alipay",
+    "title": "****6",
+    "note": "模型中转站，官方模型。 [支付宝(133)/]",
+    "date": "2026-06-03 15:12:26",
+    "createdAt": "2026-09-03T15:43:35.424039",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-232-202606032300",
+    "type": "expense",
+    "amount": 10.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "闲鱼超级擦亮充值 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-06-03 14:42:22",
+    "createdAt": "2026-09-03T15:43:35.424049",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-446-46176558",
     "type": "income",
     "amount": 19.9,
@@ -5760,6 +8556,30 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-233-202606031003",
+    "type": "expense",
+    "amount": 1.64,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3305256315262029157)扣款 [支付宝(133)/]",
+    "date": "2026-06-03 09:36:18",
+    "createdAt": "2026-09-03T15:43:35.424058",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-234-202606031003",
+    "type": "expense",
+    "amount": 0.06,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3305256315262029157)扣款 [支付宝(133)/]",
+    "date": "2026-06-03 09:36:17",
+    "createdAt": "2026-09-03T15:43:35.424063",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-449-46176103",
     "type": "expense",
     "amount": 13.9,
@@ -5793,6 +8613,18 @@
     "note": "[/]",
     "date": "2026-06-03 02:17:40",
     "createdAt": "2026-09-03T13:57:57.335926",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-235-202606032300",
+    "type": "income",
+    "amount": 19.87,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****x",
+    "note": "GLM5.1、Kimi 2.6 mimo-v2.5(pro) [支付宝(133)/]",
+    "date": "2026-06-03 00:36:46",
+    "createdAt": "2026-09-03T15:43:35.424071",
     "createdBy": "user"
   },
   {
@@ -5928,6 +8760,54 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-236-202606022300",
+    "type": "income",
+    "amount": 32.0,
+    "category": "other",
+    "account": "alipay",
+    "title": "****h",
+    "note": "OpenClaw龙虾安装部署，完全手搓安装，专治疑难杂症。 [支付宝(133)/]",
+    "date": "2026-06-02 16:19:18",
+    "createdAt": "2026-09-03T15:43:35.424082",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-237-202606021003",
+    "type": "expense",
+    "amount": 1.98,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-闲鱼币智能软件服务费(3306251784850026091)扣款 [支付宝(133)/]",
+    "date": "2026-06-02 15:09:36",
+    "createdAt": "2026-09-03T15:43:35.424088",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-238-202606021003",
+    "type": "expense",
+    "amount": 0.1,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-软件服务费(3306251784850026091)扣款 [支付宝(133)/]",
+    "date": "2026-06-02 15:09:35",
+    "createdAt": "2026-09-03T15:43:35.424094",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-239-202606021003",
+    "type": "expense",
+    "amount": 0.06,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "分账-基础软件服务费(3306251784850026091)扣款 [支付宝(133)/]",
+    "date": "2026-06-02 15:09:09",
+    "createdAt": "2026-09-03T15:43:35.424102",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-463-46175605",
     "type": "expense",
     "amount": 12.3,
@@ -5937,6 +8817,42 @@
     "note": "【沙县小吃（天悦外滩店）】沙县小吃特色饭丨鸡腿套餐饭丨鸭腿…-拼好饭微信小程序-260602111003 [分付]",
     "date": "2026-06-02 14:31:18",
     "createdAt": "2026-09-03T13:57:57.336107",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-240-202606022300",
+    "type": "income",
+    "amount": 9.9,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****3",
+    "note": "GLM5.1、Kimi 2.6 mimo-v2.5(pro) [支付宝(133)/]",
+    "date": "2026-06-02 13:09:56",
+    "createdAt": "2026-09-03T15:43:35.424113",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-241-202606022300",
+    "type": "income",
+    "amount": 9.9,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****5",
+    "note": "GLM5.1、Kimi 2.6 mimo-v2.5(pro) [支付宝(133)/]",
+    "date": "2026-06-02 13:03:18",
+    "createdAt": "2026-09-03T15:43:35.424122",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-242-202606022300",
+    "type": "expense",
+    "amount": 10.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "闲鱼超级擦亮充值 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-06-02 12:46:54",
+    "createdAt": "2026-09-03T15:43:35.424128",
     "createdBy": "user"
   },
   {
@@ -6036,6 +8952,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-243-202606012300",
+    "type": "income",
+    "amount": 9.56,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "****湖",
+    "note": "GLM5.1、Kimi 2.6 mimo-v2.5(pro) [支付宝(133)/]",
+    "date": "2026-06-01 10:12:19",
+    "createdAt": "2026-09-03T15:43:35.424135",
+    "createdBy": "user"
+  },
+  {
     "id": "wx-470-46174425",
     "type": "income",
     "amount": 88.8,
@@ -6081,6 +9009,18 @@
     "note": "收款方备注:二维码收款 [分付] (原微信收款方: 初温)",
     "date": "2026-05-31 15:16:54",
     "createdAt": "2026-09-03T13:57:57.336244",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-244-202605312300",
+    "type": "expense",
+    "amount": 15.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "闲鱼超级擦亮充值 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-05-31 14:50:07",
+    "createdAt": "2026-09-03T15:43:35.424141",
     "createdBy": "user"
   },
   {
@@ -6336,6 +9276,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-245-202605292300",
+    "type": "expense",
+    "amount": 1.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "闲鱼服务费",
+    "note": "闲鱼超级擦亮充值 [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-05-29 16:30:54",
+    "createdAt": "2026-09-03T15:43:35.424147",
+    "createdBy": "user"
+  },
+  {
     "id": "alipay-42-20260529154745",
     "type": "income",
     "amount": 20.0,
@@ -6480,6 +9432,18 @@
     "createdBy": "user"
   },
   {
+    "id": "alipay2-246-202605282300",
+    "type": "expense",
+    "amount": 268.0,
+    "category": "food",
+    "account": "alipay",
+    "title": "g***v",
+    "note": "【GLM Pro】智谱账号转让 包月套餐 Coding Pl [支付宝(133)/农业银行储蓄卡(9775)]",
+    "date": "2026-05-28 22:00:55",
+    "createdAt": "2026-09-03T15:43:35.424156",
+    "createdBy": "user"
+  },
+  {
     "id": "alipay-47-20260528215557",
     "type": "expense",
     "amount": 1094.0,
@@ -6573,6 +9537,18 @@
     "note": "台州乾乐汤文化发展有限公司 [分付]",
     "date": "2026-05-27 21:13:56",
     "createdAt": "2026-09-03T13:57:57.336810",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-247-202605272300",
+    "type": "expense",
+    "amount": 2.68,
+    "category": "shopping",
+    "account": "alipay",
+    "title": "t***5",
+    "note": "Kimi K2.6 API不限次地板价 [支付宝(133)/账户余额(个人余额)]",
+    "date": "2026-05-27 17:32:45",
+    "createdAt": "2026-09-03T15:43:35.424166",
     "createdBy": "user"
   },
   {
@@ -6837,6 +9813,18 @@
     "note": "收款方备注:二维码收款 [分付]",
     "date": "2026-05-23 09:07:46",
     "createdAt": "2026-09-03T13:57:57.337171",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-248-202605222300",
+    "type": "expense",
+    "amount": 30.0,
+    "category": "tokenmp_project",
+    "account": "alipay",
+    "title": "剑***5",
+    "note": "小米MiMo账号盲盒&times;5(20亿以上) [支付宝(133)/账户余额(个人余额)]",
+    "date": "2026-05-22 22:24:54",
+    "createdAt": "2026-09-03T15:43:35.424173",
     "createdBy": "user"
   },
   {
@@ -7413,6 +10401,18 @@
     "note": "【杭景元·东北老式麻辣烫（麻辣拌·椒江宝龙店）】杭景元麻辣…-拼好饭微信小程序-26050111100300 [分付]",
     "date": "2026-05-01 15:32:08",
     "createdAt": "2026-09-03T13:57:57.337730",
+    "createdBy": "user"
+  },
+  {
+    "id": "alipay2-249-202605012300",
+    "type": "expense",
+    "amount": 2.38,
+    "category": "shopping",
+    "account": "alipay",
+    "title": "寒***帆",
+    "note": "0刀验证卡 虚拟卡 美区vias卡 [支付宝(133)/账户余额(个人余额)]",
+    "date": "2026-05-01 14:02:29",
+    "createdAt": "2026-09-03T15:43:35.424183",
     "createdBy": "user"
   }
 ]
