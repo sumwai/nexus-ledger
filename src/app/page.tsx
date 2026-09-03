@@ -33,10 +33,7 @@ import {
   SlidersHorizontal,
   Tag,
   Search,
-  Boxes,
-  Layers,
-  ArrowUpDown,
-  Sparkles
+  Boxes
 } from "lucide-react";
 import { Transaction, CategoryMeta, DEFAULT_CATEGORIES, ACCOUNTS, TransactionType } from "@/lib/types";
 
@@ -160,7 +157,7 @@ export default function MobileLedgerApp() {
     }).filter(c => c.total > 0).sort((a, b) => b.total - a.total);
   }, [transactions, categories, selectedMonth]);
 
-  // 按日期分组流水（Timeline Timeline 视觉架构）
+  // 按日期分组流水
   const groupedTransactionsByDate = useMemo(() => {
     const groups: { dateStr: string; dayTitle: string; totalExp: number; totalInc: number; items: Transaction[] }[] = [];
     const map = new Map<string, Transaction[]>();
@@ -176,7 +173,6 @@ export default function MobileLedgerApp() {
       const totalExp = items.filter(t => t.type === "expense").reduce((s, t) => s + t.amount, 0);
       const totalInc = items.filter(t => t.type === "income").reduce((s, t) => s + t.amount, 0);
       
-      // 格式化日期标题，例如: 09月03日 星期四
       const d = new Date(day);
       const weekdays = ["周日", "周一", "周二", "周三", "周四", "周五", "周六"];
       const dayTitle = `${day.substring(5, 7)}月${day.substring(8, 10)}日 ${weekdays[d.getDay()] || ""}`;
@@ -320,33 +316,33 @@ export default function MobileLedgerApp() {
 
   return (
     <div className="w-full min-h-screen bg-[#F6F8FA] text-slate-900 flex flex-col font-sans select-none pb-24">
-      {/* 顶部 Header (精致浮层与磨砂质感) */}
+      {/* 顶部 Header */}
       <header className="w-full bg-white/90 backdrop-blur-xl sticky top-0 z-30 border-b border-slate-200/60 shadow-[0_2px_12px_rgba(0,0,0,0.03)] px-4 sm:px-8 py-3.5 flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-slate-900 via-indigo-950 to-blue-900 flex items-center justify-center text-white shadow-md shadow-indigo-950/20 border border-slate-700/30">
+        <div className="flex items-center gap-3 min-w-0">
+          <div className="w-10 h-10 rounded-2xl bg-gradient-to-tr from-slate-900 via-indigo-950 to-blue-900 flex items-center justify-center text-white shadow-md shadow-indigo-950/20 border border-slate-700/30 shrink-0">
             <Wallet className="w-5 h-5 text-indigo-200" />
           </div>
-          <div>
+          <div className="min-w-0">
             <div className="flex items-center gap-2">
-              <h1 className="text-base sm:text-lg font-black tracking-tight text-slate-900">
+              <h1 className="text-base sm:text-lg font-black tracking-tight text-slate-900 whitespace-nowrap">
                 Nexus Ledger
               </h1>
-              <span className="px-2 py-0.5 rounded-full bg-gradient-to-r from-emerald-50 to-teal-50 text-emerald-700 text-[10px] font-bold border border-emerald-200/60 shadow-2xs">
+              <span className="px-2 py-0.5 rounded-full bg-gradient-to-r from-emerald-50 to-teal-50 text-emerald-700 text-[10px] font-bold border border-emerald-200/60 shadow-2xs whitespace-nowrap hidden sm:inline-block">
                 {transactions.length} 笔流水
               </span>
             </div>
-            <p className="text-[11px] text-slate-400 font-medium">极简高定金融资产看板</p>
+            <p className="text-[11px] text-slate-400 font-medium whitespace-nowrap truncate">智能财务资产看板</p>
           </div>
         </div>
 
         {/* 月份切换器与操作 */}
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 shrink-0">
           <select 
             value={selectedMonth}
             onChange={(e) => setSelectedMonth(e.target.value)}
-            className="bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200/80 text-xs font-semibold rounded-xl px-3 py-2 text-slate-700 focus:outline-none focus:border-indigo-500 shadow-2xs transition-all"
+            className="bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200/80 text-xs font-semibold rounded-xl px-2.5 sm:px-3 py-2 text-slate-700 focus:outline-none focus:border-indigo-500 shadow-2xs transition-all whitespace-nowrap"
           >
-            <option value="all">全部账单周期</option>
+            <option value="all">全部周期</option>
             {months.map(m => (
               <option key={m} value={m}>{m}</option>
             ))}
@@ -355,7 +351,7 @@ export default function MobileLedgerApp() {
           <button 
             onClick={fetchData} 
             disabled={loading}
-            className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 active:scale-95 transition-all text-xs flex items-center gap-1.5 shadow-2xs"
+            className="p-2.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-600 active:scale-95 transition-all text-xs flex items-center gap-1.5 shadow-2xs shrink-0"
             title="刷新数据"
           >
             <RefreshCw className={`w-3.5 h-3.5 ${loading ? "animate-spin" : ""}`} />
@@ -366,10 +362,10 @@ export default function MobileLedgerApp() {
       {/* 主体全屏内容区 */}
       <main className="w-full flex-1 px-4 sm:px-8 py-5 max-w-7xl mx-auto space-y-6">
         
-        {/* 1. 概览 Tab (升级为高端 Bento 布局) */}
+        {/* 1. 概览 Tab */}
         {activeTab === "overview" && (
           <>
-            {/* 核心黑曜石资产主卡片 (Obsidian Fintech Card) */}
+            {/* 核心资产主卡片 */}
             <div className="w-full relative overflow-hidden rounded-3xl p-6 sm:p-8 bg-gradient-to-br from-[#0F172A] via-[#1E293B] to-[#0A0F1D] text-white shadow-2xl shadow-slate-950/20 border border-slate-700/50">
               <div className="absolute -right-16 -top-16 w-56 h-56 bg-indigo-500/15 rounded-full blur-3xl pointer-events-none" />
               <div className="absolute -left-16 -bottom-16 w-56 h-56 bg-emerald-500/10 rounded-full blur-3xl pointer-events-none" />
@@ -382,39 +378,39 @@ export default function MobileLedgerApp() {
                     </span>
                     <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
                   </div>
-                  <div className="mt-2 flex items-baseline gap-1.5">
+                  <div className="mt-2 flex items-baseline gap-1.5 whitespace-nowrap">
                     <span className="text-sm font-light text-slate-400">¥</span>
                     <span className="text-3xl sm:text-4xl font-black tracking-tight text-white font-mono">
                       {netBalance.toLocaleString("zh-CN", { minimumFractionDigits: 2, maximumFractionDigits: 2 })}
                     </span>
                   </div>
                 </div>
-                <div className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-slate-200 text-xs font-semibold border border-white/15 shadow-inner">
-                  {selectedMonth === "all" ? "全周期汇总" : selectedMonth}
+                <div className="px-3 py-1 rounded-full bg-white/10 backdrop-blur-md text-slate-200 text-xs font-semibold border border-white/15 shadow-inner whitespace-nowrap shrink-0">
+                  {selectedMonth === "all" ? "全周期" : selectedMonth}
                 </div>
               </div>
 
               {/* 收支双栏指标 */}
               <div className="grid grid-cols-2 gap-4 mt-6 pt-5 border-t border-slate-800/90">
-                <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shadow-inner">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 shrink-0 shadow-inner">
                     <ArrowDownLeft className="w-5 h-5 stroke-[2.5]" />
                   </div>
-                  <div>
-                    <div className="text-xs text-slate-400 font-medium">总收入进账</div>
-                    <div className="text-base sm:text-lg font-bold text-emerald-400 font-mono">
+                  <div className="min-w-0">
+                    <div className="text-xs text-slate-400 font-medium whitespace-nowrap">总收入</div>
+                    <div className="text-sm sm:text-base font-bold text-emerald-400 font-mono whitespace-nowrap truncate">
                       +¥{totalIncome.toLocaleString("zh-CN", { minimumFractionDigits: 2 })}
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-3.5">
-                  <div className="w-11 h-11 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 shadow-inner">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-2xl bg-rose-500/10 border border-rose-500/20 flex items-center justify-center text-rose-400 shrink-0 shadow-inner">
                     <ArrowUpRight className="w-5 h-5 stroke-[2.5]" />
                   </div>
-                  <div>
-                    <div className="text-xs text-slate-400 font-medium">总消费支出</div>
-                    <div className="text-base sm:text-lg font-bold text-rose-400 font-mono">
+                  <div className="min-w-0">
+                    <div className="text-xs text-slate-400 font-medium whitespace-nowrap">总支出</div>
+                    <div className="text-sm sm:text-base font-bold text-rose-400 font-mono whitespace-nowrap truncate">
                       -¥{totalExpense.toLocaleString("zh-CN", { minimumFractionDigits: 2 })}
                     </div>
                   </div>
@@ -433,9 +429,9 @@ export default function MobileLedgerApp() {
                   </div>
                   <button 
                     onClick={() => setActiveTab("stats")}
-                    className="text-xs text-indigo-600 font-bold hover:underline flex items-center gap-0.5"
+                    className="text-xs text-indigo-600 font-bold hover:underline flex items-center gap-0.5 whitespace-nowrap"
                   >
-                    全部分析 <ChevronRight className="w-3.5 h-3.5" />
+                    全部 <ChevronRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
 
@@ -446,19 +442,17 @@ export default function MobileLedgerApp() {
                       onClick={() => handleDrilldownCategory(item)}
                       className="p-3 rounded-2xl bg-slate-50/70 hover:bg-indigo-50/50 border border-slate-100 hover:border-indigo-200/80 cursor-pointer active:scale-98 transition-all group"
                     >
-                      <div className="flex justify-between items-center text-xs mb-1.5">
-                        <div className="flex items-center gap-2.5">
-                          <div className={`p-2 rounded-xl border ${getCategoryBgClass(item.id)} shadow-2xs group-hover:scale-105 transition-transform`}>
+                      <div className="flex justify-between items-center text-xs mb-1.5 gap-2">
+                        <div className="flex items-center gap-2.5 min-w-0">
+                          <div className={`p-2 rounded-xl border ${getCategoryBgClass(item.id)} shadow-2xs group-hover:scale-105 transition-transform shrink-0`}>
                             {renderCategoryIcon(item.id, item.color)}
                           </div>
-                          <div>
-                            <span className="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">
-                              {item.label}
-                            </span>
-                            <span className="text-[10px] text-slate-400 ml-1.5 font-normal">({item.count}笔)</span>
-                          </div>
+                          <span className="font-bold text-slate-800 group-hover:text-indigo-600 transition-colors truncate">
+                            {item.label}
+                          </span>
+                          <span className="text-[10px] text-slate-400 font-normal shrink-0">({item.count}笔)</span>
                         </div>
-                        <div className="flex items-center gap-1.5">
+                        <div className="flex items-center gap-1.5 shrink-0 whitespace-nowrap">
                           <span className="font-extrabold text-slate-900 font-mono">¥{item.total.toFixed(2)}</span>
                           <span className="text-[10px] font-bold text-slate-400">({item.percentage}%)</span>
                         </div>
@@ -483,9 +477,9 @@ export default function MobileLedgerApp() {
                   </div>
                   <button 
                     onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); setActiveTab("records"); }}
-                    className="text-xs text-indigo-600 font-bold hover:underline flex items-center gap-0.5"
+                    className="text-xs text-indigo-600 font-bold hover:underline flex items-center gap-0.5 whitespace-nowrap"
                   >
-                    查看全部流水 <ChevronRight className="w-3.5 h-3.5" />
+                    全部流水 <ChevronRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
 
@@ -493,44 +487,44 @@ export default function MobileLedgerApp() {
                   {transactions.slice(0, 7).map((tx) => (
                     <div 
                       key={tx.id}
-                      className="p-3.5 rounded-2xl bg-slate-50/70 hover:bg-white border border-slate-100 hover:border-slate-300/80 hover:shadow-md transition-all flex items-center justify-between group"
+                      className="p-3.5 rounded-2xl bg-slate-50/70 hover:bg-white border border-slate-100 hover:border-slate-300/80 hover:shadow-md transition-all flex items-center justify-between gap-3 group"
                     >
-                      <div className="flex items-center gap-3.5">
+                      <div className="flex items-center gap-3.5 min-w-0 flex-1">
                         <div className={`w-11 h-11 rounded-2xl border ${getCategoryBgClass(tx.category)} shadow-2xs flex items-center justify-center shrink-0`}>
                           {renderCategoryIcon(tx.category)}
                         </div>
-                        <div>
-                          <div className="flex items-center gap-1.5">
+                        <div className="min-w-0 flex-1">
+                          <div className="flex items-center gap-1.5 min-w-0">
                             <button 
                               onClick={() => handleDrilldownCounterparty(tx.title.trim())}
-                              className="text-sm font-bold text-slate-800 hover:text-indigo-600 text-left transition-colors"
-                              title="点击筛选该交易方"
+                              className="text-sm font-bold text-slate-800 hover:text-indigo-600 text-left transition-colors truncate block max-w-full"
+                              title={tx.title}
                             >
                               {tx.title}
                             </button>
                             {tx.createdBy === "agent" && (
-                              <span className="inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded-md bg-indigo-50 text-indigo-600 text-[10px] font-bold border border-indigo-200/60">
+                              <span className="inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded-md bg-indigo-50 text-indigo-600 text-[10px] font-bold border border-indigo-200/60 shrink-0">
                                 <Bot className="w-2.5 h-2.5" /> Agent
                               </span>
                             )}
                           </div>
-                          <div className="text-xs text-slate-400 mt-1 flex flex-wrap items-center gap-2">
-                            <span>{tx.date.substring(5, 16)}</span>
-                            <span>•</span>
+                          <div className="text-xs text-slate-400 mt-1 flex items-center gap-2 overflow-hidden whitespace-nowrap text-ellipsis">
+                            <span className="shrink-0">{tx.date.substring(5, 16)}</span>
+                            <span className="shrink-0">•</span>
                             <button 
                               onClick={() => setEditingTx(tx)}
-                              className="font-medium text-slate-600 hover:text-indigo-600 bg-slate-200/60 hover:bg-indigo-50 px-1.5 py-0.2 rounded transition-colors"
+                              className="font-medium text-slate-600 hover:text-indigo-600 bg-slate-200/60 hover:bg-indigo-50 px-1.5 py-0.2 rounded transition-colors shrink-0"
                               title="点击修改分类"
                             >
                               {categories.find(c => c.id === tx.category)?.label || tx.category} ✎
                             </button>
-                            <span>•</span>
-                            <span>{ACCOUNTS.find(a => a.id === tx.account)?.label || tx.account}</span>
+                            <span className="shrink-0">•</span>
+                            <span className="truncate">{ACCOUNTS.find(a => a.id === tx.account)?.label || tx.account}</span>
                           </div>
                         </div>
                       </div>
 
-                      <div className="text-right whitespace-nowrap pl-2">
+                      <div className="text-right whitespace-nowrap shrink-0 pl-1">
                         <span className={`text-base font-extrabold font-mono tracking-tight ${tx.type === "expense" ? "text-slate-900" : "text-emerald-600"}`}>
                           {tx.type === "expense" ? "-" : "+"}¥{tx.amount.toFixed(2)}
                         </span>
@@ -565,19 +559,19 @@ export default function MobileLedgerApp() {
                     onClick={() => handleDrilldownCategory(item)}
                     className="p-4 rounded-2xl bg-slate-50/70 hover:bg-indigo-50/40 border border-slate-100 hover:border-indigo-200/80 cursor-pointer active:scale-98 transition-all space-y-3 group shadow-2xs hover:shadow-md"
                   >
-                    <div className="flex justify-between items-center">
-                      <div className="flex items-center gap-3">
-                        <div className={`p-2.5 rounded-xl border ${getCategoryBgClass(item.id)} shadow-2xs group-hover:scale-105 transition-transform`}>
+                    <div className="flex justify-between items-center gap-2">
+                      <div className="flex items-center gap-3 min-w-0">
+                        <div className={`p-2.5 rounded-xl border ${getCategoryBgClass(item.id)} shadow-2xs group-hover:scale-105 transition-transform shrink-0`}>
                           {renderCategoryIcon(item.id, item.color)}
                         </div>
-                        <div>
-                          <div className="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors">
+                        <div className="min-w-0">
+                          <div className="text-sm font-bold text-slate-800 group-hover:text-indigo-600 transition-colors truncate">
                             {item.label}
                           </div>
-                          <div className="text-xs text-slate-400">共 {item.count} 笔支出</div>
+                          <div className="text-xs text-slate-400 whitespace-nowrap">共 {item.count} 笔支出</div>
                         </div>
                       </div>
-                      <div className="text-right">
+                      <div className="text-right shrink-0 whitespace-nowrap">
                         <div className="text-base font-extrabold text-slate-900 font-mono">¥{item.total.toFixed(2)}</div>
                         <div className="text-xs text-indigo-600 font-bold">{item.percentage}%</div>
                       </div>
@@ -590,7 +584,7 @@ export default function MobileLedgerApp() {
                       />
                     </div>
 
-                    <div className="flex justify-between items-center pt-1 text-[11px] text-slate-400 group-hover:text-indigo-600 font-medium">
+                    <div className="flex justify-between items-center pt-1 text-[11px] text-slate-400 group-hover:text-indigo-600 font-medium whitespace-nowrap">
                       <span>查看明细账单</span>
                       <ChevronRight className="w-3.5 h-3.5" />
                     </div>
@@ -601,37 +595,37 @@ export default function MobileLedgerApp() {
           </div>
         )}
 
-        {/* 3. 全量流水 Tab (时间轴卡片流 Timeline Design) */}
+        {/* 3. 全量流水 Tab (时间轴卡片流) */}
         {activeTab === "records" && (
           <div className="w-full space-y-5">
             {/* 顶栏筛选与统计卡片 */}
             <div className="bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs space-y-4">
               <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3">
-                <div className="flex items-center gap-2">
+                <div className="flex items-center gap-2 min-w-0">
                   {(selectedCategoryDetail || selectedCounterparty) && (
                     <button 
                       onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); }}
-                      className="p-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-1 text-xs font-bold mr-1 shadow-2xs"
+                      className="p-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-1 text-xs font-bold mr-1 shadow-2xs shrink-0 whitespace-nowrap"
                     >
                       <ArrowLeft className="w-3.5 h-3.5" /> 全部
                     </button>
                   )}
-                  <div>
-                    <h2 className="text-base font-black text-slate-800 flex items-center gap-1.5">
+                  <div className="min-w-0">
+                    <h2 className="text-base font-black text-slate-800 flex items-center gap-1.5 truncate">
                       {selectedCategoryDetail && <span>【{selectedCategoryDetail.label}】分类明细</span>}
                       {selectedCounterparty && <span>【{selectedCounterparty}】交易明细</span>}
                       {!selectedCategoryDetail && !selectedCounterparty && <span>全量流水明细</span>}
                     </h2>
-                    <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 mt-1">
-                      <span>筛选出 {filteredTransactions.length} 笔记录</span>
+                    <div className="flex items-center gap-3 text-xs text-slate-500 mt-1 whitespace-nowrap overflow-x-auto">
+                      <span className="shrink-0">{filteredTransactions.length} 笔记录</span>
                       {currentListTotalExpense > 0 && (
-                        <span className="font-bold text-slate-900">
-                          总支出: -¥{currentListTotalExpense.toFixed(2)}
+                        <span className="font-bold text-slate-900 shrink-0">
+                          支: -¥{currentListTotalExpense.toFixed(2)}
                         </span>
                       )}
                       {currentListTotalIncome > 0 && (
-                        <span className="font-bold text-emerald-600">
-                          总收入: +¥{currentListTotalIncome.toFixed(2)}
+                        <span className="font-bold text-emerald-600 shrink-0">
+                          收: +¥{currentListTotalIncome.toFixed(2)}
                         </span>
                       )}
                     </div>
@@ -639,10 +633,10 @@ export default function MobileLedgerApp() {
                 </div>
 
                 {/* 收支类型切换 */}
-                <div className="flex bg-slate-100/90 p-1 rounded-2xl w-fit border border-slate-200/60 shadow-2xs">
+                <div className="flex bg-slate-100/90 p-1 rounded-2xl w-fit border border-slate-200/60 shadow-2xs shrink-0">
                   <button
                     onClick={() => setFilterType("all")}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
                       filterType === "all" ? "bg-white text-slate-900 shadow-sm" : "text-slate-500 hover:text-slate-800"
                     }`}
                   >
@@ -650,7 +644,7 @@ export default function MobileLedgerApp() {
                   </button>
                   <button
                     onClick={() => setFilterType("expense")}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
                       filterType === "expense" ? "bg-white text-rose-600 shadow-sm" : "text-slate-500 hover:text-slate-800"
                     }`}
                   >
@@ -658,7 +652,7 @@ export default function MobileLedgerApp() {
                   </button>
                   <button
                     onClick={() => setFilterType("income")}
-                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all ${
+                    className={`px-3 py-1.5 rounded-xl text-xs font-bold transition-all whitespace-nowrap ${
                       filterType === "income" ? "bg-white text-emerald-600 shadow-sm" : "text-slate-500 hover:text-slate-800"
                     }`}
                   >
@@ -673,7 +667,7 @@ export default function MobileLedgerApp() {
                   <select
                     value={selectedCounterparty || ""}
                     onChange={(e) => setSelectedCounterparty(e.target.value ? e.target.value : null)}
-                    className="w-full px-3 py-2 bg-slate-50/90 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:border-indigo-500 transition-colors shadow-2xs"
+                    className="w-full px-3 py-2 bg-slate-50/90 border border-slate-200 rounded-xl text-xs font-semibold text-slate-800 focus:outline-none focus:border-indigo-500 transition-colors shadow-2xs whitespace-nowrap"
                   >
                     <option value="">👤 全部收/付款方 ({counterpartiesList.length})</option>
                     {counterpartiesList.map((c) => (
@@ -703,12 +697,12 @@ export default function MobileLedgerApp() {
 
               {/* 高频交易方胶囊 */}
               <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
-                <span className="text-slate-400 text-[11px] font-medium whitespace-nowrap">常用快捷:</span>
+                <span className="text-slate-400 text-[11px] font-medium whitespace-nowrap shrink-0">常用快捷:</span>
                 {counterpartiesList.slice(0, 8).map((c) => (
                   <button
                     key={c.name}
                     onClick={() => setSelectedCounterparty(selectedCounterparty === c.name ? null : c.name)}
-                    className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap transition-all ${
+                    className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap shrink-0 transition-all ${
                       selectedCounterparty === c.name
                         ? "bg-indigo-600 text-white shadow-sm shadow-indigo-500/20 scale-102"
                         : "bg-slate-100 hover:bg-slate-200/80 text-slate-700"
@@ -720,18 +714,18 @@ export default function MobileLedgerApp() {
               </div>
             </div>
 
-            {/* 按日期时间轴分组渲染流水列表 (Timeline Grouping) */}
+            {/* 按日期时间轴分组渲染流水列表 */}
             <div className="space-y-4">
               {groupedTransactionsByDate.map((group) => (
                 <div key={group.dateStr} className="bg-white rounded-3xl p-4 sm:p-5 border border-slate-200/70 shadow-xs space-y-2.5">
                   {/* 日期分组标题栏 */}
                   <div className="flex justify-between items-center px-1 pb-2 border-b border-slate-100/90 text-xs">
-                    <div className="flex items-center gap-2">
-                      <Calendar className="w-3.5 h-3.5 text-indigo-500" />
+                    <div className="flex items-center gap-2 whitespace-nowrap">
+                      <Calendar className="w-3.5 h-3.5 text-indigo-500 shrink-0" />
                       <span className="font-extrabold text-slate-800">{group.dayTitle}</span>
-                      <span className="text-[10px] text-slate-400 font-mono">({group.dateStr})</span>
+                      <span className="text-[10px] text-slate-400 font-mono hidden sm:inline-block">({group.dateStr})</span>
                     </div>
-                    <div className="flex items-center gap-3 font-mono font-bold text-[11px]">
+                    <div className="flex items-center gap-3 font-mono font-bold text-[11px] whitespace-nowrap">
                       {group.totalExp > 0 && (
                         <span className="text-slate-600">支出 ¥{group.totalExp.toFixed(2)}</span>
                       )}
@@ -746,45 +740,45 @@ export default function MobileLedgerApp() {
                     {group.items.map((tx) => (
                       <div 
                         key={tx.id}
-                        className="p-3 rounded-2xl bg-slate-50/70 hover:bg-white border border-slate-100 hover:border-slate-300 hover:shadow-md transition-all flex items-center justify-between group"
+                        className="p-3 rounded-2xl bg-slate-50/70 hover:bg-white border border-slate-100 hover:border-slate-300 hover:shadow-md transition-all flex items-center justify-between gap-3 group"
                       >
-                        <div className="flex items-center gap-3.5">
+                        <div className="flex items-center gap-3.5 min-w-0 flex-1">
                           <div className={`w-11 h-11 rounded-2xl border ${getCategoryBgClass(tx.category)} shadow-2xs flex items-center justify-center shrink-0`}>
                             {renderCategoryIcon(tx.category)}
                           </div>
-                          <div>
-                            <div className="flex items-center gap-2">
+                          <div className="min-w-0 flex-1">
+                            <div className="flex items-center gap-2 min-w-0">
                               <button 
                                 onClick={() => handleDrilldownCounterparty(tx.title.trim())}
-                                className="text-sm font-bold text-slate-800 hover:text-indigo-600 text-left transition-colors"
-                                title="点击筛选该交易方"
+                                className="text-sm font-bold text-slate-800 hover:text-indigo-600 text-left transition-colors truncate block max-w-full"
+                                title={tx.title}
                               >
                                 {tx.title}
                               </button>
                               {tx.createdBy === "agent" && (
-                                <span className="inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded-md bg-indigo-50 text-indigo-600 text-[10px] font-bold border border-indigo-200/60">
+                                <span className="inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded-md bg-indigo-50 text-indigo-600 text-[10px] font-bold border border-indigo-200/60 shrink-0">
                                   <Bot className="w-2.5 h-2.5" /> Agent
                                 </span>
                               )}
                             </div>
-                            <div className="text-xs text-slate-400 mt-1 flex flex-wrap items-center gap-2">
-                              <span>{tx.date.substring(11, 16)}</span>
-                              <span>•</span>
+                            <div className="text-xs text-slate-400 mt-1 flex items-center gap-2 overflow-hidden whitespace-nowrap text-ellipsis">
+                              <span className="shrink-0">{tx.date.substring(11, 16)}</span>
+                              <span className="shrink-0">•</span>
                               <button 
                                 onClick={() => setEditingTx(tx)}
-                                className="font-semibold text-slate-600 hover:text-indigo-600 bg-slate-200/60 hover:bg-indigo-50 px-2 py-0.5 rounded transition-colors"
+                                className="font-semibold text-slate-600 hover:text-indigo-600 bg-slate-200/60 hover:bg-indigo-50 px-2 py-0.5 rounded transition-colors shrink-0"
                                 title="点击修改分类"
                               >
                                 {categories.find(c => c.id === tx.category)?.label || tx.category} ✎
                               </button>
-                              <span>•</span>
-                              <span>{ACCOUNTS.find(a => a.id === tx.account)?.label || tx.account}</span>
-                              {tx.note && <span className="text-slate-400 text-[11px] hidden sm:inline">({tx.note})</span>}
+                              <span className="shrink-0">•</span>
+                              <span className="truncate">{ACCOUNTS.find(a => a.id === tx.account)?.label || tx.account}</span>
+                              {tx.note && <span className="text-slate-400 text-[11px] truncate hidden sm:inline">({tx.note})</span>}
                             </div>
                           </div>
                         </div>
 
-                        <div className="flex items-center gap-3 shrink-0 pl-2">
+                        <div className="flex items-center gap-3 shrink-0 pl-1">
                           <div className="text-right whitespace-nowrap">
                             <span className={`text-base font-black font-mono tracking-tight ${tx.type === "expense" ? "text-slate-900" : "text-emerald-600"}`}>
                               {tx.type === "expense" ? "-" : "+"}¥{tx.amount.toFixed(2)}
@@ -792,7 +786,7 @@ export default function MobileLedgerApp() {
                           </div>
                           <button 
                             onClick={() => handleDeleteTx(tx.id)}
-                            className="p-2 text-slate-300 hover:text-rose-600 transition-colors"
+                            className="p-2 text-slate-300 hover:text-rose-600 transition-colors shrink-0"
                             title="删除记录"
                           >
                             <Trash2 className="w-4 h-4" />
@@ -831,7 +825,7 @@ export default function MobileLedgerApp() {
               </div>
               <button
                 onClick={() => setIsAddCategoryOpen(true)}
-                className="px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white text-xs font-bold flex items-center gap-1.5 active:scale-95 transition-all shadow-md shadow-indigo-500/20"
+                className="px-4 py-2 rounded-xl bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-500 hover:to-blue-500 text-white text-xs font-bold flex items-center gap-1.5 active:scale-95 transition-all shadow-md shadow-indigo-500/20 whitespace-nowrap"
               >
                 <Plus className="w-4 h-4" />
                 <span>新建分类</span>
@@ -845,13 +839,13 @@ export default function MobileLedgerApp() {
                   onClick={() => handleDrilldownCategory(cat)}
                   className="p-3.5 rounded-2xl bg-slate-50/80 border border-slate-200/70 flex items-center justify-between group hover:border-indigo-300 hover:bg-indigo-50/30 cursor-pointer transition-all shadow-2xs hover:shadow-xs"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className={`p-2.5 rounded-xl border ${getCategoryBgClass(cat.id)} shadow-2xs`}>
+                  <div className="flex items-center gap-3 min-w-0">
+                    <div className={`p-2.5 rounded-xl border ${getCategoryBgClass(cat.id)} shadow-2xs shrink-0`}>
                       {renderCategoryIcon(cat.id, cat.color)}
                     </div>
-                    <div>
-                      <div className="text-xs font-bold text-slate-800">{cat.label}</div>
-                      <div className="text-[10px] text-slate-400">
+                    <div className="min-w-0">
+                      <div className="text-xs font-bold text-slate-800 truncate">{cat.label}</div>
+                      <div className="text-[10px] text-slate-400 whitespace-nowrap">
                         {cat.isCustom ? "自建分类" : "系统内置"}
                       </div>
                     </div>
@@ -860,7 +854,7 @@ export default function MobileLedgerApp() {
                   {cat.isCustom && (
                     <button
                       onClick={(e) => handleDeleteCategory(cat.id, e)}
-                      className="p-1.5 text-slate-400 hover:text-rose-600 transition-colors"
+                      className="p-1.5 text-slate-400 hover:text-rose-600 transition-colors shrink-0"
                       title="删除自建分类"
                     >
                       <Trash2 className="w-3.5 h-3.5" />
@@ -873,7 +867,7 @@ export default function MobileLedgerApp() {
         )}
       </main>
 
-      {/* 底部 Tab 导航 (高斯模糊浮动岛) */}
+      {/* 底部 Tab 导航 */}
       <footer className="fixed bottom-0 left-0 right-0 w-full bg-white/90 backdrop-blur-xl border-t border-slate-200/70 px-4 py-3 z-30 flex items-center justify-around shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
         <button 
           onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); setActiveTab("overview"); }}
@@ -882,7 +876,7 @@ export default function MobileLedgerApp() {
           }`}
         >
           <Wallet className="w-5 h-5 stroke-[2.2]" />
-          <span className="text-[11px]">资产概览</span>
+          <span className="text-[11px] whitespace-nowrap">资产概览</span>
         </button>
 
         <button 
@@ -892,7 +886,7 @@ export default function MobileLedgerApp() {
           }`}
         >
           <PieChartIcon className="w-5 h-5 stroke-[2.2]" />
-          <span className="text-[11px]">分类统计</span>
+          <span className="text-[11px] whitespace-nowrap">分类统计</span>
         </button>
 
         <button 
@@ -902,7 +896,7 @@ export default function MobileLedgerApp() {
           }`}
         >
           <Calendar className="w-5 h-5 stroke-[2.2]" />
-          <span className="text-[11px]">时间轴流水</span>
+          <span className="text-[11px] whitespace-nowrap">时间轴流水</span>
         </button>
 
         <button 
@@ -912,7 +906,7 @@ export default function MobileLedgerApp() {
           }`}
         >
           <SlidersHorizontal className="w-5 h-5 stroke-[2.2]" />
-          <span className="text-[11px]">分类库</span>
+          <span className="text-[11px] whitespace-nowrap">分类库</span>
         </button>
       </footer>
 
@@ -921,11 +915,11 @@ export default function MobileLedgerApp() {
         <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
           <div className="bg-white rounded-3xl p-6 max-w-sm w-full border border-slate-200 shadow-2xl space-y-4 animate-in fade-in zoom-in-95">
             <div className="flex justify-between items-center">
-              <div>
-                <h3 className="text-base font-black text-slate-900">重新归类账目</h3>
-                <p className="text-xs text-slate-500 mt-0.5">{editingTx.title} (¥{editingTx.amount})</p>
+              <div className="min-w-0 flex-1 pr-2">
+                <h3 className="text-base font-black text-slate-900 truncate">重新归类账目</h3>
+                <p className="text-xs text-slate-500 mt-0.5 truncate">{editingTx.title} (¥{editingTx.amount})</p>
               </div>
-              <button onClick={() => setEditingTx(null)} className="text-slate-400 hover:text-slate-600">
+              <button onClick={() => setEditingTx(null)} className="text-slate-400 hover:text-slate-600 shrink-0">
                 <X className="w-5 h-5" />
               </button>
             </div>
@@ -942,7 +936,7 @@ export default function MobileLedgerApp() {
                   }`}
                 >
                   {renderCategoryIcon(cat.id, editingTx.category === cat.id ? "#FFFFFF" : cat.color)}
-                  <span className="text-[11px]">{cat.label}</span>
+                  <span className="text-[11px] truncate w-full text-center">{cat.label}</span>
                 </button>
               ))}
             </div>
@@ -956,7 +950,7 @@ export default function MobileLedgerApp() {
           <div className="bg-white rounded-3xl p-6 max-w-sm w-full border border-slate-200 shadow-2xl space-y-4 animate-in fade-in zoom-in-95">
             <div className="flex justify-between items-center">
               <h3 className="text-base font-black text-slate-900">自建新分类</h3>
-              <button onClick={() => setIsAddCategoryOpen(false)} className="text-slate-400 hover:text-slate-600">
+              <button onClick={() => setIsAddCategoryOpen(false)} className="text-slate-400 hover:text-slate-600 shrink-0">
                 <X className="w-5 h-5" />
               </button>
             </div>
