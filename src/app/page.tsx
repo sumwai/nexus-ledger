@@ -33,7 +33,8 @@ import {
   SlidersHorizontal,
   Tag,
   Search,
-  Check
+  UserCheck,
+  Building
 } from "lucide-react";
 import { Transaction, CategoryMeta, DEFAULT_CATEGORIES, ACCOUNTS, TransactionType } from "@/lib/types";
 
@@ -47,6 +48,7 @@ export default function MobileLedgerApp() {
   const [selectedMonth, setSelectedMonth] = useState<string>("all");
   const [filterType, setFilterType] = useState<"all" | "expense" | "income">("all");
   const [selectedCategoryDetail, setSelectedCategoryDetail] = useState<CategoryMeta | null>(null);
+  const [selectedCounterparty, setSelectedCounterparty] = useState<string | null>(null);
   const [searchKeyword, setSearchKeyword] = useState<string>("");
 
   // 修改分类弹窗状态
@@ -86,19 +88,38 @@ export default function MobileLedgerApp() {
     return Array.from(new Set(transactions.map(t => t.date.substring(0, 7)))).filter(Boolean).sort().reverse();
   }, [transactions]);
 
+  // 高频交易方列表（排行榜）
+  const counterpartiesList = useMemo(() => {
+    const map = new Map<string, { count: number; totalExpense: number; totalIncome: number }>();
+    transactions.forEach(t => {
+      const name = t.title.trim();
+      if (!name || name === "日常收支" || name === "/") return;
+      const cur = map.get(name) || { count: 0, totalExpense: 0, totalIncome: 0 };
+      cur.count += 1;
+      if (t.type === "expense") cur.totalExpense += t.amount;
+      if (t.type === "income") cur.totalIncome += t.amount;
+      map.set(name, cur);
+    });
+
+    return Array.from(map.entries())
+      .map(([name, data]) => ({ name, ...data }))
+      .sort((a, b) => b.count - a.count);
+  }, [transactions]);
+
   // 全局过滤后的流水
   const filteredTransactions = useMemo(() => {
     return transactions.filter(tx => {
       if (selectedMonth !== "all" && !tx.date.startsWith(selectedMonth)) return false;
       if (filterType !== "all" && tx.type !== filterType) return false;
       if (selectedCategoryDetail && tx.category !== selectedCategoryDetail.id) return false;
+      if (selectedCounterparty && tx.title.trim() !== selectedCounterparty) return false;
       if (searchKeyword.trim()) {
         const kw = searchKeyword.toLowerCase();
         return tx.title.toLowerCase().includes(kw) || (tx.note && tx.note.toLowerCase().includes(kw));
       }
       return true;
     });
-  }, [transactions, selectedMonth, filterType, selectedCategoryDetail, searchKeyword]);
+  }, [transactions, selectedMonth, filterType, selectedCategoryDetail, selectedCounterparty, searchKeyword]);
 
   // 统计计算
   const totalIncome = useMemo(() => {
@@ -241,6 +262,14 @@ export default function MobileLedgerApp() {
   // 下钻到某个分类的详细流水
   const handleDrilldownCategory = (cat: CategoryMeta) => {
     setSelectedCategoryDetail(cat);
+    setSelectedCounterparty(null);
+    setActiveTab("records");
+  };
+
+  // 下钻到某个交易对方的详细流水
+  const handleDrilldownCounterparty = (name: string) => {
+    setSelectedCounterparty(name);
+    setSelectedCategoryDetail(null);
     setActiveTab("records");
   };
 
@@ -390,9 +419,6 @@ export default function MobileLedgerApp() {
                       </div>
                     </div>
                   ))}
-                  {categoryStats.length === 0 && (
-                    <div className="text-center py-6 text-xs text-slate-400">当前周期无支出</div>
-                  )}
                 </div>
               </div>
 
@@ -401,10 +427,10 @@ export default function MobileLedgerApp() {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3 className="text-sm font-bold text-slate-800">近期收支明细</h3>
-                    <p className="text-[11px] text-slate-400">点击分类徽标可快捷修改归类</p>
+                    <p className="text-[11px] text-slate-400">点击商家/对方名字可快捷筛选其全部流水</p>
                   </div>
                   <button 
-                    onClick={() => { setSelectedCategoryDetail(null); setActiveTab("records"); }}
+                    onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); setActiveTab("records"); }}
                     className="text-xs text-blue-600 font-medium hover:underline flex items-center"
                   >
                     查看全部流水 <ChevronRight className="w-3.5 h-3.5" />
@@ -423,7 +449,13 @@ export default function MobileLedgerApp() {
                         </div>
                         <div>
                           <div className="flex items-center gap-1.5">
-                            <span className="text-sm font-semibold text-slate-800">{tx.title}</span>
+                            <button 
+                              onClick={() => handleDrilldownCounterparty(tx.title.trim())}
+                              className="text-sm font-semibold text-slate-800 hover:text-blue-600 hover:underline text-left"
+                              title="点击筛选该收款方/付款方"
+                            >
+                              {tx.title}
+                            </button>
                             {tx.createdBy === "agent" && (
                               <span className="inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded-md bg-indigo-50 text-indigo-600 text-[10px] font-medium border border-indigo-200/60">
                                 <Bot className="w-2.5 h-2.5" /> Agent
@@ -516,24 +548,26 @@ export default function MobileLedgerApp() {
           </div>
         )}
 
-        {/* 3. 流水明细 Tab（已优化移动端搜索与清晰收支累计） */}
+        {/* 3. 流水明细 Tab（包含收款方/付款方快速下拉筛选与点击下钻） */}
         {activeTab === "records" && (
           <div className="w-full bg-white rounded-3xl p-6 border border-slate-200/80 shadow-xs space-y-5">
             {/* 顶栏控制 */}
-            <div className="flex flex-col gap-3 border-b border-slate-100 pb-4">
+            <div className="flex flex-col gap-3.5 border-b border-slate-100 pb-4">
               <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
                 <div className="flex items-center gap-2">
-                  {selectedCategoryDetail && (
+                  {(selectedCategoryDetail || selectedCounterparty) && (
                     <button 
-                      onClick={() => setSelectedCategoryDetail(null)}
+                      onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); }}
                       className="p-1.5 rounded-xl bg-slate-100 hover:bg-slate-200 text-slate-700 transition-all flex items-center gap-1 text-xs font-semibold mr-1"
                     >
                       <ArrowLeft className="w-3.5 h-3.5" /> 全部
                     </button>
                   )}
                   <div>
-                    <h2 className="text-base font-bold text-slate-800">
-                      {selectedCategoryDetail ? `【${selectedCategoryDetail.label}】分类明细` : "全量财务流水"}
+                    <h2 className="text-base font-bold text-slate-800 flex items-center gap-1.5">
+                      {selectedCategoryDetail && <span>【{selectedCategoryDetail.label}】分类明细</span>}
+                      {selectedCounterparty && <span>【{selectedCounterparty}】交易明细</span>}
+                      {!selectedCategoryDetail && !selectedCounterparty && <span>全量财务流水</span>}
                     </h2>
                     <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 mt-1">
                       <span>共 {filteredTransactions.length} 笔记录</span>
@@ -551,7 +585,7 @@ export default function MobileLedgerApp() {
                   </div>
                 </div>
 
-                {/* 过滤切换 */}
+                {/* 收支类型过滤切换 */}
                 <div className="flex bg-slate-100 p-1 rounded-xl w-fit">
                   <button
                     onClick={() => setFilterType("all")}
@@ -580,21 +614,58 @@ export default function MobileLedgerApp() {
                 </div>
               </div>
 
-              {/* 搜索框单独成行（避免移动端挤压截断） */}
-              <div className="relative w-full">
-                <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
-                <input 
-                  type="text"
-                  placeholder="搜索商家、商品、转账人或备注..."
-                  value={searchKeyword}
-                  onChange={(e) => setSearchKeyword(e.target.value)}
-                  className="w-full pl-10 pr-8 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
-                />
-                {searchKeyword && (
-                  <button onClick={() => setSearchKeyword("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1">
-                    <X className="w-3.5 h-3.5" />
+              {/* 复合筛选行：收款/付款方下拉选择器 + 搜索框 */}
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
+                {/* 交易方下拉快捷筛选 */}
+                <div className="sm:col-span-1">
+                  <select
+                    value={selectedCounterparty || ""}
+                    onChange={(e) => setSelectedCounterparty(e.target.value ? e.target.value : null)}
+                    className="w-full px-3 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs font-medium text-slate-800 focus:outline-none focus:border-blue-500 transition-colors"
+                  >
+                    <option value="">👤 全部收/付款方 ({counterpartiesList.length})</option>
+                    {counterpartiesList.map((c) => (
+                      <option key={c.name} value={c.name}>
+                        {c.name} ({c.count}笔 / {c.totalExpense > 0 ? `支¥${c.totalExpense.toFixed(0)}` : `收¥${c.totalIncome.toFixed(0)}`})
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {/* 搜索框 */}
+                <div className="sm:col-span-2 relative">
+                  <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                  <input 
+                    type="text"
+                    placeholder="搜索商家、商品、转账人或备注..."
+                    value={searchKeyword}
+                    onChange={(e) => setSearchKeyword(e.target.value)}
+                    className="w-full pl-10 pr-8 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
+                  />
+                  {searchKeyword && (
+                    <button onClick={() => setSearchKeyword("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1">
+                      <X className="w-3.5 h-3.5" />
+                    </button>
+                  )}
+                </div>
+              </div>
+
+              {/* 常用交易方标签快捷胶囊 */}
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
+                <span className="text-slate-400 text-[11px] whitespace-nowrap">高频交易方:</span>
+                {counterpartiesList.slice(0, 8).map((c) => (
+                  <button
+                    key={c.name}
+                    onClick={() => setSelectedCounterparty(selectedCounterparty === c.name ? null : c.name)}
+                    className={`px-2.5 py-1 rounded-full text-[11px] font-medium whitespace-nowrap transition-all ${
+                      selectedCounterparty === c.name
+                        ? "bg-blue-600 text-white shadow-xs"
+                        : "bg-slate-100 hover:bg-slate-200/80 text-slate-700"
+                    }`}
+                  >
+                    {c.name} ({c.count})
                   </button>
-                )}
+                ))}
               </div>
             </div>
 
@@ -611,7 +682,13 @@ export default function MobileLedgerApp() {
                     </div>
                     <div>
                       <div className="flex items-center gap-2">
-                        <span className="text-sm font-semibold text-slate-800">{tx.title}</span>
+                        <button 
+                          onClick={() => handleDrilldownCounterparty(tx.title.trim())}
+                          className="text-sm font-semibold text-slate-800 hover:text-blue-600 hover:underline text-left"
+                          title="点击快速筛选该交易对方的所有流水"
+                        >
+                          {tx.title}
+                        </button>
                         {tx.createdBy === "agent" && (
                           <span className="inline-flex items-center gap-0.5 px-1.5 py-0.2 rounded-md bg-indigo-50 text-indigo-600 text-[10px] font-medium border border-indigo-200/60">
                             <Bot className="w-2.5 h-2.5" /> Agent
@@ -655,12 +732,12 @@ export default function MobileLedgerApp() {
               {filteredTransactions.length === 0 && (
                 <div className="text-center py-12 text-slate-400 space-y-2">
                   <p className="text-sm">没有匹配到任何流水账单</p>
-                  {selectedCategoryDetail && (
+                  {(selectedCategoryDetail || selectedCounterparty) && (
                     <button 
-                      onClick={() => setSelectedCategoryDetail(null)}
+                      onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); }}
                       className="text-xs text-blue-600 underline font-medium"
                     >
-                      清除分类筛选
+                      清除所有筛选条件
                     </button>
                   )}
                 </div>
@@ -724,7 +801,7 @@ export default function MobileLedgerApp() {
       {/* 底部 Tab 导航 */}
       <footer className="fixed bottom-0 left-0 right-0 w-full bg-white/95 backdrop-blur-md border-t border-slate-200/80 px-4 py-2.5 z-30 flex items-center justify-around shadow-lg">
         <button 
-          onClick={() => { setSelectedCategoryDetail(null); setActiveTab("overview"); }}
+          onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); setActiveTab("overview"); }}
           className={`flex flex-col items-center gap-1 py-1 px-4 rounded-xl transition-all ${
             activeTab === "overview" ? "text-blue-600 font-bold" : "text-slate-500 hover:text-slate-800"
           }`}
@@ -734,7 +811,7 @@ export default function MobileLedgerApp() {
         </button>
 
         <button 
-          onClick={() => { setSelectedCategoryDetail(null); setActiveTab("stats"); }}
+          onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); setActiveTab("stats"); }}
           className={`flex flex-col items-center gap-1 py-1 px-4 rounded-xl transition-all ${
             activeTab === "stats" ? "text-blue-600 font-bold" : "text-slate-500 hover:text-slate-800"
           }`}
@@ -744,7 +821,7 @@ export default function MobileLedgerApp() {
         </button>
 
         <button 
-          onClick={() => { setSelectedCategoryDetail(null); setActiveTab("records"); }}
+          onClick={() => { setSelectedCategoryDetail(null); setSelectedCounterparty(null); setActiveTab("records"); }}
           className={`flex flex-col items-center gap-1 py-1 px-4 rounded-xl transition-all ${
             activeTab === "records" ? "text-blue-600 font-bold" : "text-slate-500 hover:text-slate-800"
           }`}
