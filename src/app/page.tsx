@@ -11,7 +11,6 @@ import {
   ArrowDownLeft, 
   Trash2, 
   ChevronRight, 
-  Filter,
   RefreshCw,
   CreditCard,
   Building2,
@@ -21,6 +20,7 @@ import {
   ShoppingBag,
   Car,
   Home,
+  Users,
   Gamepad2,
   HeartPulse,
   GraduationCap,
@@ -32,9 +32,10 @@ import {
   ArrowLeft,
   SlidersHorizontal,
   Tag,
-  Search
+  Search,
+  Check
 } from "lucide-react";
-import { Transaction, CategoryMeta, DEFAULT_CATEGORIES, ACCOUNTS, Category, TransactionType } from "@/lib/types";
+import { Transaction, CategoryMeta, DEFAULT_CATEGORIES, ACCOUNTS, TransactionType } from "@/lib/types";
 
 export default function MobileLedgerApp() {
   const [activeTab, setActiveTab] = useState<"overview" | "stats" | "records" | "categories">("overview");
@@ -47,6 +48,9 @@ export default function MobileLedgerApp() {
   const [filterType, setFilterType] = useState<"all" | "expense" | "income">("all");
   const [selectedCategoryDetail, setSelectedCategoryDetail] = useState<CategoryMeta | null>(null);
   const [searchKeyword, setSearchKeyword] = useState<string>("");
+
+  // 修改分类弹窗状态
+  const [editingTx, setEditingTx] = useState<Transaction | null>(null);
 
   // 新建分类模态框
   const [isAddCategoryOpen, setIsAddCategoryOpen] = useState(false);
@@ -111,6 +115,15 @@ export default function MobileLedgerApp() {
 
   const netBalance = totalIncome - totalExpense;
 
+  // 当前列表统计
+  const currentListTotalIncome = useMemo(() => {
+    return filteredTransactions.filter(t => t.type === "income").reduce((s, t) => s + t.amount, 0);
+  }, [filteredTransactions]);
+
+  const currentListTotalExpense = useMemo(() => {
+    return filteredTransactions.filter(t => t.type === "expense").reduce((s, t) => s + t.amount, 0);
+  }, [filteredTransactions]);
+
   // 分类支出统计
   const categoryStats = useMemo(() => {
     const periodTxs = transactions.filter(t => (selectedMonth === "all" || t.date.startsWith(selectedMonth)) && t.type === "expense");
@@ -134,6 +147,7 @@ export default function MobileLedgerApp() {
       case "shopping": return <ShoppingBag className="w-4 h-4 text-pink-600" />;
       case "transport": return <Car className="w-4 h-4 text-blue-600" />;
       case "housing": return <Home className="w-4 h-4 text-purple-600" />;
+      case "social": return <Users className="w-4 h-4 text-orange-600" />;
       case "entertainment": return <Gamepad2 className="w-4 h-4 text-emerald-600" />;
       case "digital": return <Smartphone className="w-4 h-4 text-indigo-600" />;
       case "medical": return <HeartPulse className="w-4 h-4 text-rose-600" />;
@@ -142,6 +156,26 @@ export default function MobileLedgerApp() {
       case "bonus": return <Gift className="w-4 h-4 text-amber-600" />;
       case "invest": return <TrendingUp className="w-4 h-4 text-blue-600" />;
       default: return <Tag className="w-4 h-4" style={{ color }} />;
+    }
+  };
+
+  // 修改流水分类
+  const handleUpdateCategory = async (txId: string, newCatId: string) => {
+    try {
+      const res = await fetch("/api/transactions", {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ id: txId, category: newCatId })
+      });
+      const data = await res.json();
+      if (data.success) {
+        setTransactions(prev => prev.map(t => t.id === txId ? { ...t, category: newCatId } : t));
+        setEditingTx(null);
+      } else {
+        alert(data.error);
+      }
+    } catch {
+      alert("修改异常");
     }
   };
 
@@ -266,7 +300,7 @@ export default function MobileLedgerApp() {
               <div className="flex justify-between items-start">
                 <div>
                   <span className="text-xs font-medium text-blue-100 tracking-wider">
-                    {selectedMonth === "all" ? "总收支结余 (CNY)" : `${selectedMonth} 结余 (CNY)`}
+                    {selectedMonth === "all" ? "总收支净结余 (CNY)" : `${selectedMonth} 结余 (CNY)`}
                   </span>
                   <div className="mt-1 flex items-baseline gap-1">
                     <span className="text-sm font-light text-blue-200">¥</span>
@@ -288,7 +322,7 @@ export default function MobileLedgerApp() {
                   </div>
                   <div>
                     <div className="text-xs text-blue-100 font-medium">总收入</div>
-                    <div className="text-base sm:text-lg font-bold text-white">
+                    <div className="text-base sm:text-lg font-bold text-emerald-300">
                       +¥{totalIncome.toLocaleString("zh-CN", { minimumFractionDigits: 2 })}
                     </div>
                   </div>
@@ -300,7 +334,7 @@ export default function MobileLedgerApp() {
                   </div>
                   <div>
                     <div className="text-xs text-blue-100 font-medium">总支出</div>
-                    <div className="text-base sm:text-lg font-bold text-white">
+                    <div className="text-base sm:text-lg font-bold text-rose-200">
                       -¥{totalExpense.toLocaleString("zh-CN", { minimumFractionDigits: 2 })}
                     </div>
                   </div>
@@ -310,7 +344,7 @@ export default function MobileLedgerApp() {
 
             {/* 双栏布局 */}
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-              {/* 左侧：分类支出分布（支持点击下钻） */}
+              {/* 左侧：分类支出分布 */}
               <div className="lg:col-span-1 bg-white rounded-3xl p-5 border border-slate-200/80 shadow-xs space-y-4">
                 <div className="flex justify-between items-center">
                   <div>
@@ -367,7 +401,7 @@ export default function MobileLedgerApp() {
                 <div className="flex justify-between items-center">
                   <div>
                     <h3 className="text-sm font-bold text-slate-800">近期收支明细</h3>
-                    <p className="text-[11px] text-slate-400">来自微信账单与 Agent 同步录入</p>
+                    <p className="text-[11px] text-slate-400">点击分类徽标可快捷修改归类</p>
                   </div>
                   <button 
                     onClick={() => { setSelectedCategoryDetail(null); setActiveTab("records"); }}
@@ -399,17 +433,22 @@ export default function MobileLedgerApp() {
                           <div className="text-xs text-slate-500 mt-0.5 flex flex-wrap items-center gap-2">
                             <span>{tx.date.substring(5, 16)}</span>
                             <span>•</span>
-                            <span>{categories.find(c => c.id === tx.category)?.label || tx.category}</span>
+                            <button 
+                              onClick={() => setEditingTx(tx)}
+                              className="font-medium text-blue-600 hover:underline bg-blue-50/80 px-1.5 py-0.2 rounded"
+                            >
+                              {categories.find(c => c.id === tx.category)?.label || tx.category} ✎
+                            </button>
                             <span>•</span>
                             <span>{ACCOUNTS.find(a => a.id === tx.account)?.label || tx.account}</span>
                           </div>
                         </div>
                       </div>
 
-                      <div className="text-right">
-                        <div className={`text-sm font-bold ${tx.type === "expense" ? "text-slate-900" : "text-emerald-600"}`}>
+                      <div className="text-right whitespace-nowrap pl-2">
+                        <span className={`text-sm font-bold inline-block ${tx.type === "expense" ? "text-slate-900" : "text-emerald-600"}`}>
                           {tx.type === "expense" ? "-" : "+"}¥{tx.amount.toFixed(2)}
-                        </div>
+                        </span>
                       </div>
                     </div>
                   ))}
@@ -477,12 +516,12 @@ export default function MobileLedgerApp() {
           </div>
         )}
 
-        {/* 3. 流水明细 Tab（支持分类下钻与搜索） */}
+        {/* 3. 流水明细 Tab（已优化移动端搜索与清晰收支累计） */}
         {activeTab === "records" && (
           <div className="w-full bg-white rounded-3xl p-6 border border-slate-200/80 shadow-xs space-y-5">
             {/* 顶栏控制 */}
-            <div className="flex flex-col md:flex-row justify-between md:items-center gap-4 border-b border-slate-100 pb-4">
-              <div>
+            <div className="flex flex-col gap-3 border-b border-slate-100 pb-4">
+              <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2">
                 <div className="flex items-center gap-2">
                   {selectedCategoryDetail && (
                     <button 
@@ -492,44 +531,31 @@ export default function MobileLedgerApp() {
                       <ArrowLeft className="w-3.5 h-3.5" /> 全部
                     </button>
                   )}
-                  <h2 className="text-base font-bold text-slate-800">
-                    {selectedCategoryDetail ? `【${selectedCategoryDetail.label}】分类明细` : "全量财务流水"}
-                  </h2>
-                </div>
-                <p className="text-xs text-slate-500 mt-0.5">
-                  共筛选出 {filteredTransactions.length} 笔记录
-                  {selectedCategoryDetail && (
-                    <span className="ml-2 font-medium text-rose-600">
-                      (累计: ¥{filteredTransactions.reduce((s, t) => s + t.amount, 0).toFixed(2)})
-                    </span>
-                  )}
-                </p>
-              </div>
-
-              {/* 搜索与类型切换 */}
-              <div className="flex flex-wrap items-center gap-2.5">
-                {/* 关键词搜索框 */}
-                <div className="relative flex-1 sm:flex-initial">
-                  <Search className="w-3.5 h-3.5 text-slate-400 absolute left-3 top-1/2 -translate-y-1/2" />
-                  <input 
-                    type="text"
-                    placeholder="搜索商家、商品或备注..."
-                    value={searchKeyword}
-                    onChange={(e) => setSearchKeyword(e.target.value)}
-                    className="w-full sm:w-48 pl-8 pr-3 py-1.5 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500"
-                  />
-                  {searchKeyword && (
-                    <button onClick={() => setSearchKeyword("")} className="absolute right-2.5 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600">
-                      <X className="w-3 h-3" />
-                    </button>
-                  )}
+                  <div>
+                    <h2 className="text-base font-bold text-slate-800">
+                      {selectedCategoryDetail ? `【${selectedCategoryDetail.label}】分类明细` : "全量财务流水"}
+                    </h2>
+                    <div className="flex flex-wrap items-center gap-3 text-xs text-slate-500 mt-1">
+                      <span>共 {filteredTransactions.length} 笔记录</span>
+                      {currentListTotalExpense > 0 && (
+                        <span className="font-semibold text-slate-900">
+                          总支出: -¥{currentListTotalExpense.toFixed(2)}
+                        </span>
+                      )}
+                      {currentListTotalIncome > 0 && (
+                        <span className="font-semibold text-emerald-600">
+                          总收入: +¥{currentListTotalIncome.toFixed(2)}
+                        </span>
+                      )}
+                    </div>
+                  </div>
                 </div>
 
                 {/* 过滤切换 */}
-                <div className="flex bg-slate-100 p-1 rounded-xl">
+                <div className="flex bg-slate-100 p-1 rounded-xl w-fit">
                   <button
                     onClick={() => setFilterType("all")}
-                    className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
+                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                       filterType === "all" ? "bg-white text-slate-900 shadow-xs" : "text-slate-500"
                     }`}
                   >
@@ -537,7 +563,7 @@ export default function MobileLedgerApp() {
                   </button>
                   <button
                     onClick={() => setFilterType("expense")}
-                    className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
+                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                       filterType === "expense" ? "bg-white text-slate-900 shadow-xs" : "text-slate-500"
                     }`}
                   >
@@ -545,13 +571,30 @@ export default function MobileLedgerApp() {
                   </button>
                   <button
                     onClick={() => setFilterType("income")}
-                    className={`px-3 py-1 rounded-lg text-xs font-semibold transition-all ${
+                    className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
                       filterType === "income" ? "bg-white text-slate-900 shadow-xs" : "text-slate-500"
                     }`}
                   >
                     收入
                   </button>
                 </div>
+              </div>
+
+              {/* 搜索框单独成行（避免移动端挤压截断） */}
+              <div className="relative w-full">
+                <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                <input 
+                  type="text"
+                  placeholder="搜索商家、商品、转账人或备注..."
+                  value={searchKeyword}
+                  onChange={(e) => setSearchKeyword(e.target.value)}
+                  className="w-full pl-10 pr-8 py-2 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800 placeholder-slate-400 focus:outline-none focus:border-blue-500 transition-colors"
+                />
+                {searchKeyword && (
+                  <button onClick={() => setSearchKeyword("")} className="absolute right-3 top-1/2 -translate-y-1/2 text-slate-400 hover:text-slate-600 p-1">
+                    <X className="w-3.5 h-3.5" />
+                  </button>
+                )}
               </div>
             </div>
 
@@ -563,7 +606,7 @@ export default function MobileLedgerApp() {
                   className="p-3.5 rounded-2xl bg-slate-50 hover:bg-slate-100/80 border border-slate-200/60 transition-all flex items-center justify-between"
                 >
                   <div className="flex items-center gap-3">
-                    <div className="w-10 h-10 rounded-2xl bg-white border border-slate-200/60 shadow-xs flex items-center justify-center">
+                    <div className="w-10 h-10 rounded-2xl bg-white border border-slate-200/60 shadow-xs flex items-center justify-center shrink-0">
                       {renderCategoryIcon(tx.category)}
                     </div>
                     <div>
@@ -578,9 +621,13 @@ export default function MobileLedgerApp() {
                       <div className="text-xs text-slate-500 mt-0.5 flex flex-wrap items-center gap-2">
                         <span>{tx.date}</span>
                         <span>•</span>
-                        <span className="font-medium text-slate-600">
-                          {categories.find(c => c.id === tx.category)?.label || tx.category}
-                        </span>
+                        <button 
+                          onClick={() => setEditingTx(tx)}
+                          className="font-medium text-blue-600 hover:underline bg-blue-50/80 px-1.5 py-0.2 rounded"
+                          title="点击快速修改分类"
+                        >
+                          {categories.find(c => c.id === tx.category)?.label || tx.category} ✎
+                        </button>
                         <span>•</span>
                         <span>{ACCOUNTS.find(a => a.id === tx.account)?.label || tx.account}</span>
                         {tx.note && <span className="text-slate-400 text-[11px] hidden sm:inline">({tx.note})</span>}
@@ -588,9 +635,11 @@ export default function MobileLedgerApp() {
                     </div>
                   </div>
 
-                  <div className="flex items-center gap-3">
-                    <div className={`text-sm font-bold ${tx.type === "expense" ? "text-slate-900" : "text-emerald-600"}`}>
-                      {tx.type === "expense" ? "-" : "+"}¥{tx.amount.toFixed(2)}
+                  <div className="flex items-center gap-3 shrink-0 pl-2">
+                    <div className="text-right whitespace-nowrap">
+                      <span className={`text-sm font-bold inline-block ${tx.type === "expense" ? "text-slate-900" : "text-emerald-600"}`}>
+                        {tx.type === "expense" ? "-" : "+"}¥{tx.amount.toFixed(2)}
+                      </span>
                     </div>
                     <button 
                       onClick={() => handleDeleteTx(tx.id)}
@@ -620,7 +669,7 @@ export default function MobileLedgerApp() {
           </div>
         )}
 
-        {/* 4. 分类管理与自建分类 Tab */}
+        {/* 4. 分类管理 Tab */}
         {activeTab === "categories" && (
           <div className="w-full bg-white rounded-3xl p-6 border border-slate-200/80 shadow-xs space-y-5">
             <div className="flex justify-between items-center border-b border-slate-100 pb-4">
@@ -641,7 +690,8 @@ export default function MobileLedgerApp() {
               {categories.map((cat) => (
                 <div 
                   key={cat.id}
-                  className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-center justify-between group hover:border-blue-300 transition-all"
+                  onClick={() => handleDrilldownCategory(cat)}
+                  className="p-3.5 rounded-2xl bg-slate-50 border border-slate-200/70 flex items-center justify-between group hover:border-blue-300 cursor-pointer transition-all"
                 >
                   <div className="flex items-center gap-2.5">
                     <div className="p-2 rounded-xl bg-white border border-slate-200/60 shadow-xs">
@@ -713,6 +763,40 @@ export default function MobileLedgerApp() {
           <span className="text-[11px]">分类管理</span>
         </button>
       </footer>
+
+      {/* 修改单笔分类弹窗 */}
+      {editingTx && (
+        <div className="fixed inset-0 z-50 bg-black/50 backdrop-blur-xs flex items-center justify-center p-4">
+          <div className="bg-white rounded-3xl p-6 max-w-sm w-full border border-slate-200 shadow-2xl space-y-4 animate-in fade-in zoom-in-95">
+            <div className="flex justify-between items-center">
+              <div>
+                <h3 className="text-base font-bold text-slate-900">重新归类账目</h3>
+                <p className="text-xs text-slate-500 mt-0.5">{editingTx.title} (¥{editingTx.amount})</p>
+              </div>
+              <button onClick={() => setEditingTx(null)} className="text-slate-400 hover:text-slate-600">
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            <div className="grid grid-cols-3 gap-2 max-h-60 overflow-y-auto p-1">
+              {categories.map((cat) => (
+                <button
+                  key={cat.id}
+                  onClick={() => handleUpdateCategory(editingTx.id, cat.id)}
+                  className={`p-2.5 rounded-xl border text-xs font-semibold flex flex-col items-center gap-1 transition-all ${
+                    editingTx.category === cat.id
+                      ? "bg-blue-600 text-white border-blue-600 shadow-sm"
+                      : "bg-slate-50 text-slate-700 border-slate-200 hover:border-blue-300"
+                  }`}
+                >
+                  {renderCategoryIcon(cat.id, editingTx.category === cat.id ? "#FFFFFF" : cat.color)}
+                  <span className="text-[11px]">{cat.label}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* 新建分类弹窗 */}
       {isAddCategoryOpen && (

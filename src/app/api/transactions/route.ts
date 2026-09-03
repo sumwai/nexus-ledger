@@ -1,38 +1,26 @@
 import { NextRequest, NextResponse } from "next/server";
-import { getTransactions, addTransaction, deleteTransaction } from "@/lib/store";
+import { getTransactions, addTransaction, deleteTransaction, saveTransactions } from "@/lib/store";
 import { Category, AccountType, TransactionType } from "@/lib/types";
-
-// 通用认证检查（用于保护 Agent API 或外部访问）
-function validateApiKey(req: NextRequest) {
-  const authHeader = req.headers.get("authorization");
-  const apiKeyHeader = req.headers.get("x-api-key");
-  const expectedKey = process.env.LEDGER_API_KEY || "nexus-ledger-secret";
-
-  if (apiKeyHeader === expectedKey) return true;
-  if (authHeader && authHeader.replace("Bearer ", "").trim() === expectedKey) return true;
-  return false;
-}
 
 export async function GET(req: NextRequest) {
   try {
     const { searchParams } = new URL(req.url);
-    const month = searchParams.get("month"); // e.g. "2026-09"
-    const type = searchParams.get("type");   // "income" | "expense"
+    const month = searchParams.get("month");
+    const type = searchParams.get("type");
     const category = searchParams.get("category");
 
     let txs = await getTransactions();
 
-    if (month) {
+    if (month && month !== "all") {
       txs = txs.filter(t => t.date.startsWith(month));
     }
-    if (type) {
+    if (type && type !== "all") {
       txs = txs.filter(t => t.type === type);
     }
     if (category) {
       txs = txs.filter(t => t.category === category);
     }
 
-    // 统计数据
     const totalIncome = txs
       .filter(t => t.type === "income")
       .reduce((sum, t) => sum + t.amount, 0);
@@ -55,6 +43,29 @@ export async function GET(req: NextRequest) {
   }
 }
 
+export async function PATCH(req: NextRequest) {
+  try {
+    const body = await req.json();
+    const { id, category } = body;
+    if (!id || !category) {
+      return NextResponse.json({ success: false, error: "缺少 id 或 category" }, { status: 400 });
+    }
+
+    const txs = await getTransactions();
+    const target = txs.find(t => t.id === id);
+    if (!target) {
+      return NextResponse.json({ success: false, error: "未找到对应账目" }, { status: 404 });
+    }
+
+    target.category = category;
+    await saveTransactions(txs);
+
+    return NextResponse.json({ success: true, message: "分类更新成功", data: target });
+  } catch (error) {
+    return NextResponse.json({ success: false, error: String(error) }, { status: 500 });
+  }
+}
+
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
@@ -63,12 +74,10 @@ export async function POST(req: NextRequest) {
     if (!amount || isNaN(Number(amount)) || Number(amount) <= 0) {
       return NextResponse.json({ success: false, error: "金额必须是大于 0 的有效数字" }, { status: 400 });
     }
-
     if (!title) {
       return NextResponse.json({ success: false, error: "标题或账目说明不能为空" }, { status: 400 });
     }
 
-    // 格式化时间
     const now = new Date();
     const formattedDate = date || now.toISOString().replace("T", " ").substring(0, 19);
 
