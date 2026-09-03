@@ -1,10 +1,10 @@
 [
   {
     "id": "tokenmp_project",
-    "label": "TokenMP 支出",
+    "label": "TokenMP",
     "icon": "Boxes",
     "color": "#6366F1",
-    "type": "expense"
+    "type": "both"
   },
   {
     "id": "food",
