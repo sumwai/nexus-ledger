@@ -11562,16 +11562,16 @@
     "id": "alipay2-246-202605282300",
     "type": "expense",
     "amount": 268,
-    "category": "digital",
+    "category": "tokenmp_project",
     "account": "alipay",
-    "title": "智谱 GLM Pro 账号 (个人自用)",
+    "title": "智谱 GLM Pro (TokenMP)",
     "note": "【GLM Pro】智谱账号转让 包月套餐 Coding Pl [支付宝(133)/农业银行储蓄卡(9775)]",
     "date": "2026-05-28 22:00:55",
     "createdAt": "2026-09-03T15:43:35.424156",
     "createdBy": "user",
     "tags": [
       "AI/API",
-      "自用"
+      "TokenMP"
     ]
   },
   {
