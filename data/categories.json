@@ -4,7 +4,97 @@
     "label": "TokenMP 支出",
     "icon": "Boxes",
     "color": "#6366F1",
-    "type": "expense",
-    "isCustom": true
+    "type": "expense"
+  },
+  {
+    "id": "food",
+    "label": "餐饮美食",
+    "icon": "Utensils",
+    "color": "#F59E0B",
+    "type": "expense"
+  },
+  {
+    "id": "shopping",
+    "label": "购物日用",
+    "icon": "ShoppingBag",
+    "color": "#EC4899",
+    "type": "expense"
+  },
+  {
+    "id": "transport",
+    "label": "交通出行",
+    "icon": "Car",
+    "color": "#3B82F6",
+    "type": "expense"
+  },
+  {
+    "id": "housing",
+    "label": "住房酒店",
+    "icon": "Home",
+    "color": "#8B5CF6",
+    "type": "expense"
+  },
+  {
+    "id": "social",
+    "label": "人情往来",
+    "icon": "Users",
+    "color": "#F97316",
+    "type": "expense"
+  },
+  {
+    "id": "entertainment",
+    "label": "休闲娱乐",
+    "icon": "Gamepad2",
+    "color": "#10B981",
+    "type": "expense"
+  },
+  {
+    "id": "digital",
+    "label": "数码服务",
+    "icon": "Smartphone",
+    "color": "#6366F1",
+    "type": "expense"
+  },
+  {
+    "id": "medical",
+    "label": "医疗健康",
+    "icon": "HeartPulse",
+    "color": "#EF4444",
+    "type": "expense"
+  },
+  {
+    "id": "education",
+    "label": "学习培训",
+    "icon": "GraduationCap",
+    "color": "#06B6D4",
+    "type": "expense"
+  },
+  {
+    "id": "salary",
+    "label": "工资薪水",
+    "icon": "Wallet",
+    "color": "#10B981",
+    "type": "income"
+  },
+  {
+    "id": "bonus",
+    "label": "人情红包",
+    "icon": "Gift",
+    "color": "#F59E0B",
+    "type": "income"
+  },
+  {
+    "id": "invest",
+    "label": "理财分红",
+    "icon": "TrendingUp",
+    "color": "#3B82F6",
+    "type": "income"
+  },
+  {
+    "id": "other",
+    "label": "其它款项",
+    "icon": "MoreHorizontal",
+    "color": "#64748B",
+    "type": "both"
   }
 ]

@@ -11,7 +11,18 @@ function getCategoriesStore(): CategoryMeta[] {
   try {
     if (fs.existsSync(CATEGORIES_FILE)) {
       const content = fs.readFileSync(CATEGORIES_FILE, "utf-8");
-      inMemoryCategories = JSON.parse(content);
+      const parsed: CategoryMeta[] = JSON.parse(content);
+      
+      // 合并保证系统内置默认分类始终完整存在
+      const merged = [...parsed];
+      DEFAULT_CATEGORIES.forEach(def => {
+        if (!merged.some(m => m.id === def.id)) {
+          merged.push(def);
+        }
+      });
+      inMemoryCategories = merged;
+    } else {
+      inMemoryCategories = DEFAULT_CATEGORIES;
     }
     return inMemoryCategories;
   } catch {
@@ -48,7 +59,6 @@ export async function POST(req: NextRequest) {
     const cleanLabel = label.trim();
     const id = `custom_${Date.now()}`;
 
-    // 检查重复
     if (cats.some(c => c.label === cleanLabel)) {
       return NextResponse.json({ success: false, error: "该分类名称已存在" }, { status: 400 });
     }
@@ -80,7 +90,7 @@ export async function DELETE(req: NextRequest) {
     const cats = getCategoriesStore();
     const target = cats.find(c => c.id === id);
     if (!target) return NextResponse.json({ success: false, error: "未找到该分类" }, { status: 404 });
-    if (!target.isCustom) return NextResponse.json({ success: false, error: "系统默认分类不可删除" }, { status: 400 });
+    if (!target.isCustom) return NextResponse.json({ success: false, error: "系统内置分类不可删除" }, { status: 400 });
 
     const filtered = cats.filter(c => c.id !== id);
     saveCategoriesStore(filtered);
