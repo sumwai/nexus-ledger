@@ -62,6 +62,9 @@ export default function MobileLedgerApp() {
   const [selectedCounterparty, setSelectedCounterparty] = useState<string | null>(null);
   const [searchKeyword, setSearchKeyword] = useState<string>("");
 
+  // 图表专属分类过滤状态（默认为全部，也可按某个特定分类过滤）
+  const [chartCategoryFilter, setChartCategoryFilter] = useState<string>("all");
+
   // 图表时间跨度：近 7 天 / 近 14 天 / 近 30 天 / 当前月份全部
   const [chartRange, setChartRange] = useState<"7d" | "14d" | "30d" | "all">("14d");
 
@@ -172,9 +175,13 @@ export default function MobileLedgerApp() {
     }).filter(c => c.total > 0).sort((a, b) => b.total - a.total);
   }, [transactions, categories, selectedMonth]);
 
-  // 每日收支折线/面积图数据构造 (Daily Trend Data for Recharts)
+  // 每日收支折线/面积图数据构造 (支持结合 chartCategoryFilter 进行特定分类过滤)
   const dailyChartData = useMemo(() => {
-    const periodTxs = transactions.filter(t => (selectedMonth === "all" || t.date.startsWith(selectedMonth)));
+    const periodTxs = transactions.filter(t => {
+      if (selectedMonth !== "all" && !t.date.startsWith(selectedMonth)) return false;
+      if (chartCategoryFilter !== "all" && t.category !== chartCategoryFilter) return false;
+      return true;
+    });
     
     // 提取所有涉及的日期
     const dateMap = new Map<string, { income: number; expense: number }>();
@@ -207,7 +214,14 @@ export default function MobileLedgerApp() {
         净结余: parseFloat((val.income - val.expense).toFixed(2))
       };
     });
-  }, [transactions, selectedMonth, chartRange]);
+  }, [transactions, selectedMonth, chartCategoryFilter, chartRange]);
+
+  // 图表分类下的总支出与总收入汇总
+  const chartSummary = useMemo(() => {
+    const exp = dailyChartData.reduce((s, d) => s + d.支出, 0);
+    const inc = dailyChartData.reduce((s, d) => s + d.收入, 0);
+    return { exp, inc };
+  }, [dailyChartData]);
 
   // 按日期分组流水
   const groupedTransactionsByDate = useMemo(() => {
@@ -369,12 +383,14 @@ export default function MobileLedgerApp() {
   };
 
   // 自定义图表 Tooltip
-  const CustomTooltip = ({ active, payload, label }: any) => {
+  const CustomTooltip = ({ active, payload }: any) => {
     if (active && payload && payload.length) {
+      const currentCatName = chartCategoryFilter === "all" ? "全部收支" : categories.find(c => c.id === chartCategoryFilter)?.label;
       return (
         <div className="bg-slate-900/95 backdrop-blur-md border border-slate-700/80 p-3 rounded-2xl shadow-xl text-xs space-y-1.5 font-mono text-white">
-          <div className="font-sans font-bold text-slate-300 pb-1 border-b border-slate-800">
-            {payload[0]?.payload?.date}
+          <div className="font-sans font-bold text-slate-300 pb-1 border-b border-slate-800 flex items-center justify-between gap-2">
+            <span>{payload[0]?.payload?.date}</span>
+            <span className="text-[10px] text-indigo-400 bg-indigo-950/80 px-1.5 py-0.2 rounded border border-indigo-700/50">{currentCatName}</span>
           </div>
           <div className="flex items-center justify-between gap-4 text-rose-400">
             <span className="flex items-center gap-1.5 font-sans">
@@ -500,54 +516,107 @@ export default function MobileLedgerApp() {
               </div>
             </div>
 
-            {/* 📈 每日收支动态折线/面积趋势图卡片 */}
+            {/* 📈 每日收支走势分析卡片（支持图表分类筛选） */}
             <div className="bg-white rounded-3xl p-5 sm:p-6 border border-slate-200/70 shadow-xs space-y-4">
-              <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-2 border-b border-slate-100 pb-3">
+              <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-3 border-b border-slate-100 pb-3">
                 <div className="flex items-center gap-2">
                   <div className="w-8 h-8 rounded-xl bg-indigo-50 text-indigo-600 flex items-center justify-center border border-indigo-100 shadow-2xs">
                     <Activity className="w-4 h-4" />
                   </div>
                   <div>
-                    <h3 className="text-sm sm:text-base font-bold text-slate-800">每日收支走势分析</h3>
-                    <p className="text-[11px] text-slate-400">直观洞察每日消费高峰与收益进账曲线</p>
+                    <div className="flex items-center gap-2">
+                      <h3 className="text-sm sm:text-base font-bold text-slate-800">每日收支走势分析</h3>
+                      {chartCategoryFilter !== "all" && (
+                        <span className="px-2 py-0.5 rounded-md bg-indigo-50 text-indigo-600 text-[10px] font-bold border border-indigo-200/80">
+                          只看: {categories.find(c => c.id === chartCategoryFilter)?.label}
+                        </span>
+                      )}
+                    </div>
+                    <p className="text-[11px] text-slate-400">
+                      {chartCategoryFilter === "all" ? "全部分类收支波动曲线" : `【${categories.find(c => c.id === chartCategoryFilter)?.label}】专项每日走势`}
+                    </p>
                   </div>
                 </div>
 
-                {/* 时间跨度切换 */}
-                <div className="flex bg-slate-100/90 p-1 rounded-xl w-fit border border-slate-200/60 text-xs">
-                  <button
-                    onClick={() => setChartRange("7d")}
-                    className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
-                      chartRange === "7d" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
-                    }`}
+                <div className="flex flex-wrap items-center gap-2">
+                  {/* 🎯 图表专属分类过滤下拉框 */}
+                  <select
+                    value={chartCategoryFilter}
+                    onChange={(e) => setChartCategoryFilter(e.target.value)}
+                    className="bg-slate-100/90 hover:bg-slate-200/80 border border-slate-200/80 text-xs font-bold rounded-xl px-2.5 py-1 text-slate-700 focus:outline-none focus:border-indigo-500 shadow-2xs transition-all whitespace-nowrap"
                   >
-                    近7天
-                  </button>
-                  <button
-                    onClick={() => setChartRange("14d")}
-                    className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
-                      chartRange === "14d" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
-                    }`}
-                  >
-                    近14天
-                  </button>
-                  <button
-                    onClick={() => setChartRange("30d")}
-                    className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
-                      chartRange === "30d" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
-                    }`}
-                  >
-                    近30天
-                  </button>
-                  <button
-                    onClick={() => setChartRange("all")}
-                    className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
-                      chartRange === "all" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
-                    }`}
-                  >
-                    全部
-                  </button>
+                    <option value="all">🏷️ 全部分类图表</option>
+                    {categories.map((c) => (
+                      <option key={c.id} value={c.id}>
+                        {c.label}
+                      </option>
+                    ))}
+                  </select>
+
+                  {/* 时间跨度切换 */}
+                  <div className="flex bg-slate-100/90 p-0.5 rounded-xl border border-slate-200/60 text-xs">
+                    <button
+                      onClick={() => setChartRange("7d")}
+                      className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
+                        chartRange === "7d" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
+                      }`}
+                    >
+                      7天
+                    </button>
+                    <button
+                      onClick={() => setChartRange("14d")}
+                      className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
+                        chartRange === "14d" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
+                      }`}
+                    >
+                      14天
+                    </button>
+                    <button
+                      onClick={() => setChartRange("30d")}
+                      className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
+                        chartRange === "30d" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
+                      }`}
+                    >
+                      30天
+                    </button>
+                    <button
+                      onClick={() => setChartRange("all")}
+                      className={`px-2.5 py-1 rounded-lg font-bold transition-all ${
+                        chartRange === "all" ? "bg-white text-indigo-600 shadow-2xs" : "text-slate-500"
+                      }`}
+                    >
+                      全部
+                    </button>
+                  </div>
                 </div>
+              </div>
+
+              {/* 图表分类快捷胶囊导航 */}
+              <div className="flex items-center gap-1.5 overflow-x-auto pb-1 text-xs">
+                <span className="text-slate-400 text-[11px] font-medium whitespace-nowrap shrink-0">图表过滤:</span>
+                <button
+                  onClick={() => setChartCategoryFilter("all")}
+                  className={`px-3 py-1 rounded-full text-[11px] font-bold whitespace-nowrap shrink-0 transition-all ${
+                    chartCategoryFilter === "all"
+                      ? "bg-slate-900 text-white shadow-sm"
+                      : "bg-slate-100 hover:bg-slate-200/80 text-slate-600"
+                  }`}
+                >
+                  全部
+                </button>
+                {categories.slice(0, 8).map((cat) => (
+                  <button
+                    key={cat.id}
+                    onClick={() => setChartCategoryFilter(chartCategoryFilter === cat.id ? "all" : cat.id)}
+                    className={`px-3 py-1 rounded-full text-[11px] font-semibold whitespace-nowrap shrink-0 transition-all flex items-center gap-1 ${
+                      chartCategoryFilter === cat.id
+                        ? "bg-indigo-600 text-white shadow-sm shadow-indigo-500/20 scale-102"
+                        : "bg-slate-100 hover:bg-slate-200/80 text-slate-700"
+                    }`}
+                  >
+                    <span>{cat.label}</span>
+                  </button>
+                ))}
               </div>
 
               {/* 折线面积图主体 */}
@@ -599,20 +668,27 @@ export default function MobileLedgerApp() {
                   </ResponsiveContainer>
                 ) : (
                   <div className="h-full flex items-center justify-center text-xs text-slate-400">
-                    当前周期暂无图表数据
+                    该分类在当前周期暂无图表数据
                   </div>
                 )}
               </div>
 
-              {/* 图例 */}
-              <div className="flex items-center justify-center gap-6 pt-1 text-xs font-semibold">
-                <div className="flex items-center gap-2 text-rose-600">
-                  <span className="w-3 h-1.5 rounded-full bg-rose-500" />
-                  <span>每日支出</span>
+              {/* 图例与当前图表汇总 */}
+              <div className="flex flex-wrap items-center justify-between pt-1 border-t border-slate-100 text-xs">
+                <div className="flex items-center gap-5 font-semibold">
+                  <div className="flex items-center gap-2 text-rose-600">
+                    <span className="w-3 h-1.5 rounded-full bg-rose-500" />
+                    <span>每日支出</span>
+                  </div>
+                  <div className="flex items-center gap-2 text-emerald-600">
+                    <span className="w-3 h-1.5 rounded-full bg-emerald-500" />
+                    <span>每日收入</span>
+                  </div>
                 </div>
-                <div className="flex items-center gap-2 text-emerald-600">
-                  <span className="w-3 h-1.5 rounded-full bg-emerald-500" />
-                  <span>每日收入</span>
+
+                <div className="flex items-center gap-3 text-[11px] text-slate-500 font-mono mt-1 sm:mt-0">
+                  {chartSummary.exp > 0 && <span>期间支出: <b className="text-slate-800">¥{chartSummary.exp.toFixed(2)}</b></span>}
+                  {chartSummary.inc > 0 && <span>期间收入: <b className="text-emerald-600">+¥{chartSummary.inc.toFixed(2)}</b></span>}
                 </div>
               </div>
             </div>
@@ -794,7 +870,7 @@ export default function MobileLedgerApp() {
           </div>
         )}
 
-        {/* 3. 全量流水 Tab (强化多维快捷过滤：分类筛选下拉 + 交易方下拉 + 搜索) */}
+        {/* 3. 全量流水 Tab */}
         {activeTab === "records" && (
           <div className="w-full space-y-5">
             {/* 顶栏筛选与统计卡片 */}
@@ -862,7 +938,7 @@ export default function MobileLedgerApp() {
 
               {/* 三联复合筛选行：只看某分类 + 交易方选择 + 关键词搜索 */}
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-2.5">
-                {/* 🎯 专属：只看某分类下拉选择器 */}
+                {/* 只看某分类下拉选择器 */}
                 <div className="sm:col-span-1">
                   <select
                     value={selectedCategoryDetail?.id || ""}
